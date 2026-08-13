@@ -3217,4 +3217,28 @@ button {
   color: var(--text-soft);
   font-size: 11px;
   line-height: 1.6;
+}.logout-button {
+  padding: 12px 18px;
+
+  border: 1px solid rgba(255,255,255,.10);
+  border-radius: 11px;
+
+  background: rgba(255,255,255,.04);
+
+  color: white;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: .2s;
+}
+
+.logout-button:hover {
+  background: rgba(255,255,255,.08);
+}
+
+.logout-button:disabled {
+  opacity: .6;
+  cursor: not-allowed;
 }
