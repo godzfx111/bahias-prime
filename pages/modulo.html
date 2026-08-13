@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Módulo | Bahia's Prime</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+  <aside class="sidebar">
+
+    <div class="logo-area">
+      <div class="logo-icon">BP</div>
+
+      <div>
+        <h1>Bahia's Prime</h1>
+        <span>Projeto aprovação</span>
+      </div>
+    </div>
+
+    <nav class="menu">
+
+      <a href="../index.html" class="menu-item">
+        <span>⌂</span>
+        Dashboard
+      </a>
+
+      <a href="trilha.html" class="menu-item active">
+        <span>▶</span>
+        Trilha de estudos
+      </a>
+
+      <a href="redacao.html" class="menu-item">
+        <span>✎</span>
+        Redação
+      </a>
+
+      <a href="torneio.html" class="menu-item">
+        <span>🏆</span>
+        Torneio
+      </a>
+
+      <a href="perfil.html" class="menu-item">
+        <span>◎</span>
+        Meu perfil
+      </a>
+
+      <div class="menu-divider"></div>
+
+      <a href="admin.html" class="menu-item admin-link">
+        <span>⚙</span>
+        Painel Admin
+      </a>
+
+    </nav>
+
+  </aside>
+
+
+  <main class="main-content module-page">
+
+    <a href="trilha.html" class="back-link">
+      ← Voltar para trilha
+    </a>
+
+
+    <section class="module-hero">
+
+      <div>
+        <span class="card-label" id="moduleArea">
+          ÁREA
+        </span>
+
+        <h2 id="moduleTitle">
+          Carregando...
+        </h2>
+
+        <p id="moduleDescription">
+          Preparando o conteúdo.
+        </p>
+      </div>
+
+
+      <div class="module-xp-box">
+        <span>RECOMPENSA</span>
+        <strong id="moduleXp">+0 XP</strong>
+      </div>
+
+    </section>
+
+
+    <section class="lesson-progress">
+
+      <div class="lesson-progress-top">
+
+        <span>
+          PROGRESSO DO MÓDULO
+        </span>
+
+        <strong id="moduleProgressText">
+          0%
+        </strong>
+
+      </div>
+
+      <div class="progress-bar">
+        <div
+          class="progress-fill"
+          id="moduleProgressBar"
+          style="width: 0%">
+        </div>
+      </div>
+
+    </section>
+
+
+    <section class="lesson-layout">
+
+      <div class="lesson-main">
+
+        <!-- TEORIA -->
+
+        <article class="lesson-card">
+
+          <div class="lesson-card-title">
+
+            <span class="lesson-number">
+              1
+            </span>
+
+            <div>
+              <span class="card-label">
+                TEORIA
+              </span>
+
+              <h3>
+                Fundamentos do conteúdo
+              </h3>
+            </div>
+
+          </div>
+
+          <p
+            class="lesson-intro"
+            id="theoryIntro">
+          </p>
+
+          <div
+            id="theoryTopics"
+            class="theory-topics">
+          </div>
+
+          <!-- EXEMPLOS RESOLVIDOS -->
+
+          <section
+            id="resolvedExamplesSection"
+            class="advanced-theory-section"
+            hidden
+          >
+            <span class="card-label">
+              EXEMPLOS RESOLVIDOS
+            </span>
+
+            <h3>
+              Raciocínio passo a passo
+            </h3>
+
+            <div id="resolvedExamples"></div>
+          </section>
+
+          <!-- COMO O ENEM COBRA -->
+
+          <section
+            id="enemStrategiesSection"
+            class="advanced-theory-section"
+            hidden
+          >
+            <span class="card-label">
+              ESTRATÉGIA ENEM
+            </span>
+
+            <h3>
+              Como esse conteúdo aparece na prova
+            </h3>
+
+            <div id="enemStrategies"></div>
+          </section>
+
+          <!-- ERROS COMUNS -->
+
+          <section
+            id="commonErrorsSection"
+            class="advanced-theory-section"
+            hidden
+          >
+            <span class="card-label">
+              ATENÇÃO
+            </span>
+
+            <h3>
+              Erros comuns
+            </h3>
+
+            <div id="commonErrors"></div>
+          </section>
+
+          <!-- RESUMO -->
+
+          <section
+            id="moduleSummarySection"
+            class="advanced-theory-section module-summary-section"
+            hidden
+          >
+            <span class="card-label">
+              RESUMO
+            </span>
+
+            <h3>
+              O que você precisa levar deste módulo
+            </h3>
+
+            <p id="moduleSummary"></p>
+          </section>
+
+
+          <button
+            class="complete-step-button"
+            data-step="teoria"
+          >
+            Marcar teoria como concluída
+          </button>
+
+        </article>
+
+
+        <!-- VIDEOAULA -->
+
+        <article class="lesson-card">
+
+          <div class="lesson-card-title">
+
+            <span class="lesson-number">
+              2
+            </span>
+
+            <div>
+              <span class="card-label">
+                VIDEOAULA
+              </span>
+
+              <h3>
+                Reforço complementar
+              </h3>
+            </div>
+
+          </div>
+
+          <div
+            id="videoArea"
+            class="video-placeholder">
+          </div>
+
+          <button
+            class="complete-step-button"
+            data-step="video"
+          >
+            Marcar videoaula como concluída
+          </button>
+
+        </article>
+
+
+        <!-- EXERCÍCIOS -->
+
+        <article class="lesson-card">
+
+          <div class="lesson-card-title">
+
+            <span class="lesson-number">
+              3
+            </span>
+
+            <div>
+              <span class="card-label">
+                PRÁTICA
+              </span>
+
+              <h3>
+                Exercícios e questões
+              </h3>
+            </div>
+
+          </div>
+
+          <p class="lesson-intro">
+            Responda com atenção. O objetivo não é apenas acertar:
+            leia a explicação depois de cada questão e entenda o raciocínio.
+          </p>
+
+          <div id="exerciseArea"></div>
+
+          <div
+            id="exerciseResult"
+            class="exercise-result"
+          ></div>
+
+        </article>
+
+      </div>
+
+
+      <aside class="lesson-sidebar">
+
+        <div class="card lesson-checklist">
+
+          <span class="card-label">
+            CHECKLIST
+          </span>
+
+          <h3>
+            Etapas do módulo
+          </h3>
+
+          <div
+            class="check-item"
+            id="checkTeoria"
+          >
+            <span>○</span>
+            Teoria
+          </div>
+
+          <div
+            class="check-item"
+            id="checkVideo"
+          >
+            <span>○</span>
+            Videoaula
+          </div>
+
+          <div
+            class="check-item"
+            id="checkExercicios"
+          >
+            <span>○</span>
+            Exercícios
+          </div>
+
+        </div>
+
+
+        <div class="card study-tip">
+
+          <span class="card-label">
+            DICA
+          </span>
+
+          <h3>
+            Não corra pela trilha.
+          </h3>
+
+          <p>
+            Só avance quando entender o conteúdo. O objetivo não é terminar rápido,
+            e sim construir uma base capaz de sustentar questões mais difíceis do ENEM.
+          </p>
+
+        </div>
+
+      </aside>
+
+    </section>
+
+  </main>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+  <script src="../js/supabase.js"></script>
+
+  <script src="../js/data.js"></script>
+
+  <script src="../js/modulo.js"></script>
+
+  <script src="../js/video-loader.js"></script>
+
+</body>
+
+</html>

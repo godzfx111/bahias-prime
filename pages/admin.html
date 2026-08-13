@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Admin | Bahia's Prime</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+  <aside class="sidebar">
+
+    <div class="logo-area">
+      <div class="logo-icon">BP</div>
+
+      <div>
+        <h1>Bahia's Prime</h1>
+        <span>Projeto aprovação</span>
+      </div>
+    </div>
+
+    <nav class="menu">
+
+      <a href="../index.html" class="menu-item">
+        <span>⌂</span>
+        Dashboard
+      </a>
+
+      <a href="trilha.html" class="menu-item">
+        <span>▶</span>
+        Trilha de estudos
+      </a>
+
+      <a href="redacao.html" class="menu-item">
+        <span>✎</span>
+        Redação
+      </a>
+
+      <a href="torneio.html" class="menu-item">
+        <span>🏆</span>
+        Torneio
+      </a>
+
+      <a href="perfil.html" class="menu-item">
+        <span>◎</span>
+        Meu perfil
+      </a>
+
+      <div class="menu-divider"></div>
+
+      <a href="admin.html" class="menu-item admin-link active">
+        <span>⚙</span>
+        Painel Admin
+      </a>
+
+    </nav>
+
+  </aside>
+
+
+  <main class="main-content admin-page">
+
+    <header class="admin-header">
+
+      <div>
+        <span class="card-label">
+          ADMINISTRAÇÃO
+        </span>
+
+        <h2>Central do Bahia's Prime</h2>
+
+        <p>
+          Gerencie alunos, videoaulas e conteúdos da plataforma.
+        </p>
+      </div>
+
+      <div class="admin-status">
+        <span>●</span>
+        Modo administrador
+      </div>
+
+    </header>
+
+
+    <!-- ALUNOS -->
+
+    <section class="admin-section">
+
+      <div class="admin-section-title">
+        <div>
+          <span class="card-label">ALUNOS</span>
+          <h3>Gerenciar estudantes</h3>
+        </div>
+      </div>
+
+
+      <div class="admin-grid">
+
+        <article class="card admin-create-card">
+
+          <h3>Adicionar novo aluno</h3>
+
+          <p>
+            Crie uma conta pronta para estudar no Bahia's Prime.
+          </p>
+
+
+          <form id="studentForm">
+
+            <div class="form-group">
+              <label>Nome</label>
+
+              <input
+                id="studentName"
+                type="text"
+                placeholder="Ex: Lucas"
+                required
+              >
+            </div>
+
+
+            <div class="form-group">
+              <label>E-mail</label>
+
+              <input
+                id="studentEmail"
+                type="email"
+                placeholder="aluno@email.com"
+                required
+              >
+            </div>
+
+
+            <div class="form-group">
+              <label>Senha inicial</label>
+
+              <input
+                id="studentPassword"
+                type="password"
+                placeholder="Crie uma senha"
+                minlength="6"
+                required
+              >
+            </div>
+
+
+            <div
+              id="studentMessage"
+              class="admin-message"
+            ></div>
+
+
+            <button
+              type="submit"
+              id="createStudentButton"
+              class="primary-button admin-submit"
+            >
+              + Criar aluno
+            </button>
+
+          </form>
+
+        </article>
+
+
+        <article class="card admin-students-card">
+
+          <div class="admin-list-header">
+
+            <div>
+              <span class="card-label">
+                CADASTRADOS
+              </span>
+
+              <h3>Alunos</h3>
+            </div>
+
+            <strong id="studentCount">
+              0
+            </strong>
+
+          </div>
+
+
+          <div
+            id="studentsList"
+            class="students-list"
+          >
+            Carregando alunos...
+          </div>
+
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <!-- VIDEOAULAS -->
+
+    <section class="admin-section">
+
+      <div class="admin-section-title">
+
+        <div>
+          <span class="card-label">
+            VIDEOAULAS
+          </span>
+
+          <h3>Complementos dos módulos</h3>
+
+          <p>
+            O ensino principal continua dentro do Bahia's Prime.
+            As videoaulas funcionam como reforço opcional.
+          </p>
+        </div>
+
+      </div>
+
+
+      <article class="card video-admin-card">
+
+        <div class="admin-video-grid">
+
+          <div class="form-group">
+
+            <label>
+              Módulo
+            </label>
+
+            <select id="videoModule">
+              <option value="">
+                Selecione um módulo
+              </option>
+            </select>
+
+          </div>
+
+
+          <div class="form-group">
+
+            <label>
+              Link da videoaula
+            </label>
+
+            <input
+              id="videoUrl"
+              type="url"
+              placeholder="https://youtube.com/..."
+            >
+
+          </div>
+
+        </div>
+
+
+        <div class="admin-message" id="videoMessage"></div>
+
+
+        <button
+          id="saveVideoButton"
+          class="primary-button admin-submit"
+        >
+          Salvar videoaula
+        </button>
+
+      </article>
+
+    </section>
+
+
+    <!-- CONTEÚDO -->
+
+    <section class="admin-section">
+
+      <div class="admin-section-title">
+        <div>
+          <span class="card-label">
+            CONTEÚDO
+          </span>
+
+          <h3>Ferramentas futuras</h3>
+        </div>
+      </div>
+
+
+      <div class="admin-tools-grid">
+
+        <article class="card admin-tool">
+          <span>📎</span>
+          <strong>Materiais</strong>
+          <p>Adicionar PDFs, simulados e materiais complementares.</p>
+        </article>
+
+
+        <article class="card admin-tool">
+          <span>✎</span>
+          <strong>Temas de Redação</strong>
+          <p>Adicionar novas propostas ao banco de redação.</p>
+        </article>
+
+
+        <article class="card admin-tool">
+          <span>📚</span>
+          <strong>Módulos</strong>
+          <p>Gerenciamento dos conteúdos da trilha.</p>
+        </article>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+  <script src="../js/supabase.js"></script>
+
+  <script src="../js/data.js"></script>
+
+  <script src="../js/admin.js"></script>
+
+</body>
+
+</html>

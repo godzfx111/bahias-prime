@@ -1,0 +1,1 @@
+console.log("Bahia's Prime iniciado.");

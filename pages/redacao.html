@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Redação | Bahia's Prime</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+  <aside class="sidebar">
+
+    <div class="logo-area">
+
+      <div class="logo-icon">
+        BP
+      </div>
+
+      <div>
+        <h1>Bahia's Prime</h1>
+        <span>Projeto aprovação</span>
+      </div>
+
+    </div>
+
+
+    <nav class="menu">
+
+      <a href="../index.html" class="menu-item">
+        <span>⌂</span>
+        Dashboard
+      </a>
+
+      <a href="trilha.html" class="menu-item">
+        <span>▶</span>
+        Trilha de estudos
+      </a>
+
+      <a href="redacao.html" class="menu-item active">
+        <span>✎</span>
+        Redação
+      </a>
+
+      <a href="torneio.html" class="menu-item">
+        <span>🏆</span>
+        Torneio
+      </a>
+
+      <a href="perfil.html" class="menu-item">
+        <span>◎</span>
+        Meu perfil
+      </a>
+
+      <div class="menu-divider"></div>
+
+      <a href="admin.html" class="menu-item admin-link">
+        <span>⚙</span>
+        Painel Admin
+      </a>
+
+    </nav>
+
+  </aside>
+
+
+  <main class="main-content redacao-page">
+
+    <header class="redacao-header">
+
+      <div>
+
+        <span class="card-label">
+          ÁREA LIVRE
+        </span>
+
+        <h2>
+          Redação ENEM
+        </h2>
+
+        <p>
+          Estude, pratique e evolua na redação quando quiser.
+          Esta área não depende do avanço na trilha principal.
+        </p>
+
+      </div>
+
+
+      <div class="redacao-weekly-goal">
+
+        <span>
+          META SEMANAL
+        </span>
+
+        <strong id="redacaoMeta">
+          0 / 4
+        </strong>
+
+        <small>
+          sessões de redação
+        </small>
+
+      </div>
+
+    </header>
+
+
+    <!-- =========================
+         TEMA ALEATÓRIO
+    ========================== -->
+
+    <section class="redacao-theme-card">
+
+      <div class="redacao-theme-content">
+
+        <span class="card-label">
+          🎲 TEMA PARA TREINAR
+        </span>
+
+        <h3 id="temaTitulo">
+          Sorteie um tema para começar
+        </h3>
+
+        <p id="temaDescricao">
+          O Bahia's Prime possui um banco de temas preparado para treino recorrente.
+        </p>
+
+
+        <div class="redacao-theme-actions">
+
+          <button
+            id="sortearTema"
+            class="primary-button redacao-button"
+          >
+            Sortear tema
+          </button>
+
+          <button
+            id="comecarRedacao"
+            class="secondary-redacao-button"
+            disabled
+          >
+            Começar redação
+          </button>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         APRENDER REDAÇÃO
+    ========================== -->
+
+    <section class="redacao-section">
+
+      <div class="redacao-section-header">
+
+        <div>
+
+          <span class="card-label">
+            APRENDER
+          </span>
+
+          <h3>
+            Curso de Redação
+          </h3>
+
+          <p>
+            Do zero até uma redação competitiva no ENEM.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="redacao-lessons-grid">
+
+        <article class="redacao-lesson-card">
+          <span>01</span>
+
+          <div>
+            <strong>
+              Como funciona a Redação do ENEM
+            </strong>
+
+            <p>
+              Entenda proposta, estrutura, critérios e avaliação.
+            </p>
+          </div>
+        </article>
+
+
+        <article class="redacao-lesson-card">
+          <span>02</span>
+
+          <div>
+            <strong>
+              As 5 competências
+            </strong>
+
+            <p>
+              Saiba exatamente o que os avaliadores analisam.
+            </p>
+          </div>
+        </article>
+
+
+        <article class="redacao-lesson-card">
+          <span>03</span>
+
+          <div>
+            <strong>
+              Estrutura da dissertação
+            </strong>
+
+            <p>
+              Introdução, desenvolvimento e conclusão.
+            </p>
+          </div>
+        </article>
+
+
+        <article class="redacao-lesson-card">
+          <span>04</span>
+
+          <div>
+            <strong>
+              Como fazer uma introdução
+            </strong>
+
+            <p>
+              Contextualização, tema e tese.
+            </p>
+          </div>
+        </article>
+
+
+        <article class="redacao-lesson-card">
+          <span>05</span>
+
+          <div>
+            <strong>
+              Desenvolvimento
+            </strong>
+
+            <p>
+              Argumentos, explicação, exemplo e análise.
+            </p>
+          </div>
+        </article>
+
+
+        <article class="redacao-lesson-card">
+          <span>06</span>
+
+          <div>
+            <strong>
+              Argumentação
+            </strong>
+
+            <p>
+              Aprenda a defender ideias com lógica e profundidade.
+            </p>
+          </div>
+        </article>
+
+
+        <article class="redacao-lesson-card">
+          <span>07</span>
+
+          <div>
+            <strong>
+              Repertório sociocultural
+            </strong>
+
+            <p>
+              Como usar repertórios sem parecer decorado.
+            </p>
+          </div>
+        </article>
+
+
+        <article class="redacao-lesson-card">
+          <span>08</span>
+
+          <div>
+            <strong>
+              Coesão e conectivos
+            </strong>
+
+            <p>
+              Faça as ideias se conectarem de forma natural.
+            </p>
+          </div>
+        </article>
+
+
+        <article class="redacao-lesson-card">
+          <span>09</span>
+
+          <div>
+            <strong>
+              Conclusão
+            </strong>
+
+            <p>
+              Fechamento consistente e retomada da tese.
+            </p>
+          </div>
+        </article>
+
+
+        <article class="redacao-lesson-card">
+          <span>10</span>
+
+          <div>
+            <strong>
+              Proposta de intervenção
+            </strong>
+
+            <p>
+              Agente, ação, meio, finalidade e detalhamento.
+            </p>
+          </div>
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         TREINO
+    ========================== -->
+
+    <section class="redacao-section">
+
+      <div class="redacao-section-header">
+
+        <div>
+
+          <span class="card-label">
+            PRATICAR
+          </span>
+
+          <h3>
+            Seus treinos
+          </h3>
+
+          <p>
+            Escreva redações e acompanhe sua evolução.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="redacao-training-grid">
+
+
+        <article class="card redacao-training-card">
+
+          <span class="card-label">
+            NOVA REDAÇÃO
+          </span>
+
+          <h3>
+            Comece um treino
+          </h3>
+
+          <p>
+            Sorteie um tema ou escolha um tema do banco para começar.
+          </p>
+
+          <button
+            id="irParaTema"
+            class="secondary-button"
+          >
+            Sortear tema
+          </button>
+
+        </article>
+
+
+        <article class="card redacao-training-card">
+
+          <span class="card-label">
+            HISTÓRICO
+          </span>
+
+          <h3>
+            Minhas redações
+          </h3>
+
+          <p id="historicoRedacaoTexto">
+            Você ainda não possui redações salvas.
+          </p>
+
+          <button
+            class="secondary-button"
+            disabled
+          >
+            Ver histórico
+          </button>
+
+        </article>
+
+
+        <article class="card redacao-training-card">
+
+          <span class="card-label">
+            IA
+          </span>
+
+          <h3>
+            Correção inteligente
+          </h3>
+
+          <p>
+            Futuramente, envie sua redação e receba feedback por competência.
+          </p>
+
+          <button
+            class="secondary-button"
+            disabled
+          >
+            Em breve
+          </button>
+
+        </article>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+  <script src="../js/supabase.js"></script>
+
+  <script src="../js/redacao.js"></script>
+
+</body>
+
+</html>

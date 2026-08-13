@@ -1,0 +1,685 @@
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Bahia's Prime</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- =========================
+       SIDEBAR
+  ========================== -->
+
+  <aside class="sidebar">
+
+    <div class="logo-area">
+
+      <div class="logo-icon">
+        BP
+      </div>
+
+      <div>
+        <h1>Bahia's Prime</h1>
+        <span>Projeto aprovação</span>
+      </div>
+
+    </div>
+
+
+    <nav class="menu">
+
+      <a href="index.html" class="menu-item active">
+        <span>⌂</span>
+        Dashboard
+      </a>
+
+      <a href="pages/trilha.html" class="menu-item">
+        <span>▶</span>
+        Trilha de estudos
+      </a>
+
+      <a href="pages/redacao.html" class="menu-item">
+        <span>✎</span>
+        Redação
+      </a>
+
+      <a href="pages/torneio.html" class="menu-item">
+        <span>🏆</span>
+        Torneio
+      </a>
+
+      <a href="pages/perfil.html" class="menu-item">
+        <span>◎</span>
+        Meu perfil
+      </a>
+
+      <div class="menu-divider"></div>
+
+      <a href="pages/admin.html" class="menu-item admin-link">
+        <span>⚙</span>
+        Painel Admin
+      </a>
+
+    </nav>
+
+
+    <div class="sidebar-bottom">
+
+      <div class="mini-profile">
+
+        <div class="avatar">
+          P
+        </div>
+
+        <div>
+          <strong>Aluno</strong>
+          <span>Aluno</span>
+        </div>
+
+      </div>
+
+    </div>
+
+  </aside>
+
+
+  <!-- =========================
+       CONTEÚDO PRINCIPAL
+  ========================== -->
+
+  <main class="main-content">
+
+
+    <!-- =========================
+         TOPO
+    ========================== -->
+
+    <header class="topbar">
+
+      <div>
+        <p class="welcome">
+          Bem-vindo de volta,
+        </p>
+
+        <h2>
+          Aluno 👋
+        </h2>
+      </div>
+
+
+      <div class="top-actions">
+
+        <div class="streak">
+
+          🔥
+
+          <div>
+            <strong>0 dias</strong>
+            <span>sequência</span>
+          </div>
+
+        </div>
+
+
+        <div class="xp-box">
+
+          <span>
+            Nível 1
+          </span>
+
+          <div class="xp-bar">
+            <div
+              class="xp-progress"
+              style="width: 0%">
+            </div>
+          </div>
+
+          <small>
+            0 / 500 XP
+          </small>
+
+        </div>
+
+      </div>
+
+    </header>
+
+
+    <!-- =========================
+         MÓDULO ATUAL
+    ========================== -->
+
+    <section class="hero-card">
+
+      <div class="hero-content">
+
+        <span class="hero-tag">
+          TRILHA ATUAL
+        </span>
+
+        <h3>
+          Matemática Básica
+        </h3>
+
+        <p>
+          Construa uma base forte antes de avançar para os conteúdos mais complexos do ENEM.
+        </p>
+
+
+        <div class="hero-progress-area">
+
+          <div class="progress-info">
+
+            <span>
+              Progresso do módulo
+            </span>
+
+            <strong id="dashboardModuleProgressText">
+              0%
+            </strong>
+
+          </div>
+
+
+          <div class="progress-bar">
+
+            <div
+              class="progress-fill"
+              id="dashboardModuleProgressBar"
+              style="width: 0%">
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <a
+          href="pages/trilha.html"
+          class="primary-button"
+        >
+          Continuar estudando
+          <span>→</span>
+        </a>
+
+      </div>
+
+
+      <div class="hero-level">
+
+        <div class="level-circle">
+
+          <span>
+            Módulo
+          </span>
+
+          <strong>
+            01
+          </strong>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         DASHBOARD
+    ========================== -->
+
+    <section class="dashboard-grid">
+
+
+      <!-- MISSÃO DO DIA -->
+
+      <article class="card today-card">
+
+        <div class="card-header">
+
+          <div>
+
+            <span class="card-label">
+              PLANO DE HOJE
+            </span>
+
+            <h3>
+              Sua missão diária
+            </h3>
+
+          </div>
+
+          <span class="status-badge">
+            0 / 4
+          </span>
+
+        </div>
+
+
+        <div class="task-list">
+
+
+          <div class="task">
+
+            <div class="task-icon">
+              ✓
+            </div>
+
+            <div class="task-info">
+
+              <strong>
+                Aula principal
+              </strong>
+
+              <span>
+                Matemática básica
+              </span>
+
+            </div>
+
+            <small>
+              +50 XP
+            </small>
+
+          </div>
+
+
+          <div class="task">
+
+            <div class="task-icon">
+              ?
+            </div>
+
+            <div class="task-info">
+
+              <strong>
+                Exercícios
+              </strong>
+
+              <span>
+                10 questões
+              </span>
+
+            </div>
+
+            <small>
+              +30 XP
+            </small>
+
+          </div>
+
+
+          <div class="task">
+
+            <div class="task-icon">
+              ↻
+            </div>
+
+            <div class="task-info">
+
+              <strong>
+                Revisão
+              </strong>
+
+              <span>
+                Conteúdo anterior
+              </span>
+
+            </div>
+
+            <small>
+              +20 XP
+            </small>
+
+          </div>
+
+
+          <div class="task">
+
+            <div class="task-icon">
+              ✎
+            </div>
+
+            <div class="task-info">
+
+              <strong>
+                Redação
+              </strong>
+
+              <span>
+                20 minutos
+              </span>
+
+            </div>
+
+            <small>
+              +40 XP
+            </small>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <!-- DESEMPENHO -->
+
+      <article class="card performance-card">
+
+        <div class="card-header">
+
+          <div>
+
+            <span class="card-label">
+              DESEMPENHO
+            </span>
+
+            <h3>
+              Suas matérias
+            </h3>
+
+          </div>
+
+        </div>
+
+
+        <div class="subject">
+
+          <div class="subject-title">
+
+            <span>
+              Matemática
+            </span>
+
+            <strong>
+              0%
+            </strong>
+
+          </div>
+
+          <div class="subject-bar">
+            <div style="width: 0%"></div>
+          </div>
+
+        </div>
+
+
+        <div class="subject">
+
+          <div class="subject-title">
+
+            <span>
+              Linguagens
+            </span>
+
+            <strong>
+              0%
+            </strong>
+
+          </div>
+
+          <div class="subject-bar">
+            <div style="width: 0%"></div>
+          </div>
+
+        </div>
+
+
+        <div class="subject">
+
+          <div class="subject-title">
+
+            <span>
+              Humanas
+            </span>
+
+            <strong>
+              0%
+            </strong>
+
+          </div>
+
+          <div class="subject-bar">
+            <div style="width: 0%"></div>
+          </div>
+
+        </div>
+
+
+        <div class="subject">
+
+          <div class="subject-title">
+
+            <span>
+              Natureza
+            </span>
+
+            <strong>
+              0%
+            </strong>
+
+          </div>
+
+          <div class="subject-bar">
+            <div style="width: 0%"></div>
+          </div>
+
+        </div>
+
+
+        <div class="priority-box">
+
+          <span>
+            ⚠ PRIORIDADE PESSOAL
+          </span>
+
+          <strong>
+            Ainda calculando
+          </strong>
+
+          <p>
+            Conforme você responder questões, o Bahia's Prime identificará as áreas que precisam de mais revisão.
+          </p>
+
+        </div>
+
+      </article>
+
+    </section>
+
+
+    <!-- =========================
+         ESTATÍSTICAS + TORNEIO
+    ========================== -->
+
+    <section class="bottom-grid">
+
+
+      <!-- ESTATÍSTICAS -->
+
+      <article class="card stats-card">
+
+        <span class="card-label">
+          ESTATÍSTICAS
+        </span>
+
+
+        <div class="stats">
+
+          <div>
+
+            <strong>
+              0
+            </strong>
+
+            <span>
+              XP total
+            </span>
+
+          </div>
+
+
+          <div>
+
+            <strong>
+              0
+            </strong>
+
+            <span>
+              Questões
+            </span>
+
+          </div>
+
+
+          <div>
+
+            <strong>
+              0
+            </strong>
+
+            <span>
+              Dias estudados
+            </span>
+
+          </div>
+
+
+          <div>
+
+            <strong>
+              0
+            </strong>
+
+            <span>
+              Redações
+            </span>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <!-- TORNEIO -->
+
+      <article class="card tournament-preview">
+
+        <div>
+
+          <span class="card-label">
+            TORNEIO
+          </span>
+
+          <h3 id="tournamentTitle">
+            Pedro × Daniel
+          </h3>
+
+          <p>
+            Compare seu desempenho e evoluam juntos.
+          </p>
+
+        </div>
+
+
+        <div class="duel">
+
+
+          <!-- USUÁRIO LOGADO -->
+
+          <div>
+
+            <span
+              class="duel-avatar"
+              id="torneioPedroAvatar"
+            >
+              P
+            </span>
+
+            <strong id="torneioPedroXp">
+              0 XP
+            </strong>
+
+            <small id="torneioPedroNome">
+              Pedro
+            </small>
+
+          </div>
+
+
+          <span class="versus">
+            VS
+          </span>
+
+
+          <!-- DANIEL -->
+
+          <div>
+
+            <span
+              class="duel-avatar"
+              id="torneioDanielAvatar"
+            >
+              D
+            </span>
+
+            <strong id="torneioDanielXp">
+              0 XP
+            </strong>
+
+            <small id="torneioDanielNome">
+              Daniel
+            </small>
+
+          </div>
+
+        </div>
+
+
+        <a
+          href="pages/torneio.html"
+          class="secondary-button"
+        >
+          Ver torneio
+        </a>
+
+      </article>
+
+    </section>
+
+  </main>
+
+
+  <!-- =========================
+       SCRIPTS
+  ========================== -->
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+  <script src="js/supabase.js"></script>
+
+  <script src="js/auth-guard.js"></script>
+
+  <script src="js/app.js"></script>
+
+</body>
+
+</html>
+```

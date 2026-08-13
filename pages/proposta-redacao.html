@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Proposta de Redação | Bahia's Prime</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+  <aside class="sidebar">
+
+    <div class="logo-area">
+      <div class="logo-icon">BP</div>
+
+      <div>
+        <h1>Bahia's Prime</h1>
+        <span>Projeto aprovação</span>
+      </div>
+    </div>
+
+
+    <nav class="menu">
+
+      <a href="../index.html" class="menu-item">
+        <span>⌂</span>
+        Dashboard
+      </a>
+
+      <a href="trilha.html" class="menu-item">
+        <span>▶</span>
+        Trilha de estudos
+      </a>
+
+      <a href="redacao.html" class="menu-item active">
+        <span>✎</span>
+        Redação
+      </a>
+
+      <a href="torneio.html" class="menu-item">
+        <span>🏆</span>
+        Torneio
+      </a>
+
+      <a href="perfil.html" class="menu-item">
+        <span>◎</span>
+        Meu perfil
+      </a>
+
+    </nav>
+
+  </aside>
+
+
+  <main class="main-content proposta-redacao-page">
+
+    <a href="redacao.html" class="back-link">
+      ← Voltar para Redação
+    </a>
+
+
+    <header class="proposta-header">
+
+      <span class="card-label">
+        PROPOSTA DE REDAÇÃO
+      </span>
+
+      <h2 id="propostaTitulo">
+        Carregando proposta...
+      </h2>
+
+      <div class="proposta-meta">
+
+        <span id="propostaEixo">
+          —
+        </span>
+
+        <span id="propostaDificuldade">
+          —
+        </span>
+
+      </div>
+
+    </header>
+
+
+    <section class="card proposta-card">
+
+      <span class="card-label">
+        TEMA
+      </span>
+
+      <p id="propostaComando">
+        Carregando...
+      </p>
+
+    </section>
+
+
+    <section class="textos-motivadores">
+
+      <h3>
+        Textos motivadores
+      </h3>
+
+
+      <article class="card texto-motivador">
+
+        <span>
+          TEXTO I
+        </span>
+
+        <p id="textoMotivador1">
+          Carregando...
+        </p>
+
+      </article>
+
+
+      <article class="card texto-motivador">
+
+        <span>
+          TEXTO II
+        </span>
+
+        <p id="textoMotivador2">
+          Carregando...
+        </p>
+
+      </article>
+
+
+      <article class="card texto-motivador">
+
+        <span>
+          TEXTO III
+        </span>
+
+        <p id="textoMotivador3">
+          Carregando...
+        </p>
+
+      </article>
+
+    </section>
+
+
+    <section class="redacao-editor-section">
+
+      <div class="editor-header">
+
+        <div>
+          <span class="card-label">
+            SUA REDAÇÃO
+          </span>
+
+          <h3>
+            Escreva seu texto
+          </h3>
+        </div>
+
+
+        <div class="editor-info">
+
+          <span id="contadorPalavras">
+            0 palavras
+          </span>
+
+          <span id="statusRascunho">
+            Não salvo
+          </span>
+
+        </div>
+
+      </div>
+
+
+      <textarea
+        id="campoRedacao"
+        class="campo-redacao"
+        placeholder="Comece sua redação aqui..."
+      ></textarea>
+
+
+      <div class="editor-actions">
+
+        <button
+          id="salvarRascunho"
+          class="secondary-redacao-button"
+        >
+          Salvar rascunho
+        </button>
+
+
+        <button
+          id="finalizarRedacao"
+          class="primary-button redacao-button"
+        >
+          Finalizar redação
+        </button>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+  <script src="../js/supabase.js"></script>
+
+  <script src="../js/proposta-redacao.js"></script>
+
+</body>
+
+</html>

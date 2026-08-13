@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Trilha | Bahia's Prime</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <aside class="sidebar">
+
+        <div class="logo-area">
+
+            <div class="logo-icon">BP</div>
+
+            <div>
+                <h1>Bahia's Prime</h1>
+                <span>Projeto aprovação</span>
+            </div>
+
+        </div>
+
+        <nav class="menu">
+
+            <a href="../index.html" class="menu-item">
+                <span>⌂</span>
+                Dashboard
+            </a>
+
+            <a href="trilha.html" class="menu-item active">
+                <span>▶</span>
+                Trilha de estudos
+            </a>
+
+            <a href="redacao.html" class="menu-item">
+                <span>✎</span>
+                Redação
+            </a>
+
+            <a href="torneio.html" class="menu-item">
+                <span>🏆</span>
+                Torneio
+            </a>
+
+            <a href="perfil.html" class="menu-item">
+                <span>◎</span>
+                Meu perfil
+            </a>
+
+            <div class="menu-divider"></div>
+
+            <a href="admin.html" class="menu-item admin-link">
+                <span>⚙</span>
+                Painel Admin
+            </a>
+
+        </nav>
+
+    </aside>
+
+
+    <main class="main-content">
+
+        <header class="trail-header">
+
+            <div>
+                <span class="card-label">CAMINHO PARA O ENEM</span>
+                <h2>Trilha de Estudos</h2>
+
+                <p>
+                    Uma única jornada. Do fundamento ao nível ENEM.
+                </p>
+            </div>
+
+            <div class="trail-header-stats">
+
+                <div>
+                    <strong id="modulosConcluidos">0</strong>
+                    <span>concluídos</span>
+                </div>
+
+                <div>
+                    <strong id="totalModulos">0</strong>
+                    <span>módulos</span>
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <section class="trail-progress-card">
+
+            <div class="trail-progress-top">
+
+                <div>
+                    <span>PROGRESSO GERAL</span>
+                    <strong id="porcentagemTrilha">0%</strong>
+                </div>
+
+                <small>
+                    Continue avançando pela trilha.
+                </small>
+
+            </div>
+
+            <div class="progress-bar">
+                <div
+                    class="progress-fill"
+                    id="progressoTrilha"
+                    style="width: 0%">
+                </div>
+            </div>
+
+        </section>
+
+
+        <section class="trail-section">
+
+            <div class="trail-section-title">
+
+                <span class="trail-phase">FASE 01</span>
+
+                <h3>Construindo a base</h3>
+
+                <p>
+                    Antes de dominar o ENEM, precisamos dominar os fundamentos.
+                </p>
+
+            </div>
+
+
+            <div
+                class="trail-container"
+                id="trailContainer">
+            </div>
+
+        </section>
+
+    </main>
+
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<script src="../js/supabase.js"></script>
+
+<script src="../js/data.js"></script>
+
+<script src="../js/trilha.js"></script>
+
+</body>
+
+</html>

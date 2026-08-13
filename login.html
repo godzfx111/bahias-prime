@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Login | Bahia's Prime</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="login-body">
+
+  <main class="login-page">
+
+    <section class="login-brand">
+
+      <div class="login-brand-content">
+
+        <div class="login-logo">
+          BP
+        </div>
+
+        <span class="card-label">
+          BAHIA'S PRIME
+        </span>
+
+        <h1>
+          Sua preparação para o ENEM começa aqui.
+        </h1>
+
+        <p>
+          Estude em sequência, acompanhe sua evolução e avance junto com seus amigos até o dia da prova.
+        </p>
+
+        <div class="login-features">
+
+          <div>
+            <span>✓</span>
+            Trilha completa de estudos
+          </div>
+
+          <div>
+            <span>✓</span>
+            XP, níveis e sequência diária
+          </div>
+
+          <div>
+            <span>✓</span>
+            Treino intensivo de redação
+          </div>
+
+          <div>
+            <span>✓</span>
+            Torneio e desempenho individual
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <section class="login-area">
+
+      <div class="login-card">
+
+        <div class="login-card-header">
+
+          <span class="card-label">
+            ACESSO DO ALUNO
+          </span>
+
+          <h2>Bem-vindo de volta.</h2>
+
+          <p>
+            Entre na sua conta para continuar seus estudos.
+          </p>
+
+        </div>
+
+
+        <form id="loginForm">
+
+          <div class="form-group">
+
+            <label for="email">
+              E-mail
+            </label>
+
+            <input
+              type="email"
+              id="email"
+              placeholder="seuemail@exemplo.com"
+              autocomplete="email"
+              required
+            >
+
+          </div>
+
+
+          <div class="form-group">
+
+            <label for="password">
+              Senha
+            </label>
+
+            <div class="password-field">
+
+              <input
+                type="password"
+                id="password"
+                placeholder="Digite sua senha"
+                autocomplete="current-password"
+                required
+              >
+
+              <button
+                type="button"
+                id="togglePassword"
+                class="password-toggle">
+                Mostrar
+              </button>
+
+            </div>
+
+          </div>
+
+
+          <div
+            id="loginMessage"
+            class="login-message">
+          </div>
+
+
+          <button
+            type="submit"
+            id="loginButton"
+            class="login-button">
+
+            Entrar no Bahia's Prime
+
+          </button>
+
+        </form>
+
+
+        <div class="login-footer">
+
+          <span>
+            🔥 Continue sua sequência de estudos.
+          </span>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- Biblioteca oficial do Supabase -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+  <!-- Nossa conexão -->
+  <script src="js/supabase.js"></script>
+
+  <!-- Sistema de login -->
+  <script src="js/auth.js"></script>
+
+</body>
+
+</html>
