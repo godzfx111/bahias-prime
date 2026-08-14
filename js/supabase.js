@@ -2,10 +2,26 @@ const SUPABASE_URL = "https://bawecbzsmeumwumbfayx.supabase.co";
 
 const SUPABASE_KEY = "sb_publishable_xkTAsmpvhzCsYGNa4bbWuA_WtqSoUo5";
 
+
+/* =========================================
+   CONEXÃO COM SUPABASE
+   SESSÃO DURA SOMENTE NA ABA
+========================================= */
+
 const supabaseClient = window.supabase.createClient(
-    SUPABASE_URL,
-    SUPABASE_KEY
+  SUPABASE_URL,
+  SUPABASE_KEY,
+  {
+    auth: {
+      persistSession: true,
+      storage: window.sessionStorage,
+      autoRefreshToken: true,
+      detectSessionInUrl: true
+    }
+  }
 );
+
+
 /* =========================================
    BAHIA'S PRIME
    CONTROLE VISUAL DO ADMIN
@@ -90,7 +106,9 @@ async function configurarMenuPorPerfil() {
 }
 
 
-/* Executa quando a página carregar */
+/* =========================================
+   EXECUTAR AO CARREGAR A PÁGINA
+========================================= */
 
 if (
   document.readyState ===
