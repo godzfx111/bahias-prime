@@ -703,6 +703,7 @@ const trilhaBahiasPrime = [
   // =========================================
   {
     id: 6,
+    ordem: 6,
     area: "REVISÃO ENEM",
     titulo: "Questões reais do ENEM",
     descricao:
@@ -2956,6 +2957,2103 @@ const trilhaBahiasPrime = [
 
   ]
 
-}
+},
+
+  /* =====================================================
+     MÓDULO 11
+     MATEMÁTICA — RAZÃO, PROPORÇÃO E REGRA DE TRÊS
+  ===================================================== */
+
+  {
+    id: 11,
+    ordem: 11,
+    area: "Matemática",
+
+    titulo:
+      "Razão, Proporção e Regra de Três",
+
+    descricao:
+      "Aprenda a comparar grandezas, reconhecer relações proporcionais e resolver problemas de regra de três com interpretação.",
+
+    dificuldade: "Base ENEM",
+    xp: 160,
+
+    teoria: {
+
+      introducao:
+        "Razão e proporção aparecem em escalas, receitas, mapas, velocidades, consumo, densidade, produtividade e inúmeras situações do ENEM. O mais importante não é decorar uma regra de três: é compreender qual relação existe entre as grandezas antes de realizar qualquer cálculo.",
+
+      topicos: [
+
+        {
+          titulo:
+            "1. O que é razão?",
+
+          texto:
+            "Razão é uma comparação entre duas quantidades por meio de uma divisão. Se uma sala possui 20 meninas e 10 meninos, a razão entre meninas e meninos é 20/10 = 2. Isso significa que existem 2 meninas para cada menino. A ordem importa: a razão entre meninos e meninas seria 10/20 = 1/2."
+        },
+
+        {
+          titulo:
+            "2. Razão não significa necessariamente fração de um todo",
+
+          texto:
+            "Uma razão pode comparar duas grandezas diferentes. A velocidade média, por exemplo, relaciona distância e tempo. Um veículo que percorre 180 km em 3 horas apresenta razão 180/3 = 60 km por hora. Já a densidade demográfica relaciona quantidade de habitantes e área."
+        },
+
+        {
+          titulo:
+            "3. O que é proporção?",
+
+          texto:
+            "Proporção é uma igualdade entre duas razões. Por exemplo, 2/3 = 4/6. As duas frações representam a mesma relação. Em uma proporção a/b = c/d, com denominadores diferentes de zero, podemos utilizar a propriedade fundamental: a × d = b × c."
+        },
+
+        {
+          titulo:
+            "4. Grandezas diretamente proporcionais",
+
+          texto:
+            "Duas grandezas são diretamente proporcionais quando aumentam ou diminuem mantendo a mesma relação. Se cada ingresso custa R$ 30, então 2 ingressos custam R$ 60, 3 custam R$ 90 e 4 custam R$ 120. Dobrar a quantidade dobra o preço."
+        },
+
+        {
+          titulo:
+            "5. Grandezas inversamente proporcionais",
+
+          texto:
+            "Duas grandezas podem variar em sentidos opostos. Imagine um trabalho que levaria 12 horas para uma pessoa e, em uma situação idealizada, 6 horas para duas pessoas trabalhando no mesmo ritmo. Ao aumentar o número de trabalhadores, o tempo diminui. Essa é uma relação inversamente proporcional."
+        },
+
+        {
+          titulo:
+            "6. Regra de três direta",
+
+          texto:
+            "Exemplo: 4 camisetas custam R$ 120. Quanto custariam 7 camisetas pelo mesmo preço unitário? Organizamos as grandezas: 4 camisetas → 120 reais; 7 camisetas → x. Como mais camisetas significam maior preço, a relação é direta. Temos 4/7 = 120/x. Fazendo a multiplicação cruzada: 4x = 840, portanto x = 210."
+        },
+
+        {
+          titulo:
+            "7. Regra de três inversa",
+
+          texto:
+            "Exemplo idealizado: 6 máquinas realizam um serviço em 10 horas. Se 12 máquinas idênticas forem utilizadas, quanto tempo seria necessário? O número de máquinas dobrou; o tempo deve cair pela metade. Portanto, seriam necessárias 5 horas. Antes de multiplicar valores, identifique o tipo de relação."
+        },
+
+        {
+          titulo:
+            "8. Escala",
+
+          texto:
+            "Escalas também são razões. Uma escala 1:100 indica que 1 unidade no desenho corresponde a 100 unidades na realidade. Assim, 3 cm em uma planta representam 300 cm, ou 3 metros, na construção real."
+        },
+
+        {
+          titulo:
+            "9. Estratégia para questões do ENEM",
+
+          texto:
+            "Não monte regra de três automaticamente sempre que aparecerem números. Primeiro identifique as grandezas, suas unidades e a relação entre elas. Muitas alternativas incorretas são construídas justamente para quem realiza multiplicações sem interpretar o problema."
+        }
+
+      ]
+
+    },
+
+    videoaula: {
+      titulo: "Videoaula complementar",
+      url: ""
+    },
+
+    exercicios: [
+
+      {
+        pergunta:
+          "Uma receita para 4 pessoas utiliza 300 g de arroz. Mantendo a proporção, quantos gramas são necessários para 10 pessoas?",
+
+        alternativas: [
+          "450 g",
+          "600 g",
+          "750 g",
+          "900 g",
+          "1200 g"
+        ],
+
+        correta: 2
+      },
+
+      {
+        pergunta:
+          "Em uma escala 1:50 000, uma distância de 4 cm no mapa representa quantos quilômetros na realidade?",
+
+        alternativas: [
+          "0,2 km",
+          "2 km",
+          "20 km",
+          "200 km",
+          "2000 km"
+        ],
+
+        correta: 1
+      },
+
+      {
+        pergunta:
+          "Se 5 cadernos custam R$ 45, quanto custam 8 cadernos mantendo o mesmo preço unitário?",
+
+        alternativas: [
+          "R$ 54",
+          "R$ 63",
+          "R$ 72",
+          "R$ 81",
+          "R$ 90"
+        ],
+
+        correta: 2
+      },
+
+      {
+        pergunta:
+          "Em uma relação inversamente proporcional, quando uma grandeza dobra, a outra:",
+
+        alternativas: [
+          "Também dobra.",
+          "É dividida por 2.",
+          "É multiplicada por 4.",
+          "Permanece obrigatoriamente igual.",
+          "Torna-se zero."
+        ],
+
+        correta: 1
+      },
+
+      {
+        pergunta:
+          "A razão entre 24 estudantes aprovados e 8 reprovados é:",
+
+        alternativas: [
+          "1/3",
+          "2",
+          "3",
+          "8",
+          "16"
+        ],
+
+        correta: 2
+      }
+
+    ]
+
+  },
+
+
+  /* =====================================================
+     MÓDULO 12
+     LINGUAGENS — INTERPRETAÇÃO E INFERÊNCIA
+  ===================================================== */
+
+  {
+    id: 12,
+    ordem: 12,
+    area: "Linguagens",
+
+    titulo:
+      "Interpretação de Texto e Inferência",
+
+    descricao:
+      "Aprofunde a leitura de textos, relações implícitas, intenção comunicativa, ironia e efeitos de sentido.",
+
+    dificuldade: "Base ENEM",
+    xp: 160,
+
+    teoria: {
+
+      introducao:
+        "No ENEM, compreender palavras individualmente não basta. Muitas questões exigem perceber relações construídas pelo texto: ironia, intenção, posicionamento, oposição, pressupostos e informações implícitas. Interpretar é justificar uma conclusão usando evidências presentes no próprio texto.",
+
+      topicos: [
+
+        {
+          titulo:
+            "1. Informação explícita e implícita",
+
+          texto:
+            "Informação explícita aparece diretamente no texto. Informação implícita precisa ser inferida. Se um personagem entra em casa completamente molhado segurando um guarda-chuva quebrado, o texto não precisa dizer que estava chovendo para permitir essa conclusão."
+        },
+
+        {
+          titulo:
+            "2. Inferência",
+
+          texto:
+            "Inferir é chegar a uma conclusão sustentada por pistas. Inferência não significa inventar. Se uma alternativa apresenta uma interpretação que não encontra apoio no texto, ela não é uma inferência válida."
+        },
+
+        {
+          titulo:
+            "3. Pressuposto",
+
+          texto:
+            "Certas construções carregam informações pressupostas. Na frase 'Joana voltou a estudar', pressupõe-se que Joana estudava antes e havia interrompido essa atividade. Verbos e expressões podem introduzir informações sem afirmá-las diretamente."
+        },
+
+        {
+          titulo:
+            "4. Ironia",
+
+          texto:
+            "Ironia ocorre quando existe uma diferença entre aquilo que é literalmente dito e o sentido pretendido. Se alguém observa uma rua completamente alagada e afirma 'excelente sistema de drenagem', provavelmente está criticando justamente a ausência de eficiência."
+        },
+
+        {
+          titulo:
+            "5. Efeito de sentido",
+
+          texto:
+            "A escolha de palavras, pontuação, repetição e organização das frases produz efeitos. Uma manchete pode parecer neutra ou crítica dependendo dos verbos e adjetivos escolhidos. Questões do ENEM frequentemente perguntam qual efeito uma escolha linguística provoca."
+        },
+
+        {
+          titulo:
+            "6. Finalidade do texto",
+
+          texto:
+            "Pergunte: para que esse texto foi produzido? Informar, convencer, criticar, divertir, orientar, denunciar ou vender são algumas possibilidades. Gênero, público e contexto ajudam a responder."
+        },
+
+        {
+          titulo:
+            "7. Linguagem verbal e não verbal",
+
+          texto:
+            "Charges, campanhas, tirinhas e anúncios combinam frequentemente palavras e imagens. Não analise cada elemento isoladamente. Uma imagem pode contradizer uma frase e justamente dessa relação surgir o humor ou a crítica."
+        },
+
+        {
+          titulo:
+            "8. Alternativas exageradas",
+
+          texto:
+            "Desconfie de palavras absolutas como 'sempre', 'nunca', 'todos' e 'apenas' quando o texto apresenta uma afirmação mais limitada. Muitas questões possuem alternativas quase corretas, mas ampliam indevidamente a conclusão."
+        },
+
+        {
+          titulo:
+            "9. Leia o comando",
+
+          texto:
+            "Saber o que a questão pede economiza tempo. 'Segundo o texto', 'o efeito produzido', 'a finalidade', 'a crítica presente' e 'é possível inferir' exigem operações de leitura diferentes."
+        }
+
+      ]
+
+    },
+
+    videoaula: {
+      titulo: "Videoaula complementar",
+      url: ""
+    },
+
+    exercicios: [
+
+      {
+        pergunta:
+          "Inferir uma informação significa:",
+
+        alternativas: [
+          "Inventar uma explicação possível.",
+          "Copiar literalmente o texto.",
+          "Chegar a uma conclusão sustentada por pistas do texto.",
+          "Discordar do autor.",
+          "Ignorar informações explícitas."
+        ],
+
+        correta: 2
+      },
+
+      {
+        pergunta:
+          "Na frase 'Lucas voltou a correr pela manhã', qual informação é pressuposta?",
+
+        alternativas: [
+          "Lucas nunca correu.",
+          "Lucas corria anteriormente.",
+          "Lucas é atleta profissional.",
+          "Lucas corre todas as manhãs.",
+          "Lucas deixou de caminhar."
+        ],
+
+        correta: 1
+      },
+
+      {
+        pergunta:
+          "Uma pessoa observa um enorme congestionamento e afirma 'que trânsito maravilhoso'. Esse enunciado pode produzir principalmente um efeito de:",
+
+        alternativas: [
+          "Neutralidade.",
+          "Ironia.",
+          "Descrição científica.",
+          "Formalidade.",
+          "Incerteza."
+        ],
+
+        correta: 1
+      },
+
+      {
+        pergunta:
+          "Ao interpretar uma charge, o estudante deve:",
+
+        alternativas: [
+          "Analisar apenas o texto escrito.",
+          "Analisar apenas a imagem.",
+          "Relacionar elementos verbais e visuais.",
+          "Ignorar conhecimentos de contexto.",
+          "Interpretar literalmente todo enunciado."
+        ],
+
+        correta: 2
+      },
+
+      {
+        pergunta:
+          "Uma alternativa afirma 'todos os jovens rejeitam livros', enquanto o texto diz apenas que 'parte dos jovens lê menos livros impressos'. A alternativa está:",
+
+        alternativas: [
+          "Correta por possuir sentido semelhante.",
+          "Exagerando aquilo que o texto permite concluir.",
+          "Correta por utilizar a palavra jovens.",
+          "Necessariamente incompleta apenas por ser curta.",
+          "Expressando uma inferência obrigatória."
+        ],
+
+        correta: 1
+      }
+
+    ]
+
+  },
+
+
+  /* =====================================================
+     MÓDULO 13
+     NATUREZA — MATÉRIA E ÁTOMOS
+  ===================================================== */
+
+  {
+    id: 13,
+    ordem: 13,
+    area: "Ciências da Natureza",
+
+    titulo:
+      "Matéria, Átomos e Transformações",
+
+    descricao:
+      "Entenda matéria, estrutura atômica, substâncias, misturas e transformações físicas e químicas.",
+
+    dificuldade: "Base ENEM",
+    xp: 170,
+
+    teoria: {
+
+      introducao:
+        "Química estuda a matéria, sua composição, propriedades e transformações. Antes de estudar ligações químicas, reações ou cálculos, é essencial compreender a diferença entre matéria, átomo, elemento químico, substância, mistura e transformação.",
+
+      topicos: [
+
+        {
+          titulo:
+            "1. Matéria",
+
+          texto:
+            "Matéria é tudo aquilo que possui massa e ocupa espaço. Água, ar, madeira, ferro e o próprio corpo são exemplos. Energia, por sua vez, não é classificada como matéria."
+        },
+
+        {
+          titulo:
+            "2. Átomos",
+
+          texto:
+            "Átomos são unidades fundamentais da matéria. Em um modelo simplificado, possuem núcleo formado por prótons e nêutrons e uma região eletrônica onde se encontram elétrons."
+        },
+
+        {
+          titulo:
+            "3. Prótons, nêutrons e elétrons",
+
+          texto:
+            "Prótons apresentam carga positiva, elétrons carga negativa e nêutrons não possuem carga elétrica líquida. Em um átomo eletricamente neutro, o número de prótons é igual ao número de elétrons."
+        },
+
+        {
+          titulo:
+            "4. Número atômico",
+
+          texto:
+            "O número atômico, representado por Z, corresponde à quantidade de prótons no núcleo. É essa quantidade que identifica o elemento químico. Todo átomo de carbono possui 6 prótons."
+        },
+
+        {
+          titulo:
+            "5. Elemento químico e substância",
+
+          texto:
+            "Elemento químico é o conjunto de átomos que possuem o mesmo número de prótons. Já uma substância é formada por uma composição definida. O gás oxigênio O₂ é uma substância formada apenas pelo elemento oxigênio."
+        },
+
+        {
+          titulo:
+            "6. Substâncias simples e compostas",
+
+          texto:
+            "Uma substância simples possui átomos de apenas um elemento químico, como O₂. Uma substância composta possui mais de um elemento, como a água H₂O, formada por hidrogênio e oxigênio."
+        },
+
+        {
+          titulo:
+            "7. Misturas",
+
+          texto:
+            "Misturas possuem mais de uma substância. Em uma mistura homogênea observamos uma única fase visível, como água com sal completamente dissolvido. Em uma mistura heterogênea percebemos duas ou mais fases, como água e óleo."
+        },
+
+        {
+          titulo:
+            "8. Transformação física",
+
+          texto:
+            "Uma transformação física modifica estado, forma ou aparência sem produzir necessariamente novas substâncias. O derretimento do gelo é um exemplo: continua existindo água, embora em outro estado físico."
+        },
+
+        {
+          titulo:
+            "9. Transformação química",
+
+          texto:
+            "Em uma transformação química ocorre formação de novas substâncias. Combustão, ferrugem e muitas reações envolvendo alimentos são exemplos. Mudança de cor, formação de gás ou precipitado podem ser indícios, embora seja necessário analisar o contexto."
+        },
+
+        {
+          titulo:
+            "10. Conservação da matéria",
+
+          texto:
+            "Em uma reação química realizada em sistema fechado, os átomos são reorganizados. Eles não simplesmente desaparecem. Essa ideia será fundamental para compreender balanceamento químico posteriormente."
+        }
+
+      ]
+
+    },
+
+    videoaula: {
+      titulo: "Videoaula complementar",
+      url: ""
+    },
+
+    exercicios: [
+
+      {
+        pergunta:
+          "O número atômico de um elemento corresponde ao número de:",
+
+        alternativas: [
+          "Nêutrons.",
+          "Elétrons apenas.",
+          "Prótons.",
+          "Prótons mais nêutrons.",
+          "Moléculas."
+        ],
+
+        correta: 2
+      },
+
+      {
+        pergunta:
+          "Qual alternativa representa uma substância composta?",
+
+        alternativas: [
+          "O₂",
+          "N₂",
+          "Fe",
+          "H₂O",
+          "He"
+        ],
+
+        correta: 3
+      },
+
+      {
+        pergunta:
+          "Água e óleo formam:",
+
+        alternativas: [
+          "Elemento químico.",
+          "Substância simples.",
+          "Mistura homogênea.",
+          "Mistura heterogênea.",
+          "Átomo."
+        ],
+
+        correta: 3
+      },
+
+      {
+        pergunta:
+          "O derretimento de um cubo de gelo é principalmente uma transformação:",
+
+        alternativas: [
+          "Nuclear.",
+          "Química.",
+          "Física.",
+          "Biológica.",
+          "Atômica."
+        ],
+
+        correta: 2
+      },
+
+      {
+        pergunta:
+          "A formação de ferrugem é exemplo de:",
+
+        alternativas: [
+          "Transformação química.",
+          "Fusão.",
+          "Evaporação.",
+          "Transformação exclusivamente física.",
+          "Separação de mistura."
+        ],
+
+        correta: 0
+      }
+
+    ]
+
+  },
+
+
+  /* =====================================================
+     MÓDULO 14
+     HUMANAS — ESTADO, PODER E DEMOCRACIA
+  ===================================================== */
+
+  {
+    id: 14,
+    ordem: 14,
+    area: "Ciências Humanas",
+
+    titulo:
+      "Estado, Poder e Democracia",
+
+    descricao:
+      "Compreenda conceitos políticos fundamentais para interpretar cidadania, instituições, poder e democracia.",
+
+    dificuldade: "Base ENEM",
+    xp: 170,
+
+    teoria: {
+
+      introducao:
+        "Questões de política no ENEM não dependem apenas de memorizar nomes de governantes. É necessário compreender conceitos como Estado, governo, poder, cidadania, democracia, representação e participação política.",
+
+      topicos: [
+
+        {
+          titulo:
+            "1. Estado",
+
+          texto:
+            "Estado é uma organização política que exerce autoridade sobre determinado território e população por meio de instituições e normas. Ele possui continuidade além dos indivíduos que ocupam temporariamente cargos políticos."
+        },
+
+        {
+          titulo:
+            "2. Estado não é governo",
+
+          texto:
+            "Governo é o conjunto de autoridades responsáveis pela administração política em determinado período. Governos mudam; o Estado e suas instituições possuem maior permanência."
+        },
+
+        {
+          titulo:
+            "3. Poder",
+
+          texto:
+            "Poder pode ser entendido como capacidade de influenciar comportamentos, decisões e relações sociais. Ele não existe apenas dentro do Estado: também aparece em instituições, empresas, relações econômicas, culturais e sociais."
+        },
+
+        {
+          titulo:
+            "4. Democracia",
+
+          texto:
+            "Democracia envolve participação política, direitos, mecanismos de representação e possibilidade de disputa pelo poder segundo determinadas regras. Eleições são importantes, mas democracia não se resume ao ato de votar."
+        },
+
+        {
+          titulo:
+            "5. Democracia representativa",
+
+          texto:
+            "Em democracias representativas, cidadãos elegem representantes para exercer funções políticas. Isso não elimina outras formas de participação, como mobilizações, organizações civis, audiências e mecanismos de controle social."
+        },
+
+        {
+          titulo:
+            "6. Cidadania",
+
+          texto:
+            "Cidadania envolve direitos e participação na vida social e política. Direitos civis, políticos e sociais foram historicamente conquistados e ampliados por diferentes grupos."
+        },
+
+        {
+          titulo:
+            "7. Separação dos poderes",
+
+          texto:
+            "A organização estatal moderna pode distribuir funções entre Poder Executivo, Legislativo e Judiciário. Em termos gerais, o Legislativo produz normas, o Executivo administra e implementa políticas e o Judiciário aplica e interpreta o direito nos casos de sua competência."
+        },
+
+        {
+          titulo:
+            "8. Participação política",
+
+          texto:
+            "Participar politicamente não significa apenas candidatar-se a cargos. Voto, associações, movimentos sociais, manifestações, conselhos e debates públicos podem constituir formas de participação."
+        },
+
+        {
+          titulo:
+            "9. Leia questões políticas historicamente",
+
+          texto:
+            "Uma instituição política precisa ser analisada em seu contexto histórico. Democracia, cidadania e direitos assumiram diferentes formas ao longo do tempo. Evite projetar automaticamente conceitos atuais sobre sociedades antigas."
+        }
+
+      ]
+
+    },
+
+    videoaula: {
+      titulo: "Videoaula complementar",
+      url: ""
+    },
+
+    exercicios: [
+
+      {
+        pergunta:
+          "Qual é a diferença mais adequada entre Estado e governo?",
+
+        alternativas: [
+          "Não existe diferença.",
+          "O Estado possui instituições mais permanentes, enquanto governos são administrações temporárias.",
+          "O governo é sempre permanente.",
+          "Estado significa somente território.",
+          "Governo significa somente Poder Judiciário."
+        ],
+
+        correta: 1
+      },
+
+      {
+        pergunta:
+          "Em uma democracia representativa:",
+
+        alternativas: [
+          "Não existem eleições.",
+          "A população elege representantes políticos.",
+          "Somente juízes exercem poder.",
+          "A participação social é proibida.",
+          "Não existem instituições."
+        ],
+
+        correta: 1
+      },
+
+      {
+        pergunta:
+          "Cidadania está relacionada principalmente a:",
+
+        alternativas: [
+          "Direitos, deveres e participação social e política.",
+          "Somente pagamento de impostos.",
+          "Somente nacionalidade.",
+          "Apenas eleições presidenciais.",
+          "Ausência de direitos sociais."
+        ],
+
+        correta: 0
+      },
+
+      {
+        pergunta:
+          "Qual dos itens é uma forma de participação política?",
+
+        alternativas: [
+          "Apenas ocupar cargo público.",
+          "Somente votar.",
+          "Voto, movimentos sociais e participação em organizações civis.",
+          "Somente filiação partidária.",
+          "Nenhuma manifestação coletiva."
+        ],
+
+        correta: 2
+      },
+
+      {
+        pergunta:
+          "Em termos gerais, qual poder possui função legislativa?",
+
+        alternativas: [
+          "Executivo.",
+          "Judiciário.",
+          "Legislativo.",
+          "Militar.",
+          "Econômico."
+        ],
+
+        correta: 2
+      }
+
+    ]
+
+  },
+
+
+  /* =====================================================
+     MÓDULO 15
+     MATEMÁTICA — PORCENTAGEM
+  ===================================================== */
+
+  {
+    id: 15,
+    ordem: 15,
+    area: "Matemática",
+
+    titulo:
+      "Porcentagem e Matemática Financeira",
+
+    descricao:
+      "Aprenda porcentagens, aumentos, descontos, variações sucessivas e conceitos financeiros essenciais.",
+
+    dificuldade: "Base ENEM",
+    xp: 180,
+
+    teoria: {
+
+      introducao:
+        "Porcentagem está entre os conteúdos matemáticos mais presentes no cotidiano e aparece em descontos, inflação, impostos, pesquisas, juros, variações populacionais e leitura de gráficos. Entender porcentagem como razão torna o conteúdo muito mais simples.",
+
+      topicos: [
+
+        {
+          titulo:
+            "1. O significado de porcentagem",
+
+          texto:
+            "Porcentagem significa 'por cento'. Assim, 25% = 25/100 = 0,25. Calcular 25% de 200 significa multiplicar 200 por 0,25, obtendo 50."
+        },
+
+        {
+          titulo:
+            "2. Porcentagens comuns",
+
+          texto:
+            "Algumas porcentagens podem ser calculadas mentalmente. 50% é metade; 25% é um quarto; 10% é dividir por 10; 1% é dividir por 100. Decompor porcentagens pode acelerar a prova."
+        },
+
+        {
+          titulo:
+            "3. Aumento percentual",
+
+          texto:
+            "Um produto de R$ 200 sofre aumento de 15%. O aumento é 200 × 0,15 = 30. Portanto, o novo preço é R$ 230. Também podemos calcular diretamente usando fator 1,15: 200 × 1,15 = 230."
+        },
+
+        {
+          titulo:
+            "4. Desconto percentual",
+
+          texto:
+            "Um desconto de 20% significa que permanece 80% do valor original. Assim, um produto de R$ 500 com 20% de desconto custa 500 × 0,80 = R$ 400."
+        },
+
+        {
+          titulo:
+            "5. Percentual de variação",
+
+          texto:
+            "Para descobrir quanto uma quantidade variou percentualmente, comparamos a variação ao valor inicial. Se um preço sobe de 80 para 100, houve aumento de 20. Como 20/80 = 0,25, o aumento foi de 25%."
+        },
+
+        {
+          titulo:
+            "6. Aumentar 20% e diminuir 20% não volta ao mesmo valor",
+
+          texto:
+            "Considere R$ 100. Um aumento de 20% leva a R$ 120. Depois, uma redução de 20% é calculada sobre 120, resultando em desconto de R$ 24. O valor final é R$ 96. As porcentagens foram aplicadas sobre bases diferentes."
+        },
+
+        {
+          titulo:
+            "7. Juros simples",
+
+          texto:
+            "Nos juros simples, o acréscimo por período é calculado sempre sobre o capital inicial. A expressão é J = C × i × t, em que C é o capital, i é a taxa e t é o tempo. Um capital de R$ 1000 a 2% ao mês durante 3 meses gera J = 1000 × 0,02 × 3 = R$ 60."
+        },
+
+        {
+          titulo:
+            "8. Juros compostos",
+
+          texto:
+            "Nos juros compostos, cada período utiliza como base o valor acumulado anteriormente. Por isso existe o chamado 'juros sobre juros'. Mesmo quando a questão não exige fórmula avançada, compreender essa lógica é essencial."
+        },
+
+        {
+          titulo:
+            "9. Taxa e período precisam combinar",
+
+          texto:
+            "Se a taxa está em porcentagem ao mês, o tempo utilizado no cálculo precisa estar em meses. Uma taxa anual não pode ser misturada diretamente com tempo mensal sem conversão adequada."
+        },
+
+        {
+          titulo:
+            "10. Estratégia ENEM",
+
+          texto:
+            "Antes de calcular, identifique sobre qual valor a porcentagem está sendo aplicada. Em variações sucessivas, essa base pode mudar. Essa é uma das principais fontes de erro."
+        }
+
+      ]
+
+    },
+
+    videoaula: {
+      titulo: "Videoaula complementar",
+      url: ""
+    },
+
+    exercicios: [
+
+      {
+        pergunta:
+          "Quanto é 30% de 250?",
+
+        alternativas: [
+          "25",
+          "50",
+          "75",
+          "100",
+          "125"
+        ],
+
+        correta: 2
+      },
+
+      {
+        pergunta:
+          "Um produto de R$ 400 recebe desconto de 15%. Qual é o novo preço?",
+
+        alternativas: [
+          "R$ 300",
+          "R$ 320",
+          "R$ 340",
+          "R$ 350",
+          "R$ 385"
+        ],
+
+        correta: 2
+      },
+
+      {
+        pergunta:
+          "Um preço passa de R$ 200 para R$ 250. Qual foi o aumento percentual?",
+
+        alternativas: [
+          "10%",
+          "20%",
+          "25%",
+          "40%",
+          "50%"
+        ],
+
+        correta: 2
+      },
+
+      {
+        pergunta:
+          "R$ 100 recebem aumento de 20% e depois desconto de 20%. O valor final é:",
+
+        alternativas: [
+          "R$ 80",
+          "R$ 96",
+          "R$ 100",
+          "R$ 104",
+          "R$ 120"
+        ],
+
+        correta: 1
+      },
+
+      {
+        pergunta:
+          "Um capital de R$ 2000 aplicado a juros simples de 3% ao mês por 4 meses gera quanto de juros?",
+
+        alternativas: [
+          "R$ 60",
+          "R$ 120",
+          "R$ 180",
+          "R$ 240",
+          "R$ 320"
+        ],
+
+        correta: 3
+      }
+
+    ]
+
+  },
+
+
+  /* =====================================================
+     MÓDULO 16
+     MATEMÁTICA — EQUAÇÃO DO PRIMEIRO GRAU
+     REFORÇO ESPECIAL
+  ===================================================== */
+
+  {
+    id: 16,
+    ordem: 16,
+    area: "Matemática",
+
+    titulo:
+      "Equação do Primeiro Grau",
+
+    descricao:
+      "Domine equações lineares desde os fundamentos até problemas contextualizados, distributiva, frações e incógnitas nos dois membros.",
+
+    dificuldade: "Reforço essencial",
+    xp: 220,
+
+    teoria: {
+
+      introducao:
+        "Equação do primeiro grau é uma das bases de toda a Álgebra. Não basta decorar a ideia de 'passar para o outro lado trocando o sinal'. O objetivo deste módulo é entender o princípio da igualdade. Uma equação funciona como uma balança: qualquer operação realizada em um membro precisa preservar a equivalência com o outro. Quando esse conceito fica claro, equações com parênteses, frações e incógnitas dos dois lados deixam de parecer regras diferentes.",
+
+      topicos: [
+
+        {
+          titulo:
+            "1. O que é uma equação?",
+
+          texto:
+            "Uma equação é uma igualdade que contém pelo menos uma incógnita. Na equação x + 5 = 12, x representa um valor desconhecido. Resolver a equação significa descobrir qual valor torna a igualdade verdadeira. Nesse caso, x = 7, pois 7 + 5 = 12."
+        },
+
+        {
+          titulo:
+            "2. Incógnita, membros e termos",
+
+          texto:
+            "Na expressão 3x + 2 = 17, a letra x é a incógnita. Tudo que aparece antes do sinal de igualdade forma o primeiro membro; o que aparece depois constitui o segundo membro. 3x, 2 e 17 são termos. Reconhecer essa estrutura ajuda a organizar a resolução."
+        },
+
+        {
+          titulo:
+            "3. O princípio da equivalência",
+
+          texto:
+            "Se duas expressões são iguais, podemos realizar a mesma operação nos dois lados sem destruir a igualdade. Em x + 5 = 12, subtraímos 5 dos dois membros: x + 5 - 5 = 12 - 5. Assim, x = 7. É daí que vem a famosa ideia de 'passar o 5 subtraindo'. Ela é uma abreviação de uma operação realizada nos dois lados."
+        },
+
+        {
+          titulo:
+            "4. Por que 'trocar o sinal' funciona?",
+
+          texto:
+            "Considere x - 8 = 20. Para eliminar o -8, somamos 8 aos dois membros: x - 8 + 8 = 20 + 8. Portanto x = 28. Quando alguém diz que '-8 passou para o outro lado como +8', está resumindo essa operação. Entender o motivo reduz erros de sinal."
+        },
+
+        {
+          titulo:
+            "5. Coeficiente da incógnita",
+
+          texto:
+            "Na equação 4x = 28, 4 multiplica x. Para isolar x, dividimos os dois membros por 4: x = 7. Da mesma forma, em x/5 = 3, multiplicamos os dois membros por 5 e encontramos x = 15."
+        },
+
+        {
+          titulo:
+            "6. Exemplo completo: 3x + 5 = 20",
+
+          texto:
+            "Primeiro eliminamos o termo independente: 3x + 5 = 20 → 3x = 20 - 5 → 3x = 15. Depois dividimos ambos os lados por 3: x = 5. Verificação: 3 × 5 + 5 = 15 + 5 = 20. Portanto a solução está correta."
+        },
+
+        {
+          titulo:
+            "7. Incógnita nos dois membros",
+
+          texto:
+            "Considere 5x + 4 = 2x + 19. Podemos subtrair 2x dos dois membros: 3x + 4 = 19. Depois subtraímos 4: 3x = 15. Finalmente dividimos por 3: x = 5. A estratégia é reunir os termos com x de um lado e os termos numéricos do outro."
+        },
+
+        {
+          titulo:
+            "8. Cuidado com sinais negativos",
+
+          texto:
+            "Na equação -2x + 3 = 11, primeiro temos -2x = 8. Dividindo por -2, encontramos x = -4. Verificando: -2 × (-4) + 3 = 8 + 3 = 11. Dois sinais negativos na multiplicação produzem resultado positivo."
+        },
+
+        {
+          titulo:
+            "9. Propriedade distributiva",
+
+          texto:
+            "Considere 3(x + 4) = 24. Antes de resolver, aplicamos a distributiva: 3x + 12 = 24. Depois: 3x = 12 e x = 4. O número fora dos parênteses multiplica TODOS os termos dentro deles."
+        },
+
+        {
+          titulo:
+            "10. Distributiva com sinal negativo",
+
+          texto:
+            "Em -2(x - 3) = 10, distribuímos -2: -2x + 6 = 10. Depois -2x = 4, portanto x = -2. Um erro comum é multiplicar apenas o primeiro termo ou esquecer que (-2) × (-3) = +6."
+        },
+
+        {
+          titulo:
+            "11. Parênteses dos dois lados",
+
+          texto:
+            "Exemplo: 2(x + 3) = 4(x - 1). Aplicando a distributiva: 2x + 6 = 4x - 4. Subtraindo 2x: 6 = 2x - 4. Somando 4: 10 = 2x. Logo x = 5."
+        },
+
+        {
+          titulo:
+            "12. Equações com frações",
+
+          texto:
+            "Considere x/3 + 2 = 6. Primeiro isolamos a fração: x/3 = 4. Depois multiplicamos ambos os lados por 3: x = 12. Em expressões com várias frações, uma estratégia útil é multiplicar todos os termos pelo mínimo múltiplo comum dos denominadores."
+        },
+
+        {
+          titulo:
+            "13. Exemplo com denominadores",
+
+          texto:
+            "Resolva x/2 + x/3 = 10. O MMC de 2 e 3 é 6. Multiplicando toda a equação por 6: 3x + 2x = 60. Então 5x = 60 e x = 12. Verificação: 12/2 + 12/3 = 6 + 4 = 10."
+        },
+
+        {
+          titulo:
+            "14. Transformando problemas em equações",
+
+          texto:
+            "Se um número somado a 9 resulta em 25, podemos representar o número por x e escrever x + 9 = 25. Portanto x = 16. Traduzir o enunciado para linguagem algébrica é uma habilidade tão importante quanto resolver a equação."
+        },
+
+        {
+          titulo:
+            "15. Problema de idade",
+
+          texto:
+            "Ana possui 6 anos a mais que Bruno. Juntos têm 30 anos. Se Bruno possui x anos, Ana possui x + 6. Então x + (x + 6) = 30. Temos 2x + 6 = 30, 2x = 24 e x = 12. Bruno tem 12 anos e Ana 18."
+        },
+
+        {
+          titulo:
+            "16. Problema com preço",
+
+          texto:
+            "Uma corrida de aplicativo cobra uma taxa fixa de R$ 8 mais R$ 3 por quilômetro. Se uma corrida custou R$ 38, quantos quilômetros foram percorridos? Montamos 8 + 3x = 38. Então 3x = 30 e x = 10 km."
+        },
+
+        {
+          titulo:
+            "17. Solução impossível",
+
+          texto:
+            "Algumas equações não possuem solução. Exemplo: 2x + 3 = 2x + 8. Subtraindo 2x dos dois lados, obtemos 3 = 8, uma afirmação falsa. Portanto não existe valor de x que satisfaça essa igualdade."
+        },
+
+        {
+          titulo:
+            "18. Infinitas soluções",
+
+          texto:
+            "Outras equações são verdadeiras para qualquer valor de x. Exemplo: 2(x + 3) = 2x + 6. Aplicando a distributiva, obtemos 2x + 6 = 2x + 6. Os dois lados são idênticos, portanto qualquer valor real de x satisfaz a equação."
+        },
+
+        {
+          titulo:
+            "19. Sempre verifique",
+
+          texto:
+            "Depois de encontrar x, substitua o valor na equação original. Essa verificação detecta rapidamente erros de sinal e de cálculo. Se os dois membros produzirem o mesmo resultado, a solução está correta."
+        },
+
+        {
+          titulo:
+            "20. Estratégia para não errar",
+
+          texto:
+            "Organize uma transformação por linha. Evite fazer várias operações mentalmente ao mesmo tempo. Primeiro elimine parênteses quando necessário, simplifique termos semelhantes, reúna incógnitas de um lado, números do outro e só então divida pelo coeficiente de x."
+        }
+
+      ]
+
+    },
+
+    videoaula: {
+      titulo: "Videoaula complementar",
+      url: ""
+    },
+
+    exercicios: [
+
+      {
+        pergunta:
+          "Resolva: x + 7 = 19.",
+
+        alternativas: [
+          "10",
+          "11",
+          "12",
+          "13",
+          "26"
+        ],
+
+        correta: 2
+      },
+
+      {
+        pergunta:
+          "Resolva: 4x = 36.",
+
+        alternativas: [
+          "4",
+          "8",
+          "9",
+          "12",
+          "32"
+        ],
+
+        correta: 2
+      },
+
+      {
+        pergunta:
+          "Resolva: 3x + 5 = 26.",
+
+        alternativas: [
+          "5",
+          "6",
+          "7",
+          "8",
+          "9"
+        ],
+
+        correta: 2
+      },
+
+      {
+        pergunta:
+          "Resolva: 5x + 2 = 2x + 20.",
+
+        alternativas: [
+          "4",
+          "5",
+          "6",
+          "7",
+          "8"
+        ],
+
+        correta: 2
+      },
+
+      {
+        pergunta:
+          "Resolva: 2(x + 3) = 18.",
+
+        alternativas: [
+          "3",
+          "6",
+          "7",
+          "9",
+          "12"
+        ],
+
+        correta: 1
+      },
+
+      {
+        pergunta:
+          "Resolva: -3x + 6 = 18.",
+
+        alternativas: [
+          "-8",
+          "-4",
+          "4",
+          "6",
+          "8"
+        ],
+
+        correta: 1
+      },
+
+      {
+        pergunta:
+          "Resolva: x/4 + 2 = 7.",
+
+        alternativas: [
+          "5",
+          "12",
+          "16",
+          "20",
+          "28"
+        ],
+
+        correta: 3
+      },
+
+      {
+        pergunta:
+          "Resolva: x/2 + x/3 = 15.",
+
+        alternativas: [
+          "12",
+          "15",
+          "18",
+          "24",
+          "30"
+        ],
+
+        correta: 2
+      },
+
+      {
+        pergunta:
+          "Um número somado ao seu dobro resulta em 36. Qual é esse número?",
+
+        alternativas: [
+          "8",
+          "10",
+          "12",
+          "18",
+          "24"
+        ],
+
+        correta: 2
+      },
+
+      {
+        pergunta:
+          "Uma corrida cobra R$ 10 fixos mais R$ 4 por quilômetro. Se o total foi R$ 50, quantos quilômetros foram percorridos?",
+
+        alternativas: [
+          "8",
+          "10",
+          "12",
+          "15",
+          "20"
+        ],
+
+        correta: 1
+      }
+
+    ]
+
+  },
+
+
+  /* =====================================================
+     MÓDULO 17
+     MATEMÁTICA — EQUAÇÃO DO SEGUNDO GRAU
+     REFORÇO ESPECIAL
+  ===================================================== */
+
+  {
+    id: 17,
+    ordem: 17,
+    area: "Matemática",
+
+    titulo:
+      "Equação do Segundo Grau",
+
+    descricao:
+      "Aprenda equações quadráticas desde a identificação dos coeficientes até Bhaskara, discriminante, fatoração e interpretação das raízes.",
+
+    dificuldade: "Reforço essencial",
+    xp: 240,
+
+    teoria: {
+
+      introducao:
+        "Uma equação do segundo grau possui uma incógnita elevada ao quadrado como maior potência. Esse conteúdo costuma parecer difícil porque envolve várias etapas, mas todas seguem uma sequência lógica. Neste módulo você aprenderá a reconhecer a equação, identificar a, b e c, calcular o discriminante, aplicar a fórmula de Bhaskara, resolver casos incompletos e interpretar as raízes.",
+
+      topicos: [
+
+        {
+          titulo:
+            "1. Forma geral",
+
+          texto:
+            "A forma geral de uma equação do segundo grau é ax² + bx + c = 0, com a diferente de zero. O termo ax² é quadrático, bx é linear e c é o termo independente."
+        },
+
+        {
+          titulo:
+            "2. Identificando a, b e c",
+
+          texto:
+            "Na equação 2x² + 5x - 3 = 0, temos a = 2, b = 5 e c = -3. Os sinais fazem parte dos coeficientes. Em x² - 7x + 10 = 0, temos a = 1, b = -7 e c = 10."
+        },
+
+        {
+          titulo:
+            "3. Quando um termo está ausente",
+
+          texto:
+            "Em x² - 9 = 0 não existe termo com x. Portanto b = 0. Em x² + 5x = 0 não existe termo independente, então c = 0. Identificar zeros corretamente é importante para qualquer fórmula."
+        },
+
+        {
+          titulo:
+            "4. Equações completas e incompletas",
+
+          texto:
+            "Uma equação completa apresenta a, b e c diferentes de zero. Uma equação incompleta possui b = 0, c = 0 ou ambos. Casos incompletos frequentemente podem ser resolvidos sem Bhaskara."
+        },
+
+        {
+          titulo:
+            "5. Caso x² = número",
+
+          texto:
+            "Em x² - 25 = 0, temos x² = 25. Existem dois números reais cujo quadrado é 25: 5 e -5. Portanto x = ±5. Um erro frequente é esquecer a raiz negativa."
+        },
+
+        {
+          titulo:
+            "6. Fator comum",
+
+          texto:
+            "Em x² - 6x = 0, colocamos x em evidência: x(x - 6) = 0. Para o produto ser zero, pelo menos um fator precisa ser zero. Assim x = 0 ou x - 6 = 0, resultando em x = 6."
+        },
+
+        {
+          titulo:
+            "7. Fatoração",
+
+          texto:
+            "Algumas equações podem ser escritas como produto. Por exemplo, x² - 5x + 6 = 0 pode ser fatorada como (x - 2)(x - 3) = 0. Portanto as raízes são 2 e 3."
+        },
+
+        {
+          titulo:
+            "8. Discriminante",
+
+          texto:
+            "O discriminante é representado pela letra grega delta: Δ = b² - 4ac. Ele aparece na fórmula de resolução e também indica quantas raízes reais distintas a equação possui."
+        },
+
+        {
+          titulo:
+            "9. Interpretando Δ",
+
+          texto:
+            "Se Δ > 0, existem duas raízes reais diferentes. Se Δ = 0, existe uma raiz real dupla. Se Δ < 0, não existem raízes reais. Em estudos futuros, esse último caso poderá ser tratado com números complexos."
+        },
+
+        {
+          titulo:
+            "10. Fórmula de Bhaskara",
+
+          texto:
+            "Depois de calcular Δ, utilizamos x = (-b ± √Δ)/(2a). O símbolo ± indica que realizamos duas operações: uma usando + e outra usando -. Assim podemos encontrar duas raízes."
+        },
+
+        {
+          titulo:
+            "11. Exemplo completo: x² - 5x + 6 = 0",
+
+          texto:
+            "Temos a = 1, b = -5 e c = 6. Δ = (-5)² - 4×1×6 = 25 - 24 = 1. Então x = [5 ± √1]/2. Logo x₁ = (5 + 1)/2 = 3 e x₂ = (5 - 1)/2 = 2."
+        },
+
+        {
+          titulo:
+            "12. Atenção ao -b",
+
+          texto:
+            "Se b = -5, então -b = -(-5) = +5. Esse é um dos erros mais frequentes. Sempre escreva os coeficientes antes de substituí-los na fórmula."
+        },
+
+        {
+          titulo:
+            "13. Atenção a b²",
+
+          texto:
+            "Se b = -4, então b² = (-4)² = 16. Escrever -4² sem parênteses pode causar confusão, pois pela ordem das operações isso pode ser interpretado como -(4²) = -16."
+        },
+
+        {
+          titulo:
+            "14. Exemplo com a diferente de 1",
+
+          texto:
+            "Resolva 2x² - 7x + 3 = 0. a = 2, b = -7 e c = 3. Δ = 49 - 24 = 25. x = [7 ± 5]/4. Assim x₁ = 12/4 = 3 e x₂ = 2/4 = 1/2."
+        },
+
+        {
+          titulo:
+            "15. Exemplo com Δ = 0",
+
+          texto:
+            "Na equação x² - 6x + 9 = 0, Δ = 36 - 36 = 0. Portanto x = 6/2 = 3. Existe apenas uma raiz real distinta, chamada raiz dupla."
+        },
+
+        {
+          titulo:
+            "16. Exemplo com Δ negativo",
+
+          texto:
+            "Em x² + x + 5 = 0, Δ = 1 - 20 = -19. Como o discriminante é negativo, a equação não possui solução no conjunto dos números reais."
+        },
+
+        {
+          titulo:
+            "17. Relação com problemas",
+
+          texto:
+            "Equações quadráticas podem aparecer quando duas grandezas desconhecidas são multiplicadas. Em problemas de área, por exemplo, comprimento e largura podem depender de x, produzindo um termo x²."
+        },
+
+        {
+          titulo:
+            "18. Problema de área",
+
+          texto:
+            "Um retângulo possui lados x e x + 3 e área 40. Temos x(x + 3) = 40, então x² + 3x - 40 = 0. Fatorando: (x + 8)(x - 5) = 0. As soluções algébricas são -8 e 5, mas comprimento não pode ser negativo. Portanto x = 5."
+        },
+
+        {
+          titulo:
+            "19. Nem toda raiz serve ao problema",
+
+          texto:
+            "A equação pode produzir duas soluções matematicamente válidas, mas o contexto pode eliminar alguma delas. Idade, comprimento, quantidade de pessoas e tempo normalmente não admitem determinados valores negativos."
+        },
+
+        {
+          titulo:
+            "20. Sequência segura",
+
+          texto:
+            "Organize a equação na forma ax² + bx + c = 0. Identifique a, b e c com os sinais. Veja se existe método simples de fatoração. Caso necessário, calcule Δ, analise seu sinal, substitua na fórmula e finalmente verifique se as raízes fazem sentido no problema."
+        }
+
+      ]
+
+    },
+
+    videoaula: {
+      titulo: "Videoaula complementar",
+      url: ""
+    },
+
+    exercicios: [
+
+      {
+        pergunta:
+          "Na equação 3x² - 8x + 2 = 0, quais são os coeficientes a, b e c?",
+
+        alternativas: [
+          "3, 8 e 2",
+          "3, -8 e 2",
+          "-3, 8 e 2",
+          "3, -8 e -2",
+          "8, 3 e 2"
+        ],
+
+        correta: 1
+      },
+
+      {
+        pergunta:
+          "Quais são as soluções de x² - 16 = 0?",
+
+        alternativas: [
+          "Somente 4",
+          "Somente -4",
+          "4 e -4",
+          "8 e -8",
+          "16 e -16"
+        ],
+
+        correta: 2
+      },
+
+      {
+        pergunta:
+          "Resolva x² - 5x + 6 = 0.",
+
+        alternativas: [
+          "1 e 6",
+          "2 e 3",
+          "-2 e -3",
+          "3 e 6",
+          "1 e 5"
+        ],
+
+        correta: 1
+      },
+
+      {
+        pergunta:
+          "Qual é o valor de Δ em x² - 4x + 4 = 0?",
+
+        alternativas: [
+          "-4",
+          "0",
+          "4",
+          "8",
+          "16"
+        ],
+
+        correta: 1
+      },
+
+      {
+        pergunta:
+          "Quando Δ é negativo, uma equação do segundo grau possui:",
+
+        alternativas: [
+          "Duas raízes reais diferentes.",
+          "Uma raiz real dupla.",
+          "Nenhuma raiz real.",
+          "Sempre a raiz zero.",
+          "Infinitas raízes reais."
+        ],
+
+        correta: 2
+      },
+
+      {
+        pergunta:
+          "Resolva 2x² - 8x = 0.",
+
+        alternativas: [
+          "0 e 2",
+          "0 e 4",
+          "2 e 4",
+          "-4 e 4",
+          "Somente 4"
+        ],
+
+        correta: 1
+      },
+
+      {
+        pergunta:
+          "Resolva x² - 6x + 9 = 0.",
+
+        alternativas: [
+          "x = -3",
+          "x = 0",
+          "x = 3",
+          "x = 6",
+          "x = 9"
+        ],
+
+        correta: 2
+      },
+
+      {
+        pergunta:
+          "Em 2x² - 7x + 3 = 0, as raízes são:",
+
+        alternativas: [
+          "1 e 3",
+          "1/2 e 3",
+          "-1/2 e -3",
+          "2 e 3",
+          "1/2 e 7"
+        ],
+
+        correta: 1
+      },
+
+      {
+        pergunta:
+          "Um retângulo possui lados x e x + 3 e área igual a 40. Qual valor positivo de x satisfaz o problema?",
+
+        alternativas: [
+          "4",
+          "5",
+          "8",
+          "10",
+          "20"
+        ],
+
+        correta: 1
+      },
+
+      {
+        pergunta:
+          "Na expressão x² + 7 = 0, considerando apenas números reais:",
+
+        alternativas: [
+          "x = 7",
+          "x = -7",
+          "x = ±7",
+          "Não existe solução real.",
+          "x = 0"
+        ],
+
+        correta: 3
+      }
+
+    ]
+
+  },
+
+
+  /* =====================================================
+     MÓDULO 18
+     MATEMÁTICA — TEOREMA DE PITÁGORAS
+     REFORÇO ESPECIAL
+  ===================================================== */
+
+  {
+    id: 18,
+    ordem: 18,
+    area: "Matemática",
+
+    titulo:
+      "Teorema de Pitágoras e Triângulo Retângulo",
+
+    descricao:
+      "Domine catetos, hipotenusa e o Teorema de Pitágoras em problemas de diagonal, altura, distância e aplicações geométricas.",
+
+    dificuldade: "Reforço essencial",
+    xp: 250,
+
+    teoria: {
+
+      introducao:
+        "O Teorema de Pitágoras é uma das relações mais importantes da geometria e aparece com frequência em problemas de distância, altura, diagonal e deslocamento. O ponto central deste módulo é aprender a reconhecer um triângulo retângulo, identificar corretamente catetos e hipotenusa e aplicar a relação matemática com segurança. Mais importante do que decorar a fórmula é entender quando ela pode ser utilizada e como interpretar o resultado no contexto do problema.",
+
+      topicos: [
+
+        {
+          titulo:
+            "1. O que é um triângulo retângulo?",
+
+          texto:
+            "Triângulo retângulo é aquele que possui um ângulo de 90°. Esse ângulo é chamado ângulo reto. A presença do ângulo de 90° é a condição fundamental para aplicar diretamente o Teorema de Pitágoras."
+        },
+
+        {
+          titulo:
+            "2. Catetos",
+
+          texto:
+            "Os dois lados que formam o ângulo de 90° são chamados catetos. Dependendo da posição do triângulo, eles podem aparecer na vertical, horizontal ou inclinados. O nome não depende da posição no desenho, mas da relação com o ângulo reto."
+        },
+
+        {
+          titulo:
+            "3. Hipotenusa",
+
+          texto:
+            "A hipotenusa é o lado oposto ao ângulo de 90° e é sempre o maior lado do triângulo retângulo. Esse é o critério mais seguro para identificá-la. Mesmo que a figura esteja girada, a hipotenusa continua sendo o lado em frente ao ângulo reto."
+        },
+
+        {
+          titulo:
+            "4. Como identificar os lados corretamente",
+
+          texto:
+            "Antes de fazer qualquer conta, localize o ângulo reto. Os lados que encostam nele são os catetos. O lado que não forma o ângulo reto é a hipotenusa. Muitos erros acontecem porque o estudante escolhe a hipotenusa apenas por parecer inclinada ou maior no desenho."
+        },
+
+        {
+          titulo:
+            "5. Teorema de Pitágoras",
+
+          texto:
+            "Em todo triângulo retângulo, o quadrado da hipotenusa é igual à soma dos quadrados dos catetos. Se os catetos são a e b e a hipotenusa é c, então a² + b² = c²."
+        },
+
+        {
+          titulo:
+            "6. O que significa elevar um lado ao quadrado",
+
+          texto:
+            "Elevar um comprimento ao quadrado significa multiplicá-lo por ele mesmo. Se um cateto mede 6, então 6² = 36. Na fórmula de Pitágoras, primeiro calculamos os quadrados dos comprimentos, depois realizamos as operações indicadas."
+        },
+
+        {
+          titulo:
+            "7. Encontrando a hipotenusa",
+
+          texto:
+            "Se os catetos medem 3 e 4, temos c² = 3² + 4². Então c² = 9 + 16 = 25. Como c é um comprimento positivo, c = √25 = 5. Portanto a hipotenusa mede 5."
+        },
+
+        {
+          titulo:
+            "8. Encontrando um cateto",
+
+          texto:
+            "Se a hipotenusa mede 13 e um cateto mede 5, escrevemos 5² + x² = 13². Assim, 25 + x² = 169. Subtraindo 25 dos dois lados, x² = 144. Logo x = 12. Quando buscamos um cateto, normalmente subtraímos o quadrado do cateto conhecido do quadrado da hipotenusa."
+        },
+
+        {
+          titulo:
+            "9. A raiz quadrada no final",
+
+          texto:
+            "Depois de encontrar algo como x² = 81, precisamos calcular x = √81. Como estamos tratando de comprimento, consideramos o valor positivo: x = 9. O resultado negativo não representa comprimento nesse contexto."
+        },
+
+        {
+          titulo:
+            "10. Terno pitagórico 3, 4 e 5",
+
+          texto:
+            "O conjunto 3, 4 e 5 aparece com muita frequência porque 3² + 4² = 5². Isso significa 9 + 16 = 25. Qualquer múltiplo desses valores também forma um triângulo retângulo semelhante, como 6, 8 e 10."
+        },
+
+        {
+          titulo:
+            "11. Outros ternos pitagóricos",
+
+          texto:
+            "Também são úteis os conjuntos 5, 12 e 13, e 8, 15 e 17. Reconhecer esses padrões pode acelerar questões, mas não substitui o raciocínio. Se não lembrar o trio, basta aplicar o Teorema de Pitágoras normalmente."
+        },
+
+        {
+          titulo:
+            "12. Diagonal de um retângulo",
+
+          texto:
+            "A diagonal de um retângulo divide a figura em dois triângulos retângulos. Se um retângulo possui lados 6 e 8, sua diagonal d satisfaz d² = 6² + 8² = 36 + 64 = 100. Portanto d = 10."
+        },
+
+        {
+          titulo:
+            "13. Diagonal de um quadrado",
+
+          texto:
+            "Em um quadrado de lado 5, a diagonal forma um triângulo retângulo com catetos iguais a 5. Assim, d² = 5² + 5² = 25 + 25 = 50. Logo d = √50 = 5√2."
+        },
+
+        {
+          titulo:
+            "14. Escada apoiada em uma parede",
+
+          texto:
+            "Uma escada de 10 metros apoiada em uma parede forma um triângulo retângulo com o chão e a parede. A escada é a hipotenusa. Se a base está a 6 metros da parede, então h² + 6² = 10². Temos h² = 64, portanto h = 8 metros."
+        },
+
+        {
+          titulo:
+            "15. Distância entre dois pontos",
+
+          texto:
+            "Deslocamentos horizontais e verticais podem formar um triângulo retângulo. Se uma pessoa anda 9 metros para leste e depois 12 metros para norte, a distância em linha reta até o ponto inicial é √(9² + 12²) = √225 = 15 metros."
+        },
+
+        {
+          titulo:
+            "16. Problemas com altura",
+
+          texto:
+            "Problemas de postes, prédios, árvores e rampas frequentemente criam triângulos retângulos. O segredo é identificar qual segmento representa a altura, qual representa a base e qual representa a hipotenusa."
+        },
+
+        {
+          titulo:
+            "17. Problemas com rampas",
+
+          texto:
+            "Uma rampa de 5 metros liga dois níveis separados verticalmente por 3 metros. A rampa é a hipotenusa. Se x é a distância horizontal, então x² + 3² = 5². Logo x² = 16 e x = 4."
+        },
+
+        {
+          titulo:
+            "18. Pitágoras não vale para qualquer triângulo",
+
+          texto:
+            "A relação a² + b² = c² só pode ser aplicada diretamente a triângulos retângulos. Em um triângulo sem ângulo de 90°, essa fórmula não pode ser usada dessa forma."
+        },
+
+        {
+          titulo:
+            "19. Verificando se um triângulo é retângulo",
+
+          texto:
+            "Também podemos usar a relação ao contrário. Se o quadrado do maior lado for igual à soma dos quadrados dos outros dois, o triângulo é retângulo. Por exemplo, para 7, 24 e 25: 7² + 24² = 49 + 576 = 625 = 25²."
+        },
+
+        {
+          titulo:
+            "20. Cuidado com o maior lado",
+
+          texto:
+            "Ao verificar se um triângulo é retângulo, o maior lado deve ocupar o lugar da hipotenusa na comparação. Se os lados são 6, 8 e 10, usamos 6² + 8² e comparamos com 10²."
+        },
+
+        {
+          titulo:
+            "21. Figuras podem não estar em escala",
+
+          texto:
+            "Em provas, desenhos geométricos podem ser apenas representações. Não conclua que um lado é maior só porque parece maior. Utilize medidas, símbolos de ângulo e informações do enunciado."
+        },
+
+        {
+          titulo:
+            "22. Estratégia passo a passo",
+
+          texto:
+            "1) Identifique o ângulo de 90°. 2) Localize a hipotenusa. 3) Identifique os catetos. 4) Escreva a² + b² = c². 5) Substitua os valores. 6) Resolva a equação. 7) Verifique se o resultado faz sentido no problema."
+        },
+
+        {
+          titulo:
+            "23. Erro comum: confundir hipotenusa com cateto",
+
+          texto:
+            "A hipotenusa nunca é um dos lados que formam o ângulo reto. Se você colocar um cateto no lugar da hipotenusa, a equação será montada de maneira incorreta desde o início."
+        },
+
+        {
+          titulo:
+            "24. Erro comum: esquecer a raiz",
+
+          texto:
+            "Se a conta termina em c² = 100, a resposta não é 100. Ainda precisamos calcular c = √100 = 10."
+        },
+
+        {
+          titulo:
+            "25. Erro comum: somar lados em vez de quadrados",
+
+          texto:
+            "Pitágoras não afirma que a soma dos catetos é igual à hipotenusa. Em um triângulo 3-4-5, 3 + 4 = 7, e não 5. A relação correta envolve quadrados: 3² + 4² = 5²."
+        },
+
+        {
+          titulo:
+            "26. Estratégia para o ENEM",
+
+          texto:
+            "Questões do ENEM frequentemente escondem o triângulo retângulo dentro de uma situação real: diagonal de tela, escada, rampa, cabo, distância em mapa, deslocamento ou altura. Antes de calcular, desenhe ou visualize o triângulo formado pelas grandezas."
+        }
+
+      ]
+
+    },
+
+    videoaula: {
+      titulo: "Videoaula complementar",
+      url: ""
+    },
+
+    exercicios: [
+
+      {
+        pergunta:
+          "Em um triângulo retângulo, qual lado é chamado de hipotenusa?",
+
+        alternativas: [
+          "Qualquer lado do triângulo.",
+          "O menor lado.",
+          "O lado oposto ao ângulo de 90°.",
+          "Um dos lados que formam o ângulo reto.",
+          "Sempre o lado horizontal."
+        ],
+
+        correta: 2
+      },
+
+      {
+        pergunta:
+          "Um triângulo retângulo possui catetos medindo 3 e 4. Qual é a hipotenusa?",
+
+        alternativas: [
+          "5",
+          "6",
+          "7",
+          "12",
+          "25"
+        ],
+
+        correta: 0
+      },
+
+      {
+        pergunta:
+          "Um triângulo retângulo possui catetos medindo 6 e 8. Qual é a hipotenusa?",
+
+        alternativas: [
+          "9",
+          "10",
+          "12",
+          "14",
+          "48"
+        ],
+
+        correta: 1
+      },
+
+      {
+        pergunta:
+          "A hipotenusa mede 13 e um dos catetos mede 5. Quanto mede o outro cateto?",
+
+        alternativas: [
+          "8",
+          "10",
+          "12",
+          "14",
+          "18"
+        ],
+
+        correta: 2
+      },
+
+      {
+        pergunta:
+          "Qual conjunto abaixo forma um triângulo retângulo?",
+
+        alternativas: [
+          "2, 3 e 4",
+          "3, 4 e 5",
+          "4, 5 e 6",
+          "5, 6 e 7",
+          "6, 7 e 8"
+        ],
+
+        correta: 1
+      },
+
+      {
+        pergunta:
+          "Um retângulo possui lados 9 e 12. Quanto mede sua diagonal?",
+
+        alternativas: [
+          "13",
+          "15",
+          "18",
+          "21",
+          "108"
+        ],
+
+        correta: 1
+      },
+
+      {
+        pergunta:
+          "Uma escada de 10 m está apoiada em uma parede. Sua base está a 6 m da parede. Qual altura ela alcança?",
+
+        alternativas: [
+          "4 m",
+          "6 m",
+          "8 m",
+          "10 m",
+          "16 m"
+        ],
+
+        correta: 2
+      },
+
+      {
+        pergunta:
+          "Uma pessoa anda 9 m para leste e depois 12 m para norte. Qual é a distância em linha reta entre o ponto inicial e o final?",
+
+        alternativas: [
+          "12 m",
+          "15 m",
+          "18 m",
+          "21 m",
+          "108 m"
+        ],
+
+        correta: 1
+      },
+
+      {
+        pergunta:
+          "Uma rampa possui 5 m de comprimento e alcança uma altura de 3 m. Qual é a distância horizontal entre seu início e o ponto diretamente abaixo de seu final?",
+
+        alternativas: [
+          "2 m",
+          "3 m",
+          "4 m",
+          "5 m",
+          "8 m"
+        ],
+
+        correta: 2
+      },
+
+      {
+        pergunta:
+          "Os lados 7, 24 e 25 formam um triângulo retângulo porque:",
+
+        alternativas: [
+          "7 + 24 = 25.",
+          "7² + 24² = 25².",
+          "7 × 24 = 25².",
+          "25 - 24 = 7.",
+          "7² + 25² = 24²."
+        ],
+
+        correta: 1
+      },
+
+      {
+        pergunta:
+          "Um triângulo possui lados 6, 8 e 11. Ele é retângulo?",
+
+        alternativas: [
+          "Sim, porque 6 + 8 > 11.",
+          "Sim, porque 6² + 8² = 11².",
+          "Não, porque 6² + 8² é diferente de 11².",
+          "Não, porque todo triângulo com lados diferentes não é retângulo.",
+          "Não é possível verificar."
+        ],
+
+        correta: 2
+      },
+
+      {
+        pergunta:
+          "Em um quadrado de lado 5, a diagonal mede:",
+
+        alternativas: [
+          "5",
+          "10",
+          "5√2",
+          "25",
+          "√5"
+        ],
+
+        correta: 2
+      }
+
+    ]
+
+  }
 
 ];

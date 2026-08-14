@@ -2,6 +2,7 @@ const container =
   document.getElementById("trailContainer");
 
 let usuarioLogado = null;
+let usuarioEhAdmin = false;
 
 
 /* =========================================
@@ -36,6 +37,34 @@ async function iniciarTrilha() {
 
   usuarioLogado =
     session.user;
+
+
+  /* =========================================
+     VERIFICAR SE É ADMIN
+  ========================================= */
+
+  const {
+    data: profile,
+    error: profileError
+  } = await supabaseClient
+    .from("profiles")
+    .select("role")
+    .eq("id", usuarioLogado.id)
+    .single();
+
+
+  if (profileError) {
+
+    console.error(
+      "Erro ao verificar perfil:",
+      profileError
+    );
+
+  }
+
+
+  usuarioEhAdmin =
+    profile?.role === "admin";
 
 
   await montarTrilha();
@@ -143,21 +172,31 @@ async function montarTrilha() {
 
 
       /*
-        O PRIMEIRO MÓDULO
-        SEMPRE FICA DISPONÍVEL.
+        ADMIN:
+        pode acessar qualquer módulo.
 
-        Os outros só liberam
-        se o anterior estiver completo.
+        ALUNO:
+        primeiro módulo fica disponível.
+        Os demais só liberam se o anterior
+        estiver concluído.
       */
 
       let desbloqueado = false;
 
 
-      if (index === 0) {
+      if (usuarioEhAdmin) {
 
         desbloqueado = true;
 
-      } else {
+      }
+
+      else if (index === 0) {
+
+        desbloqueado = true;
+
+      }
+
+      else {
 
         const moduloAnterior =
           trilhaBahiasPrime[
@@ -233,13 +272,17 @@ function criarCard(
 
     numero = "✓";
 
-  } else if (
+  }
+
+  else if (
     !desbloqueado
   ) {
 
     numero = "🔒";
 
-  } else {
+  }
+
+  else {
 
     numero =
       modulo.ordem;
@@ -261,7 +304,9 @@ function criarCard(
       </a>
     `;
 
-  } else if (
+  }
+
+  else if (
     desbloqueado
   ) {
 
@@ -270,11 +315,17 @@ function criarCard(
         href="modulo.html?id=${modulo.id}"
         class="module-button"
       >
-        Começar módulo →
+        ${
+          usuarioEhAdmin
+            ? "Abrir módulo →"
+            : "Começar módulo →"
+        }
       </a>
     `;
 
-  } else {
+  }
+
+  else {
 
     botao = `
       <span class="locked-text">

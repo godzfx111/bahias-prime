@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Aula de Redação | Bahia's Prime</title>
+
+
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+
+  <link
+    rel="stylesheet"
+    href="../css/style.css"
+  >
+
+
+  <style>
+
+    .essay-class-page {
+      max-width: 1050px;
+      margin: 0 auto;
+      padding-bottom: 80px;
+    }
+
+
+    .essay-class-back {
+      display: inline-flex;
+      margin-bottom: 28px;
+
+      color: #9eb9db;
+      text-decoration: none;
+
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+
+    .essay-class-back:hover {
+      color: white;
+    }
+
+
+    .essay-class-hero {
+      padding: 38px;
+
+      border: 1px solid rgba(133, 105, 255, .25);
+
+      border-radius: 24px;
+
+      background:
+        linear-gradient(
+          135deg,
+          rgba(79, 70, 229, .18),
+          rgba(15, 25, 45, .5)
+        );
+
+      margin-bottom: 30px;
+    }
+
+
+    .essay-class-number {
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 1.4px;
+
+      color: #a28cff;
+    }
+
+
+    .essay-class-hero h1 {
+      font-family: "Manrope", sans-serif;
+
+      font-size: clamp(
+        30px,
+        5vw,
+        48px
+      );
+
+      margin:
+        12px
+        0
+        14px;
+
+      line-height: 1.08;
+    }
+
+
+    .essay-class-hero p {
+      max-width: 760px;
+
+      color: #9eb1ca;
+
+      font-size: 16px;
+
+      line-height: 1.75;
+    }
+
+
+    .essay-class-progress-top {
+      display: flex;
+
+      justify-content: space-between;
+
+      gap: 20px;
+
+      margin-top: 28px;
+
+      margin-bottom: 9px;
+
+      font-size: 13px;
+
+      color: #92a5c0;
+    }
+
+
+    .essay-class-progress {
+      height: 8px;
+
+      background: rgba(
+        255,
+        255,
+        255,
+        .07
+      );
+
+      border-radius: 999px;
+
+      overflow: hidden;
+    }
+
+
+    .essay-class-progress > div {
+      height: 100%;
+
+      border-radius: inherit;
+
+      background:
+        linear-gradient(
+          90deg,
+          #7657ff,
+          #9e7aff
+        );
+    }
+
+
+    .essay-content {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+
+    .essay-section {
+      padding: 32px;
+
+      background: #101f34;
+
+      border: 1px solid rgba(
+        255,
+        255,
+        255,
+        .075
+      );
+
+      border-radius: 20px;
+    }
+
+
+    .essay-section-index {
+      display: inline-flex;
+
+      align-items: center;
+      justify-content: center;
+
+      min-width: 42px;
+      height: 32px;
+
+      padding: 0 10px;
+
+      border-radius: 9px;
+
+      background:
+        rgba(
+          117,
+          87,
+          255,
+          .14
+        );
+
+      color: #a792ff;
+
+      font-size: 12px;
+      font-weight: 800;
+
+      margin-bottom: 14px;
+    }
+
+
+    .essay-section h2 {
+      font-family: "Manrope", sans-serif;
+
+      font-size: 23px;
+
+      margin-bottom: 16px;
+    }
+
+
+    .essay-section p {
+      color: #b0bfd2;
+
+      line-height: 1.82;
+
+      margin: 0 0 15px;
+    }
+
+
+    .essay-section p:last-child {
+      margin-bottom: 0;
+    }
+
+
+    .essay-box {
+      padding: 24px;
+
+      border-radius: 16px;
+
+      line-height: 1.7;
+    }
+
+
+    .essay-box strong {
+      display: block;
+
+      margin-bottom: 8px;
+
+      font-size: 13px;
+
+      letter-spacing: .6px;
+    }
+
+
+    .essay-tip {
+      background:
+        rgba(
+          65,
+          185,
+          140,
+          .08
+        );
+
+      border:
+        1px solid
+        rgba(
+          65,
+          185,
+          140,
+          .22
+        );
+    }
+
+
+    .essay-tip strong {
+      color: #65d9ae;
+    }
+
+
+    .essay-warning {
+      background:
+        rgba(
+          255,
+          177,
+          65,
+          .07
+        );
+
+      border:
+        1px solid
+        rgba(
+          255,
+          177,
+          65,
+          .2
+        );
+    }
+
+
+    .essay-warning strong {
+      color: #f4bd61;
+    }
+
+
+    .essay-example {
+      background:
+        rgba(
+          117,
+          87,
+          255,
+          .09
+        );
+
+      border:
+        1px solid
+        rgba(
+          117,
+          87,
+          255,
+          .24
+        );
+    }
+
+
+    .essay-example strong {
+      color: #a892ff;
+    }
+
+
+    .essay-example-text {
+      margin-top: 16px;
+
+      padding: 18px;
+
+      border-left:
+        3px solid #7657ff;
+
+      background:
+        rgba(
+          0,
+          0,
+          0,
+          .15
+        );
+
+      color: #d5deea;
+
+      line-height: 1.8;
+    }
+
+
+    .essay-checklist {
+      display: grid;
+
+      gap: 10px;
+
+      margin-top: 15px;
+    }
+
+
+    .essay-check {
+      padding: 13px 15px;
+
+      background:
+        rgba(
+          255,
+          255,
+          255,
+          .035
+        );
+
+      border-radius: 11px;
+
+      color: #becadd;
+
+      line-height: 1.55;
+    }
+
+
+    .essay-quiz {
+      padding: 32px;
+
+      border-radius: 20px;
+
+      border:
+        1px solid
+        rgba(
+          117,
+          87,
+          255,
+          .28
+        );
+
+      background:
+        linear-gradient(
+          135deg,
+          rgba(
+            117,
+            87,
+            255,
+            .13
+          ),
+          #101f34
+        );
+    }
+
+
+    .essay-quiz h2 {
+      margin-bottom: 10px;
+    }
+
+
+    .essay-quiz-question {
+      color: #c8d3e3;
+
+      line-height: 1.7;
+
+      margin-bottom: 22px;
+    }
+
+
+    .essay-options {
+      display: grid;
+      gap: 11px;
+    }
+
+
+    .essay-option {
+      width: 100%;
+
+      text-align: left;
+
+      padding: 15px 17px;
+
+      border-radius: 12px;
+
+      border:
+        1px solid
+        rgba(
+          255,
+          255,
+          255,
+          .09
+        );
+
+      background:
+        rgba(
+          255,
+          255,
+          255,
+          .035
+        );
+
+      color: #d8e1ec;
+
+      cursor: pointer;
+
+      transition: .18s;
+    }
+
+
+    .essay-option:hover {
+      border-color:
+        rgba(
+          117,
+          87,
+          255,
+          .6
+        );
+
+      transform:
+        translateY(-1px);
+    }
+
+
+    .essay-option.correct {
+      border-color: #4fd19c;
+
+      background:
+        rgba(
+          79,
+          209,
+          156,
+          .1
+        );
+    }
+
+
+    .essay-option.wrong {
+      border-color: #ee7474;
+
+      background:
+        rgba(
+          238,
+          116,
+          116,
+          .09
+        );
+    }
+
+
+    .essay-feedback {
+      display: none;
+
+      margin-top: 20px;
+
+      padding: 17px;
+
+      border-radius: 12px;
+
+      background:
+        rgba(
+          255,
+          255,
+          255,
+          .04
+        );
+
+      color: #bccadd;
+
+      line-height: 1.7;
+    }
+
+
+    .essay-feedback.show {
+      display: block;
+    }
+
+
+    .essay-finish {
+      display: flex;
+
+      justify-content: space-between;
+      align-items: center;
+
+      gap: 20px;
+
+      padding: 28px;
+
+      margin-top: 6px;
+
+      background: #101f34;
+
+      border:
+        1px solid
+        rgba(
+          255,
+          255,
+          255,
+          .075
+        );
+
+      border-radius: 20px;
+    }
+
+
+    .essay-finish h3 {
+      margin-bottom: 6px;
+    }
+
+
+    .essay-finish p {
+      color: #92a4bc;
+    }
+
+
+    @media (
+      max-width: 700px
+    ) {
+
+      .essay-class-hero,
+      .essay-section,
+      .essay-quiz {
+        padding: 23px;
+      }
+
+
+      .essay-finish {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+  <aside class="sidebar">
+
+
+    <div class="logo-area">
+
+      <div class="logo-icon">
+        BP
+      </div>
+
+      <div>
+
+        <h1>
+          Bahia's Prime
+        </h1>
+
+        <span>
+          Projeto aprovação
+        </span>
+
+      </div>
+
+    </div>
+
+
+    <nav class="menu">
+
+      <a
+        href="../index.html"
+        class="menu-item"
+      >
+        <span>⌂</span>
+        Dashboard
+      </a>
+
+
+      <a
+        href="trilha.html"
+        class="menu-item"
+      >
+        <span>▶</span>
+        Trilha de estudos
+      </a>
+
+
+      <a
+        href="redacao.html"
+        class="menu-item active"
+      >
+        <span>✎</span>
+        Redação
+      </a>
+
+
+      <a
+        href="torneio.html"
+        class="menu-item"
+      >
+        <span>🏆</span>
+        Torneio
+      </a>
+
+
+      <a
+        href="perfil.html"
+        class="menu-item"
+      >
+        <span>◎</span>
+        Meu perfil
+      </a>
+
+    </nav>
+
+  </aside>
+
+
+  <main class="main-content">
+
+
+    <div class="essay-class-page">
+
+
+      <a
+        href="redacao.html"
+        class="essay-class-back"
+      >
+        ← Voltar para o curso
+      </a>
+
+
+      <section
+        class="essay-class-hero"
+      >
+
+        <span
+          class="essay-class-number"
+          id="lessonNumber"
+        >
+          REDAÇÃO • AULA
+        </span>
+
+
+        <h1 id="lessonTitle">
+          Carregando aula...
+        </h1>
+
+
+        <p id="lessonDescription">
+          Preparando seu conteúdo.
+        </p>
+
+
+        <div
+          class="essay-class-progress-top"
+        >
+
+          <span>
+            PROGRESSO DO CURSO
+          </span>
+
+          <strong
+            id="courseProgressText"
+          >
+            0%
+          </strong>
+
+        </div>
+
+
+        <div
+          class="essay-class-progress"
+        >
+
+          <div
+            id="courseProgressBar"
+            style="width:0%"
+          >
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <div
+        id="lessonContent"
+        class="essay-content"
+      >
+      </div>
+
+
+    </div>
+
+  </main>
+
+
+  <script
+    src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"
+  ></script>
+
+
+  <script
+    src="../js/supabase.js"
+  ></script>
+
+
+  <script
+    src="../js/aula-redacao.js"
+  ></script>
+
+
+</body>
+
+</html>
