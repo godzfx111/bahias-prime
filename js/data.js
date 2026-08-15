@@ -698,231 +698,459 @@ const trilhaBahiasPrime = [
     ]
 
   },
-    // =========================================
-  // MÓDULO 6 — QUESTÕES ENEM
-  // =========================================
-  {
-    id: 6,
-    ordem: 6,
-    area: "REVISÃO ENEM",
-    titulo: "Questões reais do ENEM",
-    descricao:
-      "Pratique interpretação e resolução de questões no estilo do ENEM, utilizando conteúdos cobrados em provas anteriores.",
-    dificuldade: "Intermediário",
-      xp: 150,
+  /* =====================================================
+   MÓDULO 06
+   REVISÃO — FUNDAMENTOS I
+===================================================== */
 
+{
+  id: 6,
+  ordem: 6,
+  area: "Revisão",
 
-    teoria: {
-      intro:
-        "Agora é hora de aplicar o que você estudou. Leia cada questão com atenção, identifique o que o enunciado realmente pede e elimine as alternativas incompatíveis antes de marcar sua resposta.",
+  titulo: "Revisão I — Fundamentos",
 
-      topicos: [
-        {
-          titulo: "Leia primeiro o comando",
-          texto:
-            "Antes de analisar todas as alternativas, descubra exatamente o que a questão está pedindo. Isso evita releituras desnecessárias."
-        },
-        {
-          titulo: "Elimine alternativas",
-          texto:
-            "Mesmo quando você não souber imediatamente a resposta, tente eliminar alternativas claramente incorretas."
-        },
-        {
-          titulo: "Use as informações do enunciado",
-          texto:
-            "Questões do ENEM costumam fornecer no próprio texto, gráfico ou situação-problema as informações necessárias para chegar à resposta."
-        }
-      ]
-    },
+  descricao:
+    "Consolide os conhecimentos dos primeiros módulos antes de avançar na trilha.",
 
-    exercicios: [
+  dificuldade: "Revisão",
+  xp: 180,
+
+  teoria: {
+
+    introducao:
+      "Você chegou à primeira revisão da trilha. Até aqui, estudou fundamentos de Matemática, Linguagens, Ciências Humanas e Ciências da Natureza. Esta revisão não apresenta conteúdos novos: ela existe para verificar se você realmente consegue aplicar o que já aprendeu antes de avançar.",
+
+    topicos: [
 
       {
-        pergunta:
-          "Em uma sala de aula, o nível sonoro da fala de um professor é de 60 dB a 1 metro e diminui com a distância. Se o ruído de fundo pode chegar a 45 dB e a fala precisa estar 5 dB acima dele, qual é aproximadamente a maior distância permitida?",
-        alternativas: [
-          "3,0 m",
-          "4,5 m",
-          "6,5 m",
-          "8,0 m",
-          "9,5 m"
-        ],
-        correta: 2
+        titulo: "1. O que você precisa dominar em Matemática",
+        texto:
+          "Você já estudou operações fundamentais, números positivos e negativos, ordem das operações, propriedade distributiva, frações e números decimais. Lembre-se de respeitar a prioridade das operações e de interpretar uma fração como uma divisão e também como uma representação de partes de um todo."
       },
 
       {
-        pergunta:
-          "Uma agricultora mergulha espigas de milho em água fervente por alguns minutos e depois em água gelada para preservar seu sabor. A conservação ocorre principalmente devido à:",
-        alternativas: [
-          "desnaturação enzimática pela alta temperatura",
-          "conversão de nutrientes pela redução de temperatura",
-          "degradação das reservas nutritivas pelo choque térmico",
-          "entrada de oxigênio provocada pela fervura",
-          "desidratação dos grãos"
-        ],
-        correta: 0
+        titulo: "2. Operações e prioridade",
+        texto:
+          "Ao resolver uma expressão, comece pelo que estiver entre parênteses. Depois resolva potências e raízes, em seguida multiplicações e divisões e, por último, adições e subtrações. Operações que possuem a mesma prioridade são realizadas da esquerda para a direita."
       },
 
       {
-        pergunta:
-          "Em um aquecedor solar, a água é aquecida nos coletores e depois transfere energia térmica para a água armazenada no reservatório. Esse processo de transferência de calor ocorre principalmente por:",
-        alternativas: [
-          "difusão",
-          "absorção",
-          "condução",
-          "irradiação",
-          "convecção"
-        ],
-        correta: 4
+        titulo: "3. Frações e números decimais",
+        texto:
+          "Frações equivalentes representam a mesma quantidade. Para somar ou subtrair frações com denominadores diferentes, é necessário encontrar um denominador comum. Na multiplicação, multiplicamos numeradores entre si e denominadores entre si. Na divisão, multiplicamos a primeira fração pelo inverso da segunda."
       },
 
       {
-        pergunta:
-          "Em uma reação entre mármore, constituído principalmente por carbonato de cálcio, e ácido clorídrico, qual gás é liberado?",
-        alternativas: [
-          "H₂",
-          "O₂",
-          "CO₂",
-          "CO",
-          "Cl₂"
-        ],
-        correta: 2
+        titulo: "4. O que você precisa dominar em Linguagens",
+        texto:
+          "Você já aprendeu a diferenciar tema e ideia principal, localizar informações explícitas e realizar inferências. Interpretar não significa inventar uma explicação: uma conclusão precisa ser sustentada pelas informações presentes no texto."
       },
 
       {
-        pergunta:
-          "Uma empresa produzia chocolates em formato de cone com diâmetro da base de 8 cm e altura de 10 cm. Se o novo chocolate possui o mesmo formato e altura, mas volume 19% menor, qual deve ser aproximadamente o novo raio da base?",
-        alternativas: [
-          "1,52 cm",
-          "3,24 cm",
-          "3,60 cm",
-          "6,48 cm",
-          "7,20 cm"
-        ],
-        correta: 2
+        titulo: "5. Informação explícita e inferência",
+        texto:
+          "Informação explícita aparece diretamente no texto. Inferência é uma conclusão obtida a partir de pistas. Em questões de interpretação, desconfie de alternativas que exageram, contradizem o texto ou acrescentam informações que ele não permite concluir."
       },
 
       {
-        pergunta:
-          "Em janeiro de 2013 foram criadas 28 900 vagas de emprego, quantidade 75% menor que no mesmo período de 2012. Quantas vagas foram criadas aproximadamente em janeiro de 2012?",
-        alternativas: [
-          "16 514",
-          "86 700",
-          "115 600",
-          "441 343",
-          "448 568"
-        ],
-        correta: 2
+        titulo: "6. O que você precisa dominar em Ciências Humanas",
+        texto:
+          "Você estudou tempo histórico, espaço, fontes históricas, mudança e permanência. Uma fonte histórica não é uma reprodução absolutamente neutra do passado. Para interpretá-la, devemos considerar quem a produziu, quando, em qual contexto e para qual finalidade."
       },
 
       {
-        pergunta:
-          "Após uma reforma eleitoral no Brasil do século XIX, a participação no processo eleitoral sofreu forte redução. Uma das principais razões históricas para essa redução foi a:",
-        alternativas: [
-          "restrição de gênero",
-          "exclusão de imigrantes",
-          "comprovação de domicílio",
-          "exigência da alfabetização",
-          "obrigatoriedade do sufrágio"
-        ],
-        correta: 3
+        titulo: "7. Mudança e permanência",
+        texto:
+          "Processos históricos envolvem transformações e continuidades. Nem tudo muda ao mesmo tempo ou na mesma velocidade. Comparar épocas diferentes permite identificar elementos que foram transformados e outros que permaneceram."
       },
 
       {
-        pergunta:
-          "Segundo a teoria política clássica apresentada por Aristóteles, quais são três formas de governo?",
-        alternativas: [
-          "tirania, oligarquia e república",
-          "burocracia, autarquia e império",
-          "ditadura, autocracia e anarquia",
-          "plutocracia, tecnocracia e demagogia",
-          "monarquia, aristocracia e democracia"
-        ],
-        correta: 4
+        titulo: "8. O que você precisa dominar em Ciências da Natureza",
+        texto:
+          "Você já estudou grandezas, unidades, conversões e notação científica. Uma medida combina normalmente um valor numérico com uma unidade. Saber converter unidades é essencial para Física e Química, pois muitos problemas futuros utilizarão diferentes escalas de medida."
       },
 
       {
-        pergunta:
-          "A preservação de uma variedade linguística tradicional está relacionada principalmente à manutenção de:",
-        alternativas: [
-          "um registro exclusivamente escrito",
-          "prestígio econômico dos falantes",
-          "sua função original sem alterações",
-          "um sentimento de identidade linguística",
-          "um perfil etário homogêneo"
-        ],
-        correta: 3
+        titulo: "9. Conversão de unidades",
+        texto:
+          "Prefixos modificam a escala de uma unidade. Quilo representa mil vezes a unidade; centi representa um centésimo; mili representa um milésimo. Assim, 1 km corresponde a 1000 m, enquanto 1 m corresponde a 100 cm."
       },
 
       {
-        pergunta:
-          "As variedades linguísticas regionais existentes no Brasil demonstram que elas:",
-        alternativas: [
-          "impedem o entendimento mútuo",
-          "enaltecem apenas uma região específica",
-          "são constitutivas do português brasileiro",
-          "exigem a criação de dicionários para toda comunicação",
-          "existem somente em situações coloquiais"
-        ],
-        correta: 2
-      },
-
-      {
-        pergunta:
-          "A automação da dublagem por inteligência artificial pode reduzir postos de trabalho anteriormente ocupados por profissionais. Esse fenômeno está associado à:",
-        alternativas: [
-          "proteção da economia nacional",
-          "valorização da cultura tradicional",
-          "diminuição da formação acadêmica",
-          "estagnação da manifestação artística",
-          "ampliação do desemprego estrutural"
-        ],
-        correta: 4
-      },
-
-      {
-        pergunta:
-          "O Mercosul estabelece uma Tarifa Externa Comum entre seus integrantes. Essa característica está relacionada ao funcionamento de uma:",
-        alternativas: [
-          "limitação da circulação financeira",
-          "padronização da política monetária",
-          "união aduaneira",
-          "dependência da exportação agrícola",
-          "equivalência da legislação trabalhista"
-        ],
-        correta: 2
-      },
-
-      {
-        pergunta:
-          "Na expressão inglesa 'at odds with', utilizada para indicar conflito entre dois desejos, a expressão revela:",
-        alternativas: [
-          "necessidade de acessar informações confiáveis",
-          "dificuldade de conciliar diferentes anseios",
-          "desejo de dominar novas tecnologias",
-          "desafio de permanecer imparcial",
-          "vontade de ler notícias positivas"
-        ],
-        correta: 1
-      },
-
-      {
-        pergunta:
-          "Ao avaliar um lugar turístico, diferentes pessoas podem formar opiniões distintas porque essa avaliação depende principalmente da:",
-        alternativas: [
-          "beleza objetiva do local",
-          "perspectiva do visitante",
-          "história oficial do lugar",
-          "duração obrigatória da viagem",
-          "finalidade econômica do turismo"
-        ],
-        correta: 1
+        titulo: "10. Notação científica",
+        texto:
+          "A notação científica escreve um número na forma a × 10ⁿ, com o valor absoluto de a maior ou igual a 1 e menor que 10. Por exemplo, 500 000 pode ser escrito como 5 × 10⁵. O expoente indica quantas posições a vírgula foi deslocada."
       }
 
-    ]
-  }
+    ],
 
-,
+
+    exemplosResolvidos: [
+
+      {
+        titulo: "Expressão numérica",
+
+        problema:
+          "Calcule 20 - 3 × 4.",
+
+        raciocinio:
+          "Subtração e multiplicação aparecem na mesma expressão. A multiplicação possui prioridade.",
+
+        resolucao:
+          "Primeiro calculamos 3 × 4 = 12. Depois fazemos 20 - 12 = 8.",
+
+        conclusao:
+          "Não resolva simplesmente da esquerda para a direita sem observar a prioridade das operações."
+      },
+
+      {
+        titulo: "Frações",
+
+        problema:
+          "Calcule 1/2 + 1/4.",
+
+        raciocinio:
+          "Os denominadores são diferentes. Precisamos representar as frações utilizando um denominador comum.",
+
+        resolucao:
+          "1/2 é equivalente a 2/4. Portanto: 2/4 + 1/4 = 3/4.",
+
+        conclusao:
+          "Não devemos simplesmente somar numeradores e denominadores."
+      },
+
+      {
+        titulo: "Inferência textual",
+
+        problema:
+          "Um texto afirma que uma praça permaneceu vazia durante toda a tarde enquanto uma chuva intensa atingia a cidade. Podemos concluir que a chuva pode ter contribuído para a ausência de pessoas?",
+
+        raciocinio:
+          "O texto não afirma diretamente que as pessoas deixaram de ir à praça por causa da chuva, mas apresenta informações que permitem estabelecer essa relação.",
+
+        resolucao:
+          "Sim. Essa conclusão funciona como uma inferência sustentada pelo contexto apresentado.",
+
+        conclusao:
+          "Inferir é concluir a partir de evidências, não inventar informações."
+      },
+
+      {
+        titulo: "Conversão de unidades",
+
+        problema:
+          "Uma estrada possui 2,5 km de comprimento. Quantos metros isso representa?",
+
+        raciocinio:
+          "Sabemos que 1 km corresponde a 1000 m.",
+
+        resolucao:
+          "2,5 × 1000 = 2500. Portanto, a estrada possui 2500 m.",
+
+        conclusao:
+          "Antes de calcular, identifique a relação entre as unidades."
+      }
+
+    ],
+
+
+    estrategiasEnem: [
+
+      {
+        titulo: "Descubra o que está sendo cobrado",
+        texto:
+          "Antes de calcular ou escolher uma alternativa, identifique qual conhecimento a questão está avaliando."
+      },
+
+      {
+        titulo: "Não calcule automaticamente",
+        texto:
+          "Nem toda questão que apresenta números exige que todos eles sejam utilizados. Primeiro interprete a situação."
+      },
+
+      {
+        titulo: "Elimine alternativas impossíveis",
+        texto:
+          "Mesmo quando estiver em dúvida, conhecimentos básicos podem permitir eliminar respostas incompatíveis com o problema."
+      },
+
+      {
+        titulo: "Observe as unidades",
+        texto:
+          "Uma resposta numericamente correta pode estar errada se estiver expressa na unidade inadequada."
+      },
+
+      {
+        titulo: "Volte ao texto",
+        texto:
+          "Em Linguagens e Humanas, procure no próprio texto ou documento as evidências que sustentam sua resposta."
+      }
+
+    ],
+
+
+    errosComuns: [
+
+      {
+        titulo: "Resolver operações na ordem errada",
+        texto:
+          "Multiplicação e divisão possuem prioridade sobre adição e subtração, salvo quando os parênteses modificam a ordem."
+      },
+
+      {
+        titulo: "Somar denominadores",
+        texto:
+          "Em 1/2 + 1/4, não fazemos 2/6. Primeiro encontramos denominadores equivalentes."
+      },
+
+      {
+        titulo: "Inventar uma interpretação",
+        texto:
+          "Uma inferência precisa ser sustentada pelo texto. Se nenhuma informação permite determinada conclusão, ela não é uma inferência válida."
+      },
+
+      {
+        titulo: "Tratar uma fonte como totalmente neutra",
+        texto:
+          "Fontes históricas foram produzidas por pessoas e sociedades em contextos específicos e precisam ser analisadas criticamente."
+      },
+
+      {
+        titulo: "Ignorar unidades",
+        texto:
+          "Misturar quilômetros, metros, centímetros ou outras unidades sem realizar a conversão adequada pode invalidar todo o cálculo."
+      }
+
+    ],
+
+
+    resumo:
+      "Esta revisão reúne exclusivamente conhecimentos estudados nos cinco primeiros módulos: operações e propriedades dos números, interpretação textual, frações e decimais, fundamentos da análise histórica e grandezas, unidades e notação científica. Se algum desses assuntos ainda estiver confuso, revise o módulo correspondente antes de continuar."
+
+  },
+
+
+  videoaula: {
+    titulo: "Videoaula complementar",
+    url: ""
+  },
+
+
+  exercicios: [
+
+    {
+      nivel: "Fundamental",
+
+      pergunta:
+        "Uma biblioteca recebeu 6 caixas contendo 35 livros em cada uma. Quantos livros foram recebidos?",
+
+      alternativas: [
+        "41",
+        "180",
+        "200",
+        "210",
+        "240"
+      ],
+
+      correta: 3,
+
+      explicacao:
+        "São 6 grupos de 35 livros. Portanto, 6 × 35 = 210."
+    },
+
+
+    {
+      nivel: "Fundamental",
+
+      pergunta:
+        "Qual é o resultado da expressão 24 - 4 × 5?",
+
+      alternativas: [
+        "4",
+        "20",
+        "40",
+        "100",
+        "120"
+      ],
+
+      correta: 0,
+
+      explicacao:
+        "A multiplicação possui prioridade: 4 × 5 = 20. Depois fazemos 24 - 20 = 4."
+    },
+
+
+    {
+      nivel: "Fundamental",
+
+      pergunta:
+        "Qual das frações representa a mesma quantidade que 3/4?",
+
+      alternativas: [
+        "3/8",
+        "4/3",
+        "6/8",
+        "6/12",
+        "9/16"
+      ],
+
+      correta: 2,
+
+      explicacao:
+        "Multiplicando numerador e denominador de 3/4 por 2, obtemos 6/8. Portanto, são frações equivalentes."
+    },
+
+
+    {
+      nivel: "Intermediário",
+
+      pergunta:
+        "Uma garrafa estava preenchida até 1/2 de sua capacidade. Depois foi acrescentado mais 1/4 da capacidade total. Que fração da garrafa passou a estar preenchida?",
+
+      alternativas: [
+        "1/6",
+        "2/6",
+        "2/4",
+        "3/4",
+        "1"
+      ],
+
+      correta: 3,
+
+      explicacao:
+        "Transformamos 1/2 em 2/4. Assim, 2/4 + 1/4 = 3/4."
+    },
+
+
+    {
+      nivel: "Intermediário",
+
+      pergunta:
+        "Um texto afirma: 'Depois que a ciclovia foi inaugurada, o número de bicicletas estacionadas próximo à escola aumentou durante os horários de entrada e saída.' Qual conclusão é sustentada pelo texto?",
+
+      alternativas: [
+        "Todos os estudantes abandonaram outros meios de transporte.",
+        "A construção da ciclovia pode ter favorecido o uso de bicicletas próximo à escola.",
+        "A escola proibiu a utilização de automóveis.",
+        "Nenhum estudante utilizava bicicleta anteriormente.",
+        "A ciclovia eliminou completamente o trânsito da região."
+      ],
+
+      correta: 1,
+
+      explicacao:
+        "O aumento observado depois da inauguração permite inferir uma possível relação entre a ciclovia e o uso de bicicletas. As demais alternativas apresentam afirmações que o texto não sustenta."
+    },
+
+
+    {
+      nivel: "Intermediário",
+
+      pergunta:
+        "Um historiador analisa uma carta escrita por um trabalhador no início do século XX. Para interpretar essa fonte adequadamente, é importante considerar:",
+
+      alternativas: [
+        "apenas a quantidade de palavras da carta.",
+        "somente se a caligrafia é legível.",
+        "o autor, o contexto histórico e as circunstâncias em que a carta foi produzida.",
+        "que todo relato escrito representa os acontecimentos de maneira completamente neutra.",
+        "somente acontecimentos ocorridos muitos séculos antes."
+      ],
+
+      correta: 2,
+
+      explicacao:
+        "Fontes históricas precisam ser contextualizadas. Autor, época, circunstâncias e finalidade ajudam a compreender seu significado."
+    },
+
+
+    {
+      nivel: "Intermediário",
+
+      pergunta:
+        "Uma pista possui 3,2 km de extensão. Essa distância corresponde a:",
+
+      alternativas: [
+        "32 m",
+        "320 m",
+        "3200 m",
+        "32 000 m",
+        "320 000 m"
+      ],
+
+      correta: 2,
+
+      explicacao:
+        "Como 1 km = 1000 m, temos 3,2 × 1000 = 3200 m."
+    },
+
+
+    {
+      nivel: "Intermediário",
+
+      pergunta:
+        "O número 4 500 000 escrito corretamente em notação científica é:",
+
+      alternativas: [
+        "45 × 10⁵",
+        "4,5 × 10⁶",
+        "4,5 × 10⁵",
+        "0,45 × 10⁶",
+        "450 × 10⁶"
+      ],
+
+      correta: 1,
+
+      explicacao:
+        "Deslocamos a vírgula até obter 4,5. Foram seis posições, portanto 4 500 000 = 4,5 × 10⁶."
+    },
+
+
+    {
+      nivel: "Avançado",
+
+      pergunta:
+        "Uma empresa organiza 240 produtos igualmente em 8 caixas. Durante o transporte, 1/4 dos produtos de cada caixa será separado para inspeção. Quantos produtos, ao todo, serão separados?",
+
+      alternativas: [
+        "30",
+        "40",
+        "60",
+        "80",
+        "120"
+      ],
+
+      correta: 2,
+
+      explicacao:
+        "Cada caixa possui 240 ÷ 8 = 30 produtos. Um quarto de 30 corresponde a 7,5 produtos, o que revela que interpretar dessa maneira produziria uma quantidade impossível de produtos inteiros por caixa. Como 1/4 do total será separado, calculamos 240 ÷ 4 = 60 produtos."
+    },
+
+
+    {
+      nivel: "Avançado",
+
+      pergunta:
+        "Um documento produzido durante determinado conflito apresenta somente a versão de um dos grupos envolvidos. Para utilizá-lo como fonte histórica, a atitude mais adequada é:",
+
+      alternativas: [
+        "descartá-lo automaticamente por apresentar um ponto de vista.",
+        "considerá-lo uma descrição completa e neutra dos acontecimentos.",
+        "analisá-lo considerando autoria, contexto e interesses, podendo compará-lo com outras fontes.",
+        "utilizá-lo apenas se tiver sido escrito muitos anos depois.",
+        "ignorar quem produziu o documento."
+      ],
+
+      correta: 2,
+
+      explicacao:
+        "Possuir perspectiva não torna uma fonte inútil. O trabalho histórico envolve justamente contextualizar sua produção e, quando possível, compará-la com outras evidências."
+    }
+
+  ]
+
+},
 
 /* =====================================================
    MÓDULO 07
