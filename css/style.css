@@ -3241,4 +3241,109 @@ button {
 .logout-button:disabled {
   opacity: .6;
   cursor: not-allowed;
+}/* =========================================
+   ADMIN — ORGANIZAR TRILHA
+========================================= */
+
+.trail-order-admin-card {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.trail-order-warning {
+  padding: 16px 18px;
+  border: 1px solid rgba(124, 92, 255, 0.22);
+  border-radius: 14px;
+  background: rgba(124, 92, 255, 0.06);
+}
+
+.trail-order-warning strong {
+  display: block;
+  margin-bottom: 6px;
+}
+
+.trail-order-warning p {
+  margin: 0;
+  opacity: 0.75;
+  line-height: 1.5;
+}
+
+.module-order-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.module-order-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  padding: 14px 16px;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+
+  background: rgba(255, 255, 255, 0.025);
+
+  cursor: grab;
+
+  transition:
+    transform 0.15s ease,
+    opacity 0.15s ease,
+    border-color 0.15s ease,
+    background 0.15s ease;
+}
+
+.module-order-item:hover {
+  border-color: rgba(124, 92, 255, 0.45);
+  background: rgba(124, 92, 255, 0.06);
+}
+
+.module-order-item:active {
+  cursor: grabbing;
+}
+
+.module-order-item.dragging {
+  opacity: 0.4;
+  transform: scale(0.99);
+}
+
+.module-drag-handle {
+  font-size: 22px;
+  opacity: 0.55;
+  user-select: none;
+}
+
+.module-order-position {
+  width: 38px;
+  height: 38px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 10px;
+
+  background: rgba(124, 92, 255, 0.14);
+
+  font-weight: 800;
+}
+
+.module-order-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.module-order-info strong {
+  font-size: 14px;
+}
+
+.module-order-info span {
+  font-size: 12px;
+  opacity: 0.6;
 }

@@ -1,5 +1,10 @@
 let adminUser = null;
 
+let modulosAdminOrdenados =
+  [...trilhaBahiasPrime];
+
+let itemArrastado = null;
+
 
 /* =========================================
    INICIAR ADMIN
@@ -9,26 +14,38 @@ async function iniciarAdmin() {
 
   const {
     data: { session }
-  } = await supabaseClient.auth.getSession();
+  } =
+    await supabaseClient
+      .auth
+      .getSession();
 
 
   if (!session) {
-    window.location.href = "../login.html";
+
+    window.location.href =
+      "../login.html";
+
     return;
+
   }
 
 
-  adminUser = session.user;
+  adminUser =
+    session.user;
 
 
   const {
     data: profile,
     error
-  } = await supabaseClient
-    .from("profiles")
-    .select("role")
-    .eq("id", adminUser.id)
-    .single();
+  } =
+    await supabaseClient
+      .from("profiles")
+      .select("role")
+      .eq(
+        "id",
+        adminUser.id
+      )
+      .single();
 
 
   if (
@@ -45,12 +62,725 @@ async function iniciarAdmin() {
       "../index.html";
 
     return;
+
   }
 
+
+  /*
+    IMPORTANTE:
+    Sempre que o Admin abrir,
+    verifica se existem módulos novos
+    no data.js ainda não cadastrados
+    na tabela module_order.
+  */
+
+  await sincronizarModulosComOrdem();
+
+  await carregarOrganizacaoTrilha();
 
   await carregarAlunos();
 
   carregarModulos();
+
+}
+
+
+/* =========================================
+   SINCRONIZAR MÓDULOS NOVOS
+========================================= */
+
+async function sincronizarModulosComOrdem() {
+
+  const {
+    data: ordemAtual,
+    error
+  } =
+    await supabaseClient
+      .from("module_order")
+      .select(
+        "module_id, position"
+      )
+      .order(
+        "position",
+        {
+          ascending: true
+        }
+      );
+
+
+  if (error) {
+
+    console.error(
+      "Erro ao verificar módulos cadastrados:",
+      error
+    );
+
+    return;
+
+  }
+
+
+  /*
+    IDs que já existem
+    no module_order.
+  */
+
+  const cadastrados =
+    new Set(
+      (ordemAtual || [])
+        .map(
+          item =>
+            Number(
+              item.module_id
+            )
+        )
+    );
+
+
+  /*
+    Procura módulos que existem
+    no data.js, mas ainda não
+    existem no banco.
+  */
+
+  const modulosNovos =
+    trilhaBahiasPrime.filter(
+      modulo =>
+        !cadastrados.has(
+          Number(
+            modulo.id
+          )
+        )
+    );
+
+
+  /*
+    Nenhum módulo novo.
+  */
+
+  if (!modulosNovos.length) {
+    return;
+  }
+
+
+  /*
+    Descobre qual será
+    a próxima posição.
+  */
+
+  let proximaPosicao =
+    1;
+
+
+  if (
+    ordemAtual &&
+    ordemAtual.length
+  ) {
+
+    const maiorPosicao =
+      Math.max(
+        ...ordemAtual.map(
+          item =>
+            Number(
+              item.position
+            )
+        )
+      );
+
+
+    proximaPosicao =
+      maiorPosicao + 1;
+
+  }
+
+
+  /*
+    Cadastra cada módulo novo
+    automaticamente no final.
+  */
+
+  for (
+    const modulo
+    of modulosNovos
+  ) {
+
+    const {
+      error: insertError
+    } =
+      await supabaseClient
+        .from("module_order")
+        .insert({
+
+          module_id:
+            modulo.id,
+
+          position:
+            proximaPosicao,
+
+          updated_at:
+            new Date()
+              .toISOString()
+
+        });
+
+
+    if (insertError) {
+
+      console.error(
+        `Erro ao cadastrar automaticamente o módulo ${modulo.id}:`,
+        insertError
+      );
+
+      continue;
+
+    }
+
+
+    proximaPosicao++;
+
+  }
+
+}
+
+
+/* =========================================
+   BUSCAR ORDEM DA TRILHA
+========================================= */
+
+async function carregarOrganizacaoTrilha() {
+
+  const lista =
+    document.getElementById(
+      "moduleOrderList"
+    );
+
+
+  if (lista) {
+
+    lista.textContent =
+      "Carregando módulos...";
+
+  }
+
+
+  const {
+    data,
+    error
+  } =
+    await supabaseClient
+      .from("module_order")
+      .select(
+        "module_id, position"
+      )
+      .order(
+        "position",
+        {
+          ascending: true
+        }
+      );
+
+
+  if (error) {
+
+    console.error(
+      "Erro ao buscar ordem:",
+      error
+    );
+
+
+    modulosAdminOrdenados =
+      [...trilhaBahiasPrime];
+
+
+  } else {
+
+    const mapa =
+      new Map();
+
+
+    (data || []).forEach(
+      item => {
+
+        mapa.set(
+          Number(
+            item.module_id
+          ),
+          Number(
+            item.position
+          )
+        );
+
+      }
+    );
+
+
+    modulosAdminOrdenados =
+      [...trilhaBahiasPrime]
+        .sort(
+          (a, b) => {
+
+            const ordemA =
+              mapa.get(
+                Number(
+                  a.id
+                )
+              ) ??
+              Number(
+                a.ordem
+              ) ??
+              Number(
+                a.id
+              );
+
+
+            const ordemB =
+              mapa.get(
+                Number(
+                  b.id
+                )
+              ) ??
+              Number(
+                b.ordem
+              ) ??
+              Number(
+                b.id
+              );
+
+
+            return ordemA - ordemB;
+
+          }
+        );
+
+  }
+
+
+  renderizarListaOrdenavel();
+
+}
+
+
+/* =========================================
+   RENDERIZAR LISTA ARRASTÁVEL
+========================================= */
+
+function renderizarListaOrdenavel() {
+
+  const lista =
+    document.getElementById(
+      "moduleOrderList"
+    );
+
+
+  if (!lista) {
+    return;
+  }
+
+
+  lista.innerHTML =
+    "";
+
+
+  modulosAdminOrdenados.forEach(
+    (modulo, index) => {
+
+      const item =
+        document.createElement(
+          "div"
+        );
+
+
+      item.className =
+        "module-order-item";
+
+
+      item.draggable =
+        true;
+
+
+      item.dataset.moduleId =
+        modulo.id;
+
+
+      item.innerHTML = `
+
+        <div class="module-drag-handle">
+          ☰
+        </div>
+
+
+        <div class="module-order-position">
+          ${index + 1}
+        </div>
+
+
+        <div class="module-order-info">
+
+          <strong>
+            ${modulo.titulo}
+          </strong>
+
+          <span>
+            ${modulo.area}
+            • ID ${modulo.id}
+          </span>
+
+        </div>
+
+      `;
+
+
+      /* =========================
+         COMEÇOU A ARRASTAR
+      ========================== */
+
+      item.addEventListener(
+        "dragstart",
+        () => {
+
+          itemArrastado =
+            item;
+
+
+          item.classList.add(
+            "dragging"
+          );
+
+        }
+      );
+
+
+      /* =========================
+         TERMINOU DE ARRASTAR
+      ========================== */
+
+      item.addEventListener(
+        "dragend",
+        () => {
+
+          item.classList.remove(
+            "dragging"
+          );
+
+
+          itemArrastado =
+            null;
+
+
+          atualizarNumeracaoVisual();
+
+        }
+      );
+
+
+      /* =========================
+         PASSOU SOBRE OUTRO ITEM
+      ========================== */
+
+      item.addEventListener(
+        "dragover",
+        event => {
+
+          event.preventDefault();
+
+
+          if (
+            !itemArrastado ||
+            itemArrastado === item
+          ) {
+            return;
+          }
+
+
+          const rect =
+            item.getBoundingClientRect();
+
+
+          const metade =
+            rect.top +
+            rect.height / 2;
+
+
+          if (
+            event.clientY <
+            metade
+          ) {
+
+            lista.insertBefore(
+              itemArrastado,
+              item
+            );
+
+          } else {
+
+            lista.insertBefore(
+              itemArrastado,
+              item.nextSibling
+            );
+
+          }
+
+        }
+      );
+
+
+      lista.appendChild(
+        item
+      );
+
+    }
+  );
+
+}
+
+
+/* =========================================
+   ATUALIZAR NÚMEROS VISUAIS
+========================================= */
+
+function atualizarNumeracaoVisual() {
+
+  const itens =
+    document.querySelectorAll(
+      ".module-order-item"
+    );
+
+
+  itens.forEach(
+    (item, index) => {
+
+      const numero =
+        item.querySelector(
+          ".module-order-position"
+        );
+
+
+      if (numero) {
+
+        numero.textContent =
+          index + 1;
+
+      }
+
+    }
+  );
+
+}
+
+
+/* =========================================
+   SALVAR ORDEM
+========================================= */
+
+const saveModuleOrderButton =
+  document.getElementById(
+    "saveModuleOrderButton"
+  );
+
+
+if (saveModuleOrderButton) {
+
+  saveModuleOrderButton.addEventListener(
+    "click",
+    salvarNovaOrdem
+  );
+
+}
+
+
+async function salvarNovaOrdem() {
+
+  const button =
+    document.getElementById(
+      "saveModuleOrderButton"
+    );
+
+
+  const message =
+    document.getElementById(
+      "moduleOrderMessage"
+    );
+
+
+  const itens =
+    [
+      ...document.querySelectorAll(
+        ".module-order-item"
+      )
+    ];
+
+
+  if (!itens.length) {
+    return;
+  }
+
+
+  button.disabled =
+    true;
+
+
+  button.textContent =
+    "Salvando ordem...";
+
+
+  message.textContent =
+    "";
+
+
+  message.className =
+    "admin-message";
+
+
+  try {
+
+    /*
+      Primeiro joga temporariamente
+      os módulos para posições altas.
+
+      Isso evita conflito com:
+      UNIQUE(position)
+    */
+
+    for (
+      let index = 0;
+      index < itens.length;
+      index++
+    ) {
+
+      const moduleId =
+        Number(
+          itens[index]
+            .dataset
+            .moduleId
+        );
+
+
+      const {
+        error
+      } =
+        await supabaseClient
+          .from("module_order")
+          .upsert(
+            {
+
+              module_id:
+                moduleId,
+
+              position:
+                1000 + index,
+
+              updated_at:
+                new Date()
+                  .toISOString()
+
+            },
+            {
+              onConflict:
+                "module_id"
+            }
+          );
+
+
+      if (error) {
+        throw error;
+      }
+
+    }
+
+
+    /*
+      Agora grava as posições
+      definitivas:
+      1, 2, 3, 4...
+    */
+
+    for (
+      let index = 0;
+      index < itens.length;
+      index++
+    ) {
+
+      const moduleId =
+        Number(
+          itens[index]
+            .dataset
+            .moduleId
+        );
+
+
+      const {
+        error
+      } =
+        await supabaseClient
+          .from("module_order")
+          .update(
+            {
+
+              position:
+                index + 1,
+
+              updated_at:
+                new Date()
+                  .toISOString()
+
+            }
+          )
+          .eq(
+            "module_id",
+            moduleId
+          );
+
+
+      if (error) {
+        throw error;
+      }
+
+    }
+
+
+    message.textContent =
+      "✓ Nova ordem salva com sucesso.";
+
+
+    message.className =
+      "admin-message success";
+
+
+    await carregarOrganizacaoTrilha();
+
+
+    /*
+      Atualiza também
+      o select das videoaulas.
+    */
+
+    carregarModulos();
+
+
+  } catch (error) {
+
+    console.error(
+      "Erro ao salvar ordem:",
+      error
+    );
+
+
+    message.textContent =
+      "Não foi possível salvar a nova ordem.";
+
+
+    message.className =
+      "admin-message error";
+
+  }
+
+
+  button.disabled =
+    false;
+
+
+  button.textContent =
+    "Salvar nova ordem";
 
 }
 
@@ -66,6 +796,7 @@ async function carregarAlunos() {
       "studentsList"
     );
 
+
   const contador =
     document.getElementById(
       "studentCount"
@@ -73,35 +804,51 @@ async function carregarAlunos() {
 
 
   if (lista) {
+
     lista.textContent =
       "Carregando alunos...";
+
   }
 
 
   const {
     data,
     error
-  } = await supabaseClient
-    .from("profiles")
-    .select(
-      "id, name, role, xp, level, streak"
-    )
-    .eq("role", "student")
-    .order("xp", {
-      ascending: false
-    });
+  } =
+    await supabaseClient
+      .from("profiles")
+      .select(
+        "id, name, role, xp, level, streak"
+      )
+      .eq(
+        "role",
+        "student"
+      )
+      .order(
+        "xp",
+        {
+          ascending: false
+        }
+      );
 
 
   if (error) {
 
-    console.error(error);
+    console.error(
+      error
+    );
+
 
     if (lista) {
+
       lista.textContent =
         "Erro ao carregar alunos.";
+
     }
 
+
     return;
+
   }
 
 
@@ -110,8 +857,10 @@ async function carregarAlunos() {
 
 
   if (contador) {
+
     contador.textContent =
       alunos.length;
+
   }
 
 
@@ -126,47 +875,62 @@ async function carregarAlunos() {
       "<p>Nenhum aluno cadastrado.</p>";
 
     return;
+
   }
 
 
-  lista.innerHTML = "";
+  lista.innerHTML =
+    "";
 
 
-  alunos.forEach(aluno => {
+  alunos.forEach(
+    aluno => {
 
-    const nome =
-      aluno.name || "Aluno";
-
-
-    const item =
-      document.createElement("div");
+      const nome =
+        aluno.name ||
+        "Aluno";
 
 
-    item.classList.add(
-      "student-admin-item"
-    );
+      const item =
+        document.createElement(
+          "div"
+        );
 
 
-    item.innerHTML = `
-      <div class="student-admin-avatar">
-        ${nome.charAt(0).toUpperCase()}
-      </div>
-
-      <div class="student-admin-info">
-        <strong>${nome}</strong>
-
-        <span>
-          Nível ${aluno.level || 1}
-          • ${aluno.xp || 0} XP
-          • 🔥 ${aluno.streak || 0}
-        </span>
-      </div>
-    `;
+      item.classList.add(
+        "student-admin-item"
+      );
 
 
-    lista.appendChild(item);
+      item.innerHTML = `
 
-  });
+        <div class="student-admin-avatar">
+          ${nome.charAt(0).toUpperCase()}
+        </div>
+
+        <div class="student-admin-info">
+
+          <strong>
+            ${nome}
+          </strong>
+
+          <span>
+            Nível ${aluno.level || 1}
+            • ${aluno.xp || 0} XP
+            • 🔥 ${aluno.streak || 0}
+          </span>
+
+        </div>
+
+      `;
+
+
+      lista.appendChild(
+        item
+      );
+
+    }
+  );
 
 }
 
@@ -193,19 +957,24 @@ if (studentForm) {
       const nome =
         document.getElementById(
           "studentName"
-        ).value.trim();
+        )
+        .value
+        .trim();
 
 
       const email =
         document.getElementById(
           "studentEmail"
-        ).value.trim();
+        )
+        .value
+        .trim();
 
 
       const senha =
         document.getElementById(
           "studentPassword"
-        ).value;
+        )
+        .value;
 
 
       const message =
@@ -220,18 +989,21 @@ if (studentForm) {
         );
 
 
-      button.disabled = true;
+      button.disabled =
+        true;
+
 
       button.textContent =
         "Criando aluno...";
 
-      message.textContent = "";
+
+      message.textContent =
+        "";
 
 
       try {
 
         const {
-          data,
           error
         } =
           await supabaseClient
@@ -240,22 +1012,20 @@ if (studentForm) {
               "create-student",
               {
                 body: {
-                  name: nome,
-                  email: email,
-                  password: senha
+
+                  name:
+                    nome,
+
+                  email:
+                    email,
+
+                  password:
+                    senha
+
                 }
               }
             );
 
-
-        /*
-          Em alguns casos a conta pode ter sido
-          criada mesmo que o client tenha recebido
-          uma resposta não-2xx.
-
-          Antes de declarar falha, recarregamos
-          os alunos.
-        */
 
         if (error) {
 
@@ -270,11 +1040,15 @@ if (studentForm) {
 
           const {
             data: encontrado
-          } = await supabaseClient
-            .from("profiles")
-            .select("name")
-            .eq("name", nome)
-            .maybeSingle();
+          } =
+            await supabaseClient
+              .from("profiles")
+              .select("name")
+              .eq(
+                "name",
+                nome
+              )
+              .maybeSingle();
 
 
           if (!encontrado) {
@@ -283,16 +1057,22 @@ if (studentForm) {
               "Erro ao criar aluno.";
 
 
-            if (error.context) {
+            if (
+              error.context
+            ) {
 
               try {
 
                 const resposta =
-                  await error.context.json();
+                  await error
+                    .context
+                    .json();
+
 
                 mensagem =
                   resposta.error ||
                   mensagem;
+
 
               } catch (_) {}
 
@@ -324,7 +1104,9 @@ if (studentForm) {
 
       } catch (error) {
 
-        console.error(error);
+        console.error(
+          error
+        );
 
 
         message.textContent =
@@ -338,7 +1120,9 @@ if (studentForm) {
       }
 
 
-      button.disabled = false;
+      button.disabled =
+        false;
+
 
       button.textContent =
         "+ Criar aluno";
@@ -350,7 +1134,7 @@ if (studentForm) {
 
 
 /* =========================================
-   LISTAR MÓDULOS
+   LISTAR MÓDULOS PARA VIDEOAULA
 ========================================= */
 
 function carregarModulos() {
@@ -366,15 +1150,21 @@ function carregarModulos() {
   }
 
 
+  const valorAtual =
+    select.value;
+
+
   select.innerHTML = `
+
     <option value="">
       Selecione um módulo
     </option>
+
   `;
 
 
-  trilhaBahiasPrime.forEach(
-    modulo => {
+  modulosAdminOrdenados.forEach(
+    (modulo, index) => {
 
       const option =
         document.createElement(
@@ -387,7 +1177,7 @@ function carregarModulos() {
 
 
       option.textContent =
-        `${modulo.ordem}. ${modulo.titulo}`;
+        `${index + 1}. ${modulo.titulo}`;
 
 
       select.appendChild(
@@ -398,10 +1188,16 @@ function carregarModulos() {
   );
 
 
-  select.addEventListener(
-    "change",
-    carregarVideoAtual
-  );
+  if (valorAtual) {
+
+    select.value =
+      valorAtual;
+
+  }
+
+
+  select.onchange =
+    carregarVideoAtual;
 
 }
 
@@ -428,20 +1224,28 @@ async function carregarVideoAtual() {
 
   if (!moduleId) {
 
-    campo.value = "";
+    campo.value =
+      "";
 
     return;
+
   }
 
 
   const {
     data,
     error
-  } = await supabaseClient
-    .from("module_videos")
-    .select("video_url")
-    .eq("module_id", moduleId)
-    .maybeSingle();
+  } =
+    await supabaseClient
+      .from("module_videos")
+      .select(
+        "video_url"
+      )
+      .eq(
+        "module_id",
+        moduleId
+      )
+      .maybeSingle();
 
 
   if (error) {
@@ -452,11 +1256,13 @@ async function carregarVideoAtual() {
     );
 
     return;
+
   }
 
 
   campo.value =
-    data?.video_url || "";
+    data?.video_url ||
+    "";
 
 }
 
@@ -488,7 +1294,9 @@ if (saveVideoButton) {
       const url =
         document.getElementById(
           "videoUrl"
-        ).value.trim();
+        )
+        .value
+        .trim();
 
 
       const message =
@@ -502,10 +1310,13 @@ if (saveVideoButton) {
         message.textContent =
           "Selecione um módulo.";
 
+
         message.className =
           "admin-message error";
 
+
         return;
+
       }
 
 
@@ -514,30 +1325,41 @@ if (saveVideoButton) {
         message.textContent =
           "Cole o link da videoaula.";
 
+
         message.className =
           "admin-message error";
 
+
         return;
+
       }
 
 
       try {
 
-        new URL(url);
+        new URL(
+          url
+        );
+
 
       } catch {
 
         message.textContent =
           "Informe uma URL válida.";
 
+
         message.className =
           "admin-message error";
 
+
         return;
+
       }
 
 
-      saveVideoButton.disabled = true;
+      saveVideoButton.disabled =
+        true;
+
 
       saveVideoButton.textContent =
         "Salvando...";
@@ -545,24 +1367,28 @@ if (saveVideoButton) {
 
       const {
         error
-      } = await supabaseClient
-        .from("module_videos")
-        .upsert(
-          {
-            module_id:
-              moduleId,
+      } =
+        await supabaseClient
+          .from("module_videos")
+          .upsert(
+            {
 
-            video_url:
-              url,
+              module_id:
+                moduleId,
 
-            updated_at:
-              new Date().toISOString()
-          },
-          {
-            onConflict:
-              "module_id"
-          }
-        );
+              video_url:
+                url,
+
+              updated_at:
+                new Date()
+                  .toISOString()
+
+            },
+            {
+              onConflict:
+                "module_id"
+            }
+          );
 
 
       if (error) {
@@ -576,6 +1402,7 @@ if (saveVideoButton) {
         message.textContent =
           "Não foi possível salvar a videoaula.";
 
+
         message.className =
           "admin-message error";
 
@@ -585,13 +1412,16 @@ if (saveVideoButton) {
         message.textContent =
           "✓ Videoaula salva com sucesso.";
 
+
         message.className =
           "admin-message success";
 
       }
 
 
-      saveVideoButton.disabled = false;
+      saveVideoButton.disabled =
+        false;
+
 
       saveVideoButton.textContent =
         "Salvar videoaula";

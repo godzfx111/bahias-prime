@@ -49,7 +49,10 @@ async function iniciarTrilha() {
   } = await supabaseClient
     .from("profiles")
     .select("role")
-    .eq("id", usuarioLogado.id)
+    .eq(
+      "id",
+      usuarioLogado.id
+    )
     .single();
 
 
@@ -110,6 +113,122 @@ async function buscarProgressos() {
 
 
 /* =========================================
+   BUSCAR ORDEM DOS MÓDULOS
+========================================= */
+
+async function buscarOrdemModulos() {
+
+  const {
+    data,
+    error
+  } = await supabaseClient
+    .from("module_order")
+    .select(
+      "module_id, position"
+    )
+    .order(
+      "position",
+      {
+        ascending: true
+      }
+    );
+
+
+  if (error) {
+
+    console.error(
+      "Erro ao buscar ordem dos módulos:",
+      error
+    );
+
+    return [];
+
+  }
+
+
+  return data || [];
+
+}
+
+
+/* =========================================
+   ORGANIZAR MÓDULOS
+========================================= */
+
+function organizarModulos(
+  ordemBanco
+) {
+
+  /*
+    Cria um mapa:
+
+    module_id -> position
+  */
+
+  const mapaOrdem =
+    new Map();
+
+
+  ordemBanco.forEach(
+    item => {
+
+      mapaOrdem.set(
+        Number(item.module_id),
+        Number(item.position)
+      );
+
+    }
+  );
+
+
+  /*
+    Faz uma cópia do array original
+    para não alterar o data.js.
+  */
+
+  const modulos =
+    [...trilhaBahiasPrime];
+
+
+  /*
+    Ordena usando o Supabase.
+
+    Se algum módulo novo ainda não
+    estiver na tabela module_order,
+    usa modulo.ordem como fallback.
+  */
+
+  modulos.sort(
+    (a, b) => {
+
+      const ordemA =
+        mapaOrdem.get(
+          Number(a.id)
+        ) ??
+        Number(a.ordem) ??
+        Number(a.id);
+
+
+      const ordemB =
+        mapaOrdem.get(
+          Number(b.id)
+        ) ??
+        Number(b.ordem) ??
+        Number(b.id);
+
+
+      return ordemA - ordemB;
+
+    }
+  );
+
+
+  return modulos;
+
+}
+
+
+/* =========================================
    VERIFICAR SE MÓDULO FOI CONCLUÍDO
 ========================================= */
 
@@ -146,8 +265,19 @@ function moduloConcluido(
 
 async function montarTrilha() {
 
-  const progressos =
-    await buscarProgressos();
+  const [
+    progressos,
+    ordemBanco
+  ] = await Promise.all([
+    buscarProgressos(),
+    buscarOrdemModulos()
+  ]);
+
+
+  const modulosOrdenados =
+    organizarModulos(
+      ordemBanco
+    );
 
 
   container.innerHTML = "";
@@ -156,7 +286,7 @@ async function montarTrilha() {
   let concluidos = 0;
 
 
-  trilhaBahiasPrime.forEach(
+  modulosOrdenados.forEach(
     (modulo, index) => {
 
       const concluido =
@@ -176,9 +306,12 @@ async function montarTrilha() {
         pode acessar qualquer módulo.
 
         ALUNO:
-        primeiro módulo fica disponível.
-        Os demais só liberam se o anterior
-        estiver concluído.
+        primeiro módulo da ordem atual
+        fica liberado.
+
+        Os demais dependem do módulo
+        imediatamente anterior NA ORDEM
+        definida pelo admin.
       */
 
       let desbloqueado = false;
@@ -199,7 +332,7 @@ async function montarTrilha() {
       else {
 
         const moduloAnterior =
-          trilhaBahiasPrime[
+          modulosOrdenados[
             index - 1
           ];
 
@@ -213,10 +346,23 @@ async function montarTrilha() {
       }
 
 
+      /*
+        index + 1 vira o número VISUAL
+        da trilha.
+
+        O ID real do módulo continua
+        intacto no banco.
+      */
+
+      const posicaoVisual =
+        index + 1;
+
+
       criarCard(
         modulo,
         desbloqueado,
-        concluido
+        concluido,
+        posicaoVisual
       );
 
     }
@@ -224,7 +370,8 @@ async function montarTrilha() {
 
 
   atualizarProgressoGeral(
-    concluidos
+    concluidos,
+    modulosOrdenados.length
   );
 
 }
@@ -237,7 +384,8 @@ async function montarTrilha() {
 function criarCard(
   modulo,
   desbloqueado,
-  concluido
+  concluido,
+  posicaoVisual
 ) {
 
   const card =
@@ -252,16 +400,20 @@ function criarCard(
 
 
   if (!desbloqueado) {
+
     card.classList.add(
       "locked"
     );
+
   }
 
 
   if (concluido) {
+
     card.classList.add(
       "completed"
     );
+
   }
 
 
@@ -274,9 +426,7 @@ function criarCard(
 
   }
 
-  else if (
-    !desbloqueado
-  ) {
+  else if (!desbloqueado) {
 
     numero = "🔒";
 
@@ -285,7 +435,7 @@ function criarCard(
   else {
 
     numero =
-      modulo.ordem;
+      posicaoVisual;
 
   }
 
@@ -306,9 +456,7 @@ function criarCard(
 
   }
 
-  else if (
-    desbloqueado
-  ) {
+  else if (desbloqueado) {
 
     botao = `
       <a
@@ -393,7 +541,9 @@ function criarCard(
   `;
 
 
-  container.appendChild(card);
+  container.appendChild(
+    card
+  );
 
 }
 
@@ -403,12 +553,9 @@ function criarCard(
 ========================================= */
 
 function atualizarProgressoGeral(
-  concluidos
+  concluidos,
+  total
 ) {
-
-  const total =
-    trilhaBahiasPrime.length;
-
 
   const percentual =
     total > 0
@@ -446,29 +593,41 @@ function atualizarProgressoGeral(
 
 
   if (totalElement) {
+
     totalElement.textContent =
       total;
+
   }
 
 
   if (concluidosElement) {
+
     concluidosElement.textContent =
       concluidos;
+
   }
 
 
   if (porcentagem) {
+
     porcentagem.textContent =
       `${percentual}%`;
+
   }
 
 
   if (barra) {
+
     barra.style.width =
       `${percentual}%`;
+
   }
 
 }
 
+
+/* =========================================
+   INICIAR
+========================================= */
 
 iniciarTrilha();

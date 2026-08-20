@@ -5282,6 +5282,2396 @@ const trilhaBahiasPrime = [
 
     ]
 
+  },
+
+
+  /* =====================================================
+     MÓDULO 19
+     MATEMÁTICA — LINGUAGEM ALGÉBRICA E INCÓGNITAS
+     FUNDAÇÃO PARA ÁLGEBRA
+  ===================================================== */
+
+  {
+    id: 19,
+    ordem: 19,
+    area: "Matemática",
+
+    titulo:
+      "Linguagem Algébrica e Incógnitas",
+
+    descricao:
+      "Aprenda do zero a linguagem das letras na Matemática: variáveis, incógnitas, constantes, coeficientes, termos e expressões algébricas.",
+
+    dificuldade: "Fundamento essencial",
+    xp: 250,
+
+    teoria: {
+
+      introducao:
+        "Até agora, grande parte da Matemática foi feita com números conhecidos. A Álgebra permite representar também números que não conhecemos, valores que podem variar e relações gerais entre quantidades. É por isso que aparecem letras como x, y, a e b. Este módulo constrói essa linguagem do zero. Ela será indispensável para equações, funções, geometria, Física e Química.",
+
+      topicos: [
+
+        {
+          titulo:
+            "1. Por que a Matemática começou a usar letras?",
+
+          texto:
+            "Uma letra permite representar um número sem precisar saber imediatamente qual é esse número. Imagine a frase: 'um número mais 5'. Como não sabemos qual número é, podemos chamá-lo de x. Assim, a frase pode ser representada por x + 5. A letra funciona como uma representação matemática de uma quantidade."
+        },
+
+        {
+          titulo:
+            "2. A letra não possui um valor fixo",
+
+          texto:
+            "Uma letra como x não significa automaticamente um número específico. Seu significado depende do problema. Em uma situação, x pode valer 4. Em outra, pode valer 100. A letra é apenas um símbolo utilizado para representar uma quantidade."
+        },
+
+        {
+          titulo:
+            "3. O que é uma variável?",
+
+          texto:
+            "Variável é uma representação de uma quantidade que pode assumir diferentes valores. Por exemplo, se p representa o preço de um produto, diferentes produtos podem possuir diferentes valores de p. Em funções e fórmulas, variáveis serão extremamente importantes."
+        },
+
+        {
+          titulo:
+            "4. O que é uma incógnita?",
+
+          texto:
+            "Incógnita é uma quantidade desconhecida que queremos descobrir. Em x + 4 = 10, sabemos que existe um valor de x que torna a igualdade verdadeira. Nosso objetivo é descobrir esse valor. Nesse contexto, x é uma incógnita."
+        },
+
+        {
+          titulo:
+            "5. Variável e incógnita não são exatamente a mesma coisa",
+
+          texto:
+            "Os dois conceitos utilizam letras, mas possuem funções diferentes. Uma variável pode assumir diversos valores dentro de uma relação. Uma incógnita representa um valor desconhecido que queremos determinar em determinado problema. Essa diferença ficará ainda mais clara quando estudarmos equações e funções."
+        },
+
+        {
+          titulo:
+            "6. O que é uma constante?",
+
+          texto:
+            "Constante é uma quantidade cujo valor está determinado naquela expressão ou situação. Em 3x + 7, o número 7 é um termo constante, pois não depende do valor de x."
+        },
+
+        {
+          titulo:
+            "7. O que significa 3x?",
+
+          texto:
+            "Quando um número aparece encostado em uma letra, existe uma multiplicação. Portanto, 3x significa 3 × x. Da mesma forma, 7y significa 7 × y e 2ab significa 2 × a × b. Na Álgebra, normalmente omitimos o símbolo de multiplicação entre números e letras."
+        },
+
+        {
+          titulo:
+            "8. Cuidado: 3x não significa 3 + x",
+
+          texto:
+            "A ausência do símbolo × pode confundir no começo. Se x = 5, então 3x = 3 × 5 = 15. Não devemos fazer 3 + 5. Sempre que um número estiver diretamente ao lado de uma variável, existe multiplicação."
+        },
+
+        {
+          titulo:
+            "9. O que é coeficiente?",
+
+          texto:
+            "Coeficiente é o número que multiplica uma variável. Em 5x, o coeficiente de x é 5. Em -3y, o coeficiente de y é -3. Em x, existe implicitamente o coeficiente 1, pois x = 1x."
+        },
+
+        {
+          titulo:
+            "10. O coeficiente pode ser negativo",
+
+          texto:
+            "Em -4x, o coeficiente é -4. Isso significa (-4) × x. O sinal faz parte do coeficiente e não deve ser ignorado."
+        },
+
+        {
+          titulo:
+            "11. O que é uma expressão algébrica?",
+
+          texto:
+            "Expressão algébrica é uma combinação de números, letras e operações matemáticas. Exemplos: x + 5, 3x - 2, 2a + 4b e 5x². Diferentemente de uma equação, uma expressão não precisa possuir sinal de igualdade."
+        },
+
+        {
+          titulo:
+            "12. Expressão não é equação",
+
+          texto:
+            "3x + 5 é uma expressão algébrica. Já 3x + 5 = 20 é uma equação, pois existe uma igualdade e podemos procurar o valor de x que a torna verdadeira. Essa diferença será fundamental no próximo estágio da Álgebra."
+        },
+
+        {
+          titulo:
+            "13. O que é um termo?",
+
+          texto:
+            "Os termos de uma expressão são as partes separadas principalmente pelos sinais de adição ou subtração. Em 3x + 5, temos dois termos: 3x e 5. Em 2x + 4y - 7, temos três termos: 2x, 4y e -7."
+        },
+
+        {
+          titulo:
+            "14. O sinal pertence ao termo",
+
+          texto:
+            "Em 5x - 3y + 8, podemos interpretar os termos como 5x, -3y e +8. Pensar dessa forma ajuda bastante quando começarmos a simplificar expressões."
+        },
+
+        {
+          titulo:
+            "15. Termo independente",
+
+          texto:
+            "Um termo que não contém variável é chamado termo independente ou termo constante. Em 4x + 9, o número 9 é o termo independente."
+        },
+
+        {
+          titulo:
+            "16. Termos semelhantes",
+
+          texto:
+            "Termos semelhantes possuem a mesma parte literal, isto é, as mesmas letras elevadas aos mesmos expoentes. Por exemplo, 3x e 8x são semelhantes. 4x² e 9x² também são semelhantes. Já 3x e 3y não são semelhantes."
+        },
+
+        {
+          titulo:
+            "17. Somando termos semelhantes",
+
+          texto:
+            "Podemos somar ou subtrair os coeficientes de termos semelhantes. Por exemplo: 3x + 5x = 8x. Isso acontece porque temos três unidades de x mais cinco unidades de x, totalizando oito unidades de x."
+        },
+
+        {
+          titulo:
+            "18. Uma forma intuitiva de entender 3x + 5x",
+
+          texto:
+            "Imagine que x represente uma caixa. Três caixas mais cinco caixas resultam em oito caixas. Portanto, 3x + 5x = 8x. A mesma lógica explica por que podemos juntar termos semelhantes."
+        },
+
+        {
+          titulo:
+            "19. Por que 3x + 5y não vira 8xy?",
+
+          texto:
+            "x e y representam quantidades diferentes. Por isso, 3x e 5y não são termos semelhantes e não podem ser somados dessa maneira. A expressão permanece 3x + 5y."
+        },
+
+        {
+          titulo:
+            "20. Valor numérico de uma expressão",
+
+          texto:
+            "Calcular o valor numérico significa substituir uma variável por um valor conhecido e realizar as operações. Se x = 4, então o valor de 3x + 2 é 3 × 4 + 2 = 12 + 2 = 14."
+        },
+
+        {
+          titulo:
+            "21. Substituição",
+
+          texto:
+            "Ao substituir uma variável, coloque o valor em seu lugar e mantenha todas as operações. Se a expressão é 2x + 7 e x = 6, temos 2 × 6 + 7 = 12 + 7 = 19."
+        },
+
+        {
+          titulo:
+            "22. Cuidado ao substituir números negativos",
+
+          texto:
+            "Se x = -3 e queremos calcular 2x + 5, é útil escrever 2 × (-3) + 5. Assim, 2 × (-3) = -6 e -6 + 5 = -1. Os parênteses ajudam a evitar erros de sinal."
+        },
+
+        {
+          titulo:
+            "23. Traduzindo frases para Álgebra",
+
+          texto:
+            "A Álgebra permite transformar linguagem comum em linguagem matemática. Se x representa um número, 'o dobro desse número' pode ser escrito como 2x. 'O triplo do número' é 3x. 'O número mais 8' é x + 8."
+        },
+
+        {
+          titulo:
+            "24. O dobro de um número mais 5",
+
+          texto:
+            "Se x representa o número, 'o dobro de um número mais 5' pode ser representado por 2x + 5. Primeiro multiplicamos o número por 2 e depois adicionamos 5."
+        },
+
+        {
+          titulo:
+            "25. O dobro da soma de um número com 5",
+
+          texto:
+            "Agora existe uma diferença importante. 'O dobro da soma de um número com 5' significa que primeiro fazemos x + 5 e depois dobramos o resultado. Portanto, escrevemos 2(x + 5). Os parênteses mudam o significado."
+        },
+
+        {
+          titulo:
+            "26. Metade de um número",
+
+          texto:
+            "Se x representa um número, sua metade pode ser escrita como x/2. Sua terça parte é x/3 e sua quarta parte é x/4. Essa linguagem aparecerá frequentemente em equações e problemas."
+        },
+
+        {
+          titulo:
+            "27. Antecessor e sucessor",
+
+          texto:
+            "Se um número inteiro é representado por x, seu sucessor é x + 1 e seu antecessor é x - 1. Se quisermos representar três números inteiros consecutivos, podemos utilizar x, x + 1 e x + 2."
+        },
+
+        {
+          titulo:
+            "28. Números pares e ímpares",
+
+          texto:
+            "Todo número par pode ser representado pela forma 2n, pois é múltiplo de 2. Um número ímpar pode ser representado por 2n + 1. Essa é uma aplicação importante da linguagem algébrica."
+        },
+
+        {
+          titulo:
+            "29. Introdução à propriedade distributiva na Álgebra",
+
+          texto:
+            "Quando um número multiplica uma expressão entre parênteses, ele multiplica cada termo dentro deles. Assim, 3(x + 2) = 3x + 6. Esse processo é chamado propriedade distributiva e será aprofundado no próximo módulo."
+        },
+
+        {
+          titulo:
+            "30. Distributiva com subtração",
+
+          texto:
+            "Em 2(x - 4), multiplicamos 2 por x e também 2 por -4. Portanto, 2(x - 4) = 2x - 8."
+        },
+
+        {
+          titulo:
+            "31. Letras em fórmulas",
+
+          texto:
+            "As letras também aparecem em fórmulas. Na fórmula da velocidade média, por exemplo, diferentes símbolos representam diferentes grandezas. Por isso, dominar linguagem algébrica antes de avançar em Física é essencial: precisamos entender que as letras representam quantidades e que podemos substituir seus valores."
+        },
+
+        {
+          titulo:
+            "32. Álgebra na Geometria",
+
+          texto:
+            "Se um retângulo possui comprimento x e largura 5, seu perímetro pode ser representado por 2x + 10. A Álgebra permite criar relações gerais sem precisar escolher previamente um valor específico para x."
+        },
+
+        {
+          titulo:
+            "33. Álgebra não é adivinhação",
+
+          texto:
+            "Quando encontramos uma letra, não precisamos tentar números aleatoriamente. A Álgebra possui regras que permitem manipular expressões e descobrir valores de maneira lógica. Nos próximos módulos, essas regras serão construídas passo a passo."
+        },
+
+        {
+          titulo:
+            "34. Preparação para equações",
+
+          texto:
+            "Se temos apenas 3x + 4, possuímos uma expressão. Se escrevemos 3x + 4 = 19, temos uma equação. Nesse caso existe um valor de x que torna a igualdade verdadeira. Em breve aprenderemos um método sistemático para encontrá-lo."
+        }
+
+      ],
+
+      exemplosResolvidos: [
+
+        {
+          titulo:
+            "Identificando o coeficiente",
+
+          problema:
+            "Na expressão 7x + 4, qual é o coeficiente de x?",
+
+          raciocinio:
+            "O coeficiente é o número que multiplica a variável.",
+
+          resolucao:
+            "Em 7x, temos 7 × x. Portanto, o coeficiente é 7.",
+
+          conclusao:
+            "O número encostado na variável representa uma multiplicação."
+        },
+
+        {
+          titulo:
+            "Coeficiente escondido",
+
+          problema:
+            "Qual é o coeficiente de x na expressão x + 8?",
+
+          raciocinio:
+            "Quando não aparece nenhum número antes de x, existe um 1 implícito.",
+
+          resolucao:
+            "x = 1x. Portanto, o coeficiente é 1.",
+
+          conclusao:
+            "A ausência de um número escrito não significa ausência de coeficiente."
+        },
+
+        {
+          titulo:
+            "Termos semelhantes",
+
+          problema:
+            "Simplifique 4x + 7x.",
+
+          raciocinio:
+            "Os dois termos possuem exatamente a mesma variável x.",
+
+          resolucao:
+            "Somamos os coeficientes: 4 + 7 = 11. Portanto, 4x + 7x = 11x.",
+
+          conclusao:
+            "A variável permanece; os coeficientes são somados."
+        },
+
+        {
+          titulo:
+            "Termos diferentes",
+
+          problema:
+            "É possível simplificar 5x + 3y para 8xy?",
+
+          raciocinio:
+            "Os termos possuem partes literais diferentes.",
+
+          resolucao:
+            "Não. 5x e 3y não são termos semelhantes. A expressão continua 5x + 3y.",
+
+          conclusao:
+            "Só podemos juntar diretamente termos semelhantes."
+        },
+
+        {
+          titulo:
+            "Calculando valor numérico",
+
+          problema:
+            "Calcule 4x + 3 quando x = 5.",
+
+          raciocinio:
+            "Substituímos x pelo valor informado.",
+
+          resolucao:
+            "4 × 5 + 3 = 20 + 3 = 23.",
+
+          conclusao:
+            "Depois da substituição, resolvemos normalmente a expressão numérica."
+        },
+
+        {
+          titulo:
+            "Substituindo número negativo",
+
+          problema:
+            "Calcule 3x + 10 quando x = -2.",
+
+          raciocinio:
+            "Substituímos x por -2 e utilizamos parênteses para preservar o sinal.",
+
+          resolucao:
+            "3 × (-2) + 10 = -6 + 10 = 4.",
+
+          conclusao:
+            "Parênteses tornam a substituição de valores negativos mais segura."
+        },
+
+        {
+          titulo:
+            "Transformando uma frase",
+
+          problema:
+            "Represente algebricamente: 'o triplo de um número menos 7'.",
+
+          raciocinio:
+            "Chamamos o número desconhecido de x. Seu triplo é 3x.",
+
+          resolucao:
+            "Depois retiramos 7. Portanto: 3x - 7.",
+
+          conclusao:
+            "Traduzimos cada relação da frase para uma operação matemática."
+        },
+
+        {
+          titulo:
+            "Entendendo os parênteses",
+
+          problema:
+            "Represente 'o dobro da soma de um número com 6'.",
+
+          raciocinio:
+            "Primeiro precisamos representar a soma do número com 6: x + 6. Depois queremos o dobro dessa soma inteira.",
+
+          resolucao:
+            "A expressão é 2(x + 6).",
+
+          conclusao:
+            "2x + 6 teria outro significado. Os parênteses indicam que toda a soma será multiplicada por 2."
+        },
+
+        {
+          titulo:
+            "Aplicando distributiva",
+
+          problema:
+            "Simplifique 4(x + 3).",
+
+          raciocinio:
+            "O número 4 multiplica todos os termos dentro dos parênteses.",
+
+          resolucao:
+            "4 × x + 4 × 3 = 4x + 12.",
+
+          conclusao:
+            "A propriedade distributiva será uma das ferramentas fundamentais da Álgebra."
+        }
+
+      ],
+
+      estrategiasEnem: [
+
+        {
+          titulo:
+            "Defina a variável",
+          texto:
+            "Quando transformar um problema em Álgebra, deixe claro mentalmente o que a letra representa. Por exemplo: x = quantidade de ingressos."
+        },
+
+        {
+          titulo:
+            "Traduza aos poucos",
+          texto:
+            "Não tente transformar um enunciado inteiro em uma expressão de uma vez. Identifique relações como dobro, metade, soma, diferença e produto."
+        },
+
+        {
+          titulo:
+            "Observe os parênteses",
+          texto:
+            "Frases parecidas podem produzir expressões diferentes. 'O dobro de um número mais 5' e 'o dobro da soma de um número com 5' não representam necessariamente a mesma operação."
+        },
+
+        {
+          titulo:
+            "Substitua para testar",
+          texto:
+            "Quando estiver em dúvida sobre uma expressão, escolha temporariamente um valor simples para a variável e veja se a expressão reproduz corretamente a situação descrita."
+        },
+
+        {
+          titulo:
+            "Não tenha medo das letras",
+          texto:
+            "Uma letra é apenas uma forma de representar uma quantidade. As operações continuam seguindo as mesmas regras matemáticas que você já conhece."
+        }
+
+      ],
+
+      errosComuns: [
+
+        {
+          titulo:
+            "Pensar que 4x significa 4 + x",
+          texto:
+            "4x significa 4 multiplicado por x."
+        },
+
+        {
+          titulo:
+            "Juntar termos diferentes",
+          texto:
+            "3x + 2y não pode ser transformado em 5xy. Os termos não são semelhantes."
+        },
+
+        {
+          titulo:
+            "Esquecer o coeficiente 1",
+          texto:
+            "Em x, o coeficiente é 1. Em -x, o coeficiente é -1."
+        },
+
+        {
+          titulo:
+            "Confundir expressão com equação",
+          texto:
+            "Uma expressão como 2x + 5 não possui necessariamente algo para 'resolver'. Uma equação possui uma igualdade, como 2x + 5 = 15."
+        },
+
+        {
+          titulo:
+            "Ignorar o sinal do termo",
+          texto:
+            "Em 8x - 3y, o segundo termo pode ser interpretado como -3y. O sinal faz parte dele."
+        },
+
+        {
+          titulo:
+            "Errar a distributiva",
+          texto:
+            "Em 3(x + 4), o 3 multiplica tanto x quanto 4. O resultado é 3x + 12, e não 3x + 4."
+        }
+
+      ],
+
+      resumo:
+        "A Álgebra utiliza letras para representar quantidades. Uma variável pode assumir diferentes valores; uma incógnita representa um valor desconhecido que queremos determinar. Em um termo como 5x, 5 é o coeficiente e x é a parte literal. Expressões algébricas combinam números, letras e operações. Termos semelhantes podem ser reduzidos, valores podem ser substituídos nas variáveis e situações escritas em linguagem comum podem ser traduzidas para a linguagem algébrica. Essa base será necessária para manipular expressões e, depois, resolver equações."
+
+    },
+
+    videoaula: {
+      titulo:
+        "Videoaula complementar",
+      url: ""
+    },
+
+    exercicios: [
+
+      {
+        nivel: "Fundamental",
+
+        pergunta:
+          "Na expressão 6x + 2, qual é o coeficiente de x?",
+
+        alternativas: [
+          "x",
+          "2",
+          "6",
+          "8",
+          "Não existe coeficiente."
+        ],
+
+        correta: 2,
+
+        explicacao:
+          "6x significa 6 × x. Portanto, o número que multiplica x é 6."
+      },
+
+      {
+        nivel: "Fundamental",
+
+        pergunta:
+          "O que significa 5y?",
+
+        alternativas: [
+          "5 + y",
+          "5 - y",
+          "5 × y",
+          "5 ÷ y",
+          "y - 5"
+        ],
+
+        correta: 2,
+
+        explicacao:
+          "Na linguagem algébrica, quando um número aparece diretamente ao lado de uma variável, a multiplicação fica implícita. Portanto, 5y = 5 × y."
+      },
+
+      {
+        nivel: "Fundamental",
+
+        pergunta:
+          "Qual das alternativas apresenta uma equação, e não apenas uma expressão algébrica?",
+
+        alternativas: [
+          "3x + 7",
+          "5y - 2",
+          "2a + 4b",
+          "3x + 7 = 19",
+          "8x"
+        ],
+
+        correta: 3,
+
+        explicacao:
+          "Uma equação apresenta uma igualdade. 3x + 7 = 19 possui o sinal = e estabelece uma relação entre duas expressões."
+      },
+
+      {
+        nivel: "Fundamental",
+
+        pergunta:
+          "Qual é o termo independente em 4x + 9?",
+
+        alternativas: [
+          "4",
+          "x",
+          "4x",
+          "9",
+          "13"
+        ],
+
+        correta: 3,
+
+        explicacao:
+          "O termo independente é aquele que não contém variável. Nesse caso, é 9."
+      },
+
+      {
+        nivel: "Intermediário",
+
+        pergunta:
+          "Simplifique 3x + 8x.",
+
+        alternativas: [
+          "11",
+          "11x",
+          "24x",
+          "11x²",
+          "24x²"
+        ],
+
+        correta: 1,
+
+        explicacao:
+          "Como 3x e 8x são termos semelhantes, somamos seus coeficientes: 3 + 8 = 11. Portanto, o resultado é 11x."
+      },
+
+      {
+        nivel: "Intermediário",
+
+        pergunta:
+          "Qual expressão NÃO pode ser simplificada juntando diretamente os dois termos?",
+
+        alternativas: [
+          "2x + 5x",
+          "3y + 7y",
+          "4a + 9a",
+          "6x + 2y",
+          "8b - 3b"
+        ],
+
+        correta: 3,
+
+        explicacao:
+          "6x e 2y possuem partes literais diferentes. Portanto, não são termos semelhantes."
+      },
+
+      {
+        nivel: "Intermediário",
+
+        pergunta:
+          "Se x = 4, qual é o valor de 3x + 5?",
+
+        alternativas: [
+          "12",
+          "15",
+          "17",
+          "20",
+          "27"
+        ],
+
+        correta: 2,
+
+        explicacao:
+          "Substituindo x por 4: 3 × 4 + 5 = 12 + 5 = 17."
+      },
+
+      {
+        nivel: "Intermediário",
+
+        pergunta:
+          "Se x = -3, qual é o valor de 2x + 10?",
+
+        alternativas: [
+          "-16",
+          "-4",
+          "4",
+          "7",
+          "16"
+        ],
+
+        correta: 2,
+
+        explicacao:
+          "Substituindo x por -3: 2 × (-3) + 10 = -6 + 10 = 4."
+      },
+
+      {
+        nivel: "Intermediário",
+
+        pergunta:
+          "Se x representa um número, qual expressão representa 'o triplo desse número mais 4'?",
+
+        alternativas: [
+          "x + 7",
+          "3 + x + 4",
+          "3x + 4",
+          "4x + 3",
+          "3(x + 4)"
+        ],
+
+        correta: 2,
+
+        explicacao:
+          "O triplo de x é 3x. Depois adicionamos 4, obtendo 3x + 4."
+      },
+
+      {
+        nivel: "Intermediário",
+
+        pergunta:
+          "Qual expressão representa 'o dobro da soma de um número x com 5'?",
+
+        alternativas: [
+          "2x + 5",
+          "x + 10",
+          "2(x + 5)",
+          "5(x + 2)",
+          "2x + 2"
+        ],
+
+        correta: 2,
+
+        explicacao:
+          "Primeiro temos a soma x + 5. Como queremos o dobro de toda essa soma, escrevemos 2(x + 5)."
+      },
+
+      {
+        nivel: "Intermediário",
+
+        pergunta:
+          "Qual é o resultado da simplificação de 4x + 3x - 2x?",
+
+        alternativas: [
+          "5",
+          "5x",
+          "9x",
+          "5x²",
+          "9x²"
+        ],
+
+        correta: 1,
+
+        explicacao:
+          "Todos os termos são semelhantes. Operamos os coeficientes: 4 + 3 - 2 = 5. Portanto, temos 5x."
+      },
+
+      {
+        nivel: "Avançado",
+
+        pergunta:
+          "Qual é a forma simplificada de 3(x + 4)?",
+
+        alternativas: [
+          "3x + 4",
+          "3x + 7",
+          "3x + 12",
+          "7x",
+          "12x"
+        ],
+
+        correta: 2,
+
+        explicacao:
+          "Aplicando a distributiva: 3 × x + 3 × 4 = 3x + 12."
+      },
+
+      {
+        nivel: "Avançado",
+
+        pergunta:
+          "Uma corrida cobra uma taxa fixa de R$ 6 mais R$ 3 por quilômetro percorrido. Se x representa a quantidade de quilômetros, qual expressão representa o preço total?",
+
+        alternativas: [
+          "6x + 3",
+          "3x + 6",
+          "9x",
+          "3(x + 6)",
+          "6(x + 3)"
+        ],
+
+        correta: 1,
+
+        explicacao:
+          "Cada quilômetro custa R$ 3, portanto essa parte é representada por 3x. Somamos a taxa fixa de R$ 6, resultando em 3x + 6."
+      },
+
+      {
+        nivel: "Avançado",
+
+        pergunta:
+          "Se n representa um número inteiro, qual expressão representa seu sucessor?",
+
+        alternativas: [
+          "n - 1",
+          "n + 1",
+          "2n",
+          "n/2",
+          "n²"
+        ],
+
+        correta: 1,
+
+        explicacao:
+          "O sucessor de um número inteiro é o número imediatamente seguinte, portanto n + 1."
+      },
+
+      {
+        nivel: "Avançado",
+
+        pergunta:
+          "Qual expressão pode representar qualquer número par?",
+
+        alternativas: [
+          "n + 1",
+          "2n",
+          "2n + 1",
+          "n/2",
+          "n + 2"
+        ],
+
+        correta: 1,
+
+        explicacao:
+          "Todo número par é múltiplo de 2. Portanto, para um número inteiro n, 2n sempre representa um número par."
+      }
+
+    ]
+
+  },
+
+  
+
+
+  /* =====================================================
+     MÓDULO 20
+     MATEMÁTICA — MANIPULAÇÃO DE EXPRESSÕES ALGÉBRICAS
+  ===================================================== */
+
+  {
+    id: 20,
+    ordem: 20,
+    area: "Matemática",
+
+    titulo:
+      "Manipulação de Expressões Algébricas",
+
+    descricao:
+      "Aprenda a simplificar expressões, trabalhar com sinais e parênteses, aplicar a propriedade distributiva e manipular letras com segurança.",
+
+    dificuldade: "Fundamento essencial",
+    xp: 280,
+
+    teoria: {
+
+      introducao:
+        "Agora que você entende o significado das letras na Matemática, chegou a hora de aprender a manipulá-las. Este módulo é a ponte direta entre a linguagem algébrica e as equações. O objetivo não é decorar movimentos, mas entender por que cada transformação é permitida.",
+
+      topicos: [
+
+        {
+          titulo:
+            "1. O que significa simplificar uma expressão?",
+
+          texto:
+            "Simplificar uma expressão significa escrevê-la de uma forma equivalente, porém mais organizada ou reduzida. Por exemplo, 3x + 5x pode ser escrito como 8x. As duas expressões representam exatamente o mesmo valor para qualquer valor de x."
+        },
+
+        {
+          titulo:
+            "2. Termos semelhantes",
+
+          texto:
+            "Só podemos somar ou subtrair diretamente termos que possuem a mesma parte literal. Assim, 4x + 7x = 11x. Já 4x + 7y não pode ser reduzido dessa forma porque x e y representam partes literais diferentes."
+        },
+
+        {
+          titulo:
+            "3. Operando os coeficientes",
+
+          texto:
+            "Quando os termos são semelhantes, operamos apenas os coeficientes. Em 8x - 3x, fazemos 8 - 3 = 5 e mantemos x. Portanto, 8x - 3x = 5x."
+        },
+
+        {
+          titulo:
+            "4. Vários termos semelhantes",
+
+          texto:
+            "Uma expressão pode possuir vários termos semelhantes separados. Em 3x + 5 + 7x - 2, podemos reunir 3x com 7x e 5 com -2. Assim, obtemos 10x + 3."
+        },
+
+        {
+          titulo:
+            "5. Organizando antes de calcular",
+
+          texto:
+            "Quando uma expressão parece confusa, identifique primeiro os termos semelhantes. Em 4x + 3y + 2x - y, agrupamos mentalmente 4x + 2x e 3y - y. O resultado é 6x + 2y."
+        },
+
+        {
+          titulo:
+            "6. O sinal pertence ao termo",
+
+          texto:
+            "Em 7x - 4x + 2, o segundo termo é -4x. Isso é importante porque o sinal negativo não pode ser ignorado. Podemos pensar em 7x + (-4x) + 2."
+        },
+
+        {
+          titulo:
+            "7. Relembrando as regras de sinais na multiplicação",
+
+          texto:
+            "Na multiplicação, sinais iguais produzem resultado positivo e sinais diferentes produzem resultado negativo. Assim: (+)(+) = +, (-)(-) = +, (+)(-) = - e (-)(+) = -. Essas regras aparecem constantemente na Álgebra."
+        },
+
+        {
+          titulo:
+            "8. Parênteses",
+
+          texto:
+            "Os parênteses indicam que determinados termos formam um grupo. Em 3(x + 4), o número 3 multiplica toda a expressão x + 4."
+        },
+
+        {
+          titulo:
+            "9. Propriedade distributiva",
+
+          texto:
+            "A propriedade distributiva permite retirar parênteses quando existe uma multiplicação. Em 3(x + 4), multiplicamos 3 por x e também 3 por 4. Assim, 3(x + 4) = 3x + 12."
+        },
+
+        {
+          titulo:
+            "10. Distributiva com subtração",
+
+          texto:
+            "Em 5(x - 2), o número 5 multiplica os dois termos. Temos 5 × x = 5x e 5 × (-2) = -10. Portanto, 5(x - 2) = 5x - 10."
+        },
+
+        {
+          titulo:
+            "11. Número negativo antes dos parênteses",
+
+          texto:
+            "Em -2(x + 3), o coeficiente é -2. Aplicando a distributiva: (-2)x + (-2)3 = -2x - 6."
+        },
+
+        {
+          titulo:
+            "12. O sinal de menos antes dos parênteses",
+
+          texto:
+            "Quando temos -(x + 5), existe implicitamente uma multiplicação por -1. Assim, -(x + 5) = -x - 5."
+        },
+
+        {
+          titulo:
+            "13. Menos antes de uma subtração",
+
+          texto:
+            "Em -(x - 4), multiplicamos tudo por -1. Temos -x + 4. O segundo sinal muda porque (-1) × (-4) = +4."
+        },
+
+        {
+          titulo:
+            "14. Distributiva e depois redução",
+
+          texto:
+            "Às vezes precisamos realizar mais de uma etapa. Em 2(x + 3) + 4x, primeiro fazemos a distributiva: 2x + 6 + 4x. Depois reunimos os termos semelhantes: 6x + 6."
+        },
+
+        {
+          titulo:
+            "15. Duas distributivas",
+
+          texto:
+            "Em 2(x + 3) + 3(x - 1), aplicamos a distributiva nos dois grupos. Obtemos 2x + 6 + 3x - 3. Depois reduzimos os semelhantes: 5x + 3."
+        },
+
+        {
+          titulo:
+            "16. Multiplicação entre letras",
+
+          texto:
+            "Quando multiplicamos x por y, escrevemos xy. Quando multiplicamos 3 por x e por y, escrevemos 3xy. A ausência do símbolo de multiplicação é apenas uma convenção da linguagem algébrica."
+        },
+
+        {
+          titulo:
+            "17. Multiplicando uma variável por ela mesma",
+
+          texto:
+            "Quando x é multiplicado por x, temos x². Portanto, x × x = x². Da mesma forma, x × x × x = x³. A potenciação será aprofundada no próximo módulo específico."
+        },
+
+        {
+          titulo:
+            "18. Cuidado com x + x e x × x",
+
+          texto:
+            "Essas operações produzem resultados diferentes. x + x = 2x, pois estamos somando dois termos iguais. Já x × x = x², pois estamos multiplicando a variável por ela mesma."
+        },
+
+        {
+          titulo:
+            "19. Multiplicação de monômios",
+
+          texto:
+            "Em 3x × 2x, multiplicamos os números e depois as partes literais. 3 × 2 = 6 e x × x = x². Portanto, 3x × 2x = 6x²."
+        },
+
+        {
+          titulo:
+            "20. Divisão algébrica simples",
+
+          texto:
+            "Em uma expressão como 12x ÷ 3, podemos dividir o coeficiente: 12 ÷ 3 = 4. Portanto, 12x ÷ 3 = 4x."
+        },
+
+        {
+          titulo:
+            "21. Frações algébricas simples",
+
+          texto:
+            "Uma expressão como 6x/3 significa que 6x está sendo dividido por 3. Como 6 ÷ 3 = 2, temos 6x/3 = 2x."
+        },
+
+        {
+          titulo:
+            "22. Substituição depois da simplificação",
+
+          texto:
+            "Muitas vezes é mais rápido simplificar antes de substituir valores. Se queremos calcular 3x + 2x quando x = 10, podemos primeiro escrever 5x e depois fazer 5 × 10 = 50."
+        },
+
+        {
+          titulo:
+            "23. Igualdade e equivalência",
+
+          texto:
+            "Quando escrevemos 3x + 2x = 5x, estamos afirmando que as duas expressões possuem o mesmo valor para qualquer x. Manipular Álgebra corretamente significa preservar essa equivalência."
+        },
+
+        {
+          titulo:
+            "24. Por que isso importa para equações?",
+
+          texto:
+            "Resolver uma equação exige manipular expressões sem alterar incorretamente a igualdade. Saber reduzir termos, trabalhar com sinais e usar distributiva evita que a resolução de uma equação pareça uma sequência de regras misteriosas."
+        },
+
+        {
+          titulo:
+            "25. Preparação para fórmulas",
+
+          texto:
+            "Física, Química e Geometria utilizam fórmulas com letras. Manipular expressões permite substituir valores, reorganizar relações e compreender o significado matemático dessas fórmulas."
+        }
+
+      ],
+
+      exemplosResolvidos: [
+
+        {
+          titulo:
+            "Redução simples",
+
+          problema:
+            "Simplifique 7x + 4x.",
+
+          raciocinio:
+            "Os dois termos possuem a mesma parte literal x.",
+
+          resolucao:
+            "7x + 4x = (7 + 4)x = 11x.",
+
+          conclusao:
+            "Somamos os coeficientes e mantemos a variável."
+        },
+
+        {
+          titulo:
+            "Misturando termos",
+
+          problema:
+            "Simplifique 5x + 4 + 3x - 1.",
+
+          raciocinio:
+            "Agrupamos termos com x e termos constantes.",
+
+          resolucao:
+            "5x + 3x = 8x e 4 - 1 = 3. Portanto, o resultado é 8x + 3.",
+
+          conclusao:
+            "Termos semelhantes podem aparecer separados na expressão."
+        },
+
+        {
+          titulo:
+            "Duas variáveis",
+
+          problema:
+            "Simplifique 4x + 3y + 2x - y.",
+
+          raciocinio:
+            "4x e 2x são semelhantes. 3y e -y também são semelhantes.",
+
+          resolucao:
+            "4x + 2x = 6x. Como -y = -1y, temos 3y - y = 2y. Resultado: 6x + 2y.",
+
+          conclusao:
+            "Cada grupo de partes literais deve ser tratado separadamente."
+        },
+
+        {
+          titulo:
+            "Distributiva",
+
+          problema:
+            "Simplifique 4(x + 5).",
+
+          raciocinio:
+            "O 4 multiplica cada termo dentro dos parênteses.",
+
+          resolucao:
+            "4 × x + 4 × 5 = 4x + 20.",
+
+          conclusao:
+            "Nunca distribua o número apenas para o primeiro termo."
+        },
+
+        {
+          titulo:
+            "Distributiva negativa",
+
+          problema:
+            "Simplifique -3(x - 2).",
+
+          raciocinio:
+            "Multiplicamos -3 pelos dois termos.",
+
+          resolucao:
+            "(-3)x + (-3)(-2) = -3x + 6.",
+
+          conclusao:
+            "O produto de dois números negativos é positivo."
+        },
+
+        {
+          titulo:
+            "Distributiva e redução",
+
+          problema:
+            "Simplifique 2(x + 4) + 3x.",
+
+          raciocinio:
+            "Primeiro retiramos os parênteses.",
+
+          resolucao:
+            "2x + 8 + 3x = 5x + 8.",
+
+          conclusao:
+            "A ordem mais segura é: distributiva primeiro, redução depois."
+        },
+
+        {
+          titulo:
+            "Duas distributivas",
+
+          problema:
+            "Simplifique 3(x + 2) + 2(x - 1).",
+
+          raciocinio:
+            "Aplicamos distributiva separadamente em cada grupo.",
+
+          resolucao:
+            "3x + 6 + 2x - 2 = 5x + 4.",
+
+          conclusao:
+            "Depois de remover os parênteses, identificamos os termos semelhantes."
+        },
+
+        {
+          titulo:
+            "Soma não é multiplicação",
+
+          problema:
+            "Qual a diferença entre x + x e x × x?",
+
+          raciocinio:
+            "Na primeira expressão somamos duas unidades de x. Na segunda, multiplicamos x por ele mesmo.",
+
+          resolucao:
+            "x + x = 2x. Já x × x = x².",
+
+          conclusao:
+            "2x e x² representam operações completamente diferentes."
+        }
+
+      ],
+
+      estrategiasEnem: [
+
+        {
+          titulo:
+            "Organize antes de resolver",
+          texto:
+            "Em expressões grandes, identifique parênteses e termos semelhantes antes de começar as contas."
+        },
+
+        {
+          titulo:
+            "Distributiva antes da redução",
+          texto:
+            "Se houver parênteses multiplicados por algum termo, normalmente retire-os antes de tentar reunir termos semelhantes."
+        },
+
+        {
+          titulo:
+            "Carregue o sinal junto",
+          texto:
+            "Considere -5x como um termo inteiro. Separar mentalmente o sinal do termo é uma fonte comum de erros."
+        },
+
+        {
+          titulo:
+            "Teste com um número",
+          texto:
+            "Se estiver em dúvida se duas expressões são equivalentes, substitua x por um número simples e compare os resultados."
+        },
+
+        {
+          titulo:
+            "Não invente operações",
+          texto:
+            "3x + 4 não pode ser transformado em 7x. Antes de juntar termos, confirme se eles são semelhantes."
+        }
+
+      ],
+
+      errosComuns: [
+
+        {
+          titulo:
+            "Somar 3x + 4 como 7x",
+          texto:
+            "3x e 4 não são termos semelhantes. A expressão permanece 3x + 4."
+        },
+
+        {
+          titulo:
+            "Fazer x + x = x²",
+          texto:
+            "x + x = 2x. x² aparece quando fazemos x × x."
+        },
+
+        {
+          titulo:
+            "Distribuir apenas para um termo",
+          texto:
+            "2(x + 5) é 2x + 10, e não 2x + 5."
+        },
+
+        {
+          titulo:
+            "Perder o sinal negativo",
+          texto:
+            "-(x - 3) = -x + 3. O - equivale à multiplicação de toda a expressão por -1."
+        },
+
+        {
+          titulo:
+            "Misturar x e y",
+          texto:
+            "5x + 2y não pode ser reduzido para 7xy."
+        }
+
+      ],
+
+      resumo:
+        "Manipular expressões significa transformá-las em formas equivalentes. Termos semelhantes podem ser reduzidos operando seus coeficientes. A propriedade distributiva permite retirar parênteses, e os sinais precisam acompanhar seus termos. Também vimos que x + x = 2x, enquanto x × x = x². Essa base prepara diretamente para equações, fórmulas, funções e problemas de Física e Química."
+
+    },
+
+    videoaula: {
+      titulo:
+        "Videoaula complementar",
+      url: ""
+    },
+
+    exercicios: [
+
+      {
+        nivel: "Fundamental",
+
+        pergunta:
+          "Simplifique 6x + 3x.",
+
+        alternativas: [
+          "9",
+          "9x",
+          "18x",
+          "9x²",
+          "18x²"
+        ],
+
+        correta: 1,
+
+        explicacao:
+          "Os termos são semelhantes. Somamos os coeficientes: 6 + 3 = 9. Portanto, 9x."
+      },
+
+      {
+        nivel: "Fundamental",
+
+        pergunta:
+          "Simplifique 9x - 4x.",
+
+        alternativas: [
+          "5",
+          "5x",
+          "13x",
+          "5x²",
+          "-5x"
+        ],
+
+        correta: 1,
+
+        explicacao:
+          "9 - 4 = 5. Mantemos a parte literal x, obtendo 5x."
+      },
+
+      {
+        nivel: "Fundamental",
+
+        pergunta:
+          "Qual expressão NÃO pode ser reduzida juntando os dois termos?",
+
+        alternativas: [
+          "2x + 3x",
+          "5y - 2y",
+          "4a + 7a",
+          "3x + 4y",
+          "8b - b"
+        ],
+
+        correta: 3,
+
+        explicacao:
+          "3x e 4y possuem partes literais diferentes."
+      },
+
+      {
+        nivel: "Intermediário",
+
+        pergunta:
+          "Simplifique 3x + 5 + 4x - 2.",
+
+        alternativas: [
+          "7x + 3",
+          "7x + 7",
+          "12x",
+          "7x - 3",
+          "12x + 3"
+        ],
+
+        correta: 0,
+
+        explicacao:
+          "3x + 4x = 7x e 5 - 2 = 3. Resultado: 7x + 3."
+      },
+
+      {
+        nivel: "Intermediário",
+
+        pergunta:
+          "Qual é o resultado de 3(x + 4)?",
+
+        alternativas: [
+          "3x + 4",
+          "3x + 7",
+          "3x + 12",
+          "7x",
+          "12x"
+        ],
+
+        correta: 2,
+
+        explicacao:
+          "Aplicando a distributiva: 3 × x + 3 × 4 = 3x + 12."
+      },
+
+      {
+        nivel: "Intermediário",
+
+        pergunta:
+          "Simplifique 5(x - 2).",
+
+        alternativas: [
+          "5x - 2",
+          "5x - 10",
+          "5x + 10",
+          "3x",
+          "10x"
+        ],
+
+        correta: 1,
+
+        explicacao:
+          "5 multiplica x e -2: 5x - 10."
+      },
+
+      {
+        nivel: "Intermediário",
+
+        pergunta:
+          "Simplifique -(x + 7).",
+
+        alternativas: [
+          "-x + 7",
+          "-x - 7",
+          "x - 7",
+          "x + 7",
+          "-7x"
+        ],
+
+        correta: 1,
+
+        explicacao:
+          "O sinal negativo equivale a multiplicar toda a expressão por -1: -x - 7."
+      },
+
+      {
+        nivel: "Intermediário",
+
+        pergunta:
+          "Simplifique 2(x + 3) + 4x.",
+
+        alternativas: [
+          "6x + 3",
+          "6x + 6",
+          "8x + 3",
+          "6x",
+          "8x + 6"
+        ],
+
+        correta: 1,
+
+        explicacao:
+          "2(x + 3) = 2x + 6. Depois: 2x + 6 + 4x = 6x + 6."
+      },
+
+      {
+        nivel: "Avançado",
+
+        pergunta:
+          "Simplifique -2(x - 5) + 3x.",
+
+        alternativas: [
+          "x + 10",
+          "x - 10",
+          "5x + 10",
+          "-5x + 10",
+          "x + 5"
+        ],
+
+        correta: 0,
+
+        explicacao:
+          "-2(x - 5) = -2x + 10. Somando 3x: -2x + 3x + 10 = x + 10."
+      },
+
+      {
+        nivel: "Avançado",
+
+        pergunta:
+          "Qual é o resultado de 3x × 2x?",
+
+        alternativas: [
+          "5x",
+          "6x",
+          "5x²",
+          "6x²",
+          "6x³"
+        ],
+
+        correta: 3,
+
+        explicacao:
+          "3 × 2 = 6 e x × x = x². Portanto, 6x²."
+      },
+
+      {
+        nivel: "Avançado",
+
+        pergunta:
+          "Simplifique 3(x + 2) + 2(x - 1).",
+
+        alternativas: [
+          "5x + 4",
+          "5x + 8",
+          "6x + 4",
+          "x + 4",
+          "5x - 4"
+        ],
+
+        correta: 0,
+
+        explicacao:
+          "3x + 6 + 2x - 2 = 5x + 4."
+      },
+
+      {
+        nivel: "Avançado",
+
+        pergunta:
+          "Se x = 4, qual é o valor da expressão simplificada 2x + 3x - 5?",
+
+        alternativas: [
+          "10",
+          "15",
+          "20",
+          "25",
+          "35"
+        ],
+
+        correta: 1,
+
+        explicacao:
+          "2x + 3x = 5x. Para x = 4: 5 × 4 - 5 = 20 - 5 = 15."
+      }
+
+    ]
+
+  },
+
+
+  /* =====================================================
+     MÓDULO 21
+     MATEMÁTICA — POTENCIAÇÃO E RADICIAÇÃO
+  ===================================================== */
+
+  {
+    id: 21,
+    ordem: 21,
+    area: "Matemática",
+
+    titulo:
+      "Potenciação e Radiciação",
+
+    descricao:
+      "Domine potências, expoentes, propriedades, raízes e simplificações essenciais para Álgebra, Pitágoras, funções, Física e Química.",
+
+    dificuldade: "Fundamento essencial",
+    xp: 300,
+
+    teoria: {
+
+      introducao:
+        "Potências e raízes aparecem em praticamente toda a Matemática do Ensino Médio. Elas estão em áreas, volumes, equações, funções, notação científica, Geometria, Física e Química. Neste módulo vamos construir o significado dessas operações antes de estudar suas propriedades.",
+
+      topicos: [
+
+        {
+          titulo:
+            "1. O que é uma potência?",
+
+          texto:
+            "Potenciação é uma forma compacta de representar multiplicações repetidas de fatores iguais. Por exemplo, 2³ significa 2 × 2 × 2, cujo resultado é 8."
+        },
+
+        {
+          titulo:
+            "2. Base e expoente",
+
+          texto:
+            "Em 5³, o número 5 é chamado base e o número 3 é chamado expoente. O expoente informa quantas vezes a base aparece como fator na multiplicação."
+        },
+
+        {
+          titulo:
+            "3. Expoente não é multiplicação direta",
+
+          texto:
+            "Um erro comum é pensar que 5³ significa 5 × 3. Não significa. Temos 5³ = 5 × 5 × 5 = 125."
+        },
+
+        {
+          titulo:
+            "4. Quadrado de um número",
+
+          texto:
+            "Quando o expoente é 2, dizemos que o número está elevado ao quadrado. Por exemplo, 6² = 6 × 6 = 36. Essa ideia aparece frequentemente no cálculo de áreas."
+        },
+
+        {
+          titulo:
+            "5. Cubo de um número",
+
+          texto:
+            "Quando o expoente é 3, dizemos que o número está elevado ao cubo. Por exemplo, 4³ = 4 × 4 × 4 = 64. Essa ideia aparece naturalmente em cálculos de volume."
+        },
+
+        {
+          titulo:
+            "6. Expoente 1",
+
+          texto:
+            "Todo número elevado a 1 é igual a ele mesmo. Assim, 7¹ = 7 e x¹ = x."
+        },
+
+        {
+          titulo:
+            "7. Expoente zero",
+
+          texto:
+            "Para qualquer base não nula, elevar a zero resulta em 1. Portanto, 5⁰ = 1, 100⁰ = 1 e x⁰ = 1 quando x ≠ 0."
+        },
+
+        {
+          titulo:
+            "8. Potências com base negativa",
+
+          texto:
+            "Os parênteses são importantes. (-2)² significa (-2) × (-2) = 4. Já (-2)³ = (-2) × (-2) × (-2) = -8."
+        },
+
+        {
+          titulo:
+            "9. Expoente par e base negativa",
+
+          texto:
+            "Quando uma base negativa entre parênteses é elevada a um expoente par, o resultado é positivo. Isso ocorre porque os fatores negativos podem ser agrupados em pares."
+        },
+
+        {
+          titulo:
+            "10. Expoente ímpar e base negativa",
+
+          texto:
+            "Quando uma base negativa entre parênteses é elevada a um expoente ímpar, o resultado permanece negativo. Exemplo: (-3)³ = -27."
+        },
+
+        {
+          titulo:
+            "11. Atenção: -2² e (-2)²",
+
+          texto:
+            "Essas expressões não são iguais. Em (-2)², a base inteira é -2 e o resultado é 4. Em -2², pela ordem das operações, calculamos primeiro 2² e depois aplicamos o sinal negativo: -(4) = -4."
+        },
+
+        {
+          titulo:
+            "12. Produto de potências de mesma base",
+
+          texto:
+            "Ao multiplicar potências de mesma base, mantemos a base e somamos os expoentes. Assim, 2³ × 2⁴ = 2⁷. Isso acontece porque estamos juntando três fatores 2 com mais quatro fatores 2."
+        },
+
+        {
+          titulo:
+            "13. Regra geral do produto",
+
+          texto:
+            "Para a mesma base: aᵐ × aⁿ = aᵐ⁺ⁿ. A regra não é mágica; ela é consequência da multiplicação repetida."
+        },
+
+        {
+          titulo:
+            "14. Divisão de potências de mesma base",
+
+          texto:
+            "Na divisão de potências de mesma base não nula, subtraímos os expoentes. Por exemplo, 5⁶ ÷ 5² = 5⁴."
+        },
+
+        {
+          titulo:
+            "15. Regra geral do quociente",
+
+          texto:
+            "Para a mesma base não nula: aᵐ ÷ aⁿ = aᵐ⁻ⁿ. Essa propriedade resulta do cancelamento de fatores iguais no numerador e no denominador."
+        },
+
+        {
+          titulo:
+            "16. Potência de potência",
+
+          texto:
+            "Quando uma potência é elevada a outra potência, multiplicamos os expoentes. Assim, (2³)² = 2⁶ = 64."
+        },
+
+        {
+          titulo:
+            "17. Potência de um produto",
+
+          texto:
+            "Quando um produto inteiro está elevado a uma potência, cada fator pode receber o expoente. Assim, (2 × 3)² = 2² × 3² = 36."
+        },
+
+        {
+          titulo:
+            "18. Potência de uma fração",
+
+          texto:
+            "Quando uma fração é elevada a uma potência, elevamos numerador e denominador. Por exemplo, (2/3)² = 2²/3² = 4/9."
+        },
+
+        {
+          titulo:
+            "19. Expoente negativo",
+
+          texto:
+            "Um expoente negativo indica o inverso da potência correspondente. Por exemplo, 2⁻³ = 1/2³ = 1/8. Não significa que o resultado da potência seja automaticamente negativo."
+        },
+
+        {
+          titulo:
+            "20. O que é radiciação?",
+
+          texto:
+            "Radiciação é a operação relacionada inversamente à potenciação. A raiz quadrada de 25 pergunta qual número, multiplicado por ele mesmo, produz 25. Como 5² = 25, temos √25 = 5."
+        },
+
+        {
+          titulo:
+            "21. Elementos de uma raiz",
+
+          texto:
+            "Na expressão √a, a é chamado radicando. Quando não aparece nenhum índice, entendemos que se trata de uma raiz quadrada. Em uma raiz cúbica, o índice é 3."
+        },
+
+        {
+          titulo:
+            "22. Raiz quadrada",
+
+          texto:
+            "√36 = 6 porque 6² = 36. Da mesma maneira, √81 = 9 porque 9² = 81."
+        },
+
+        {
+          titulo:
+            "23. Raiz cúbica",
+
+          texto:
+            "A raiz cúbica pergunta qual número elevado ao cubo produz o radicando. Por exemplo, ∛27 = 3 porque 3³ = 27."
+        },
+
+        {
+          titulo:
+            "24. Raiz quadrada principal",
+
+          texto:
+            "O símbolo √ representa, por convenção, a raiz quadrada principal não negativa. Portanto, √25 = 5. Mais tarde, em equações como x² = 25, podem surgir as soluções x = 5 e x = -5; isso é uma situação diferente."
+        },
+
+        {
+          titulo:
+            "25. Quadrados perfeitos",
+
+          texto:
+            "É muito útil reconhecer quadrados perfeitos: 1² = 1, 2² = 4, 3² = 9, 4² = 16, 5² = 25, 6² = 36, 7² = 49, 8² = 64, 9² = 81, 10² = 100, 11² = 121 e 12² = 144."
+        },
+
+        {
+          titulo:
+            "26. Quando a raiz não é inteira",
+
+          texto:
+            "Nem toda raiz quadrada resulta em número inteiro. √2, por exemplo, é um número irracional e pode permanecer representado exatamente como √2."
+        },
+
+        {
+          titulo:
+            "27. Simplificando raízes",
+
+          texto:
+            "Podemos simplificar uma raiz procurando fatores que sejam quadrados perfeitos. Por exemplo, √12 = √(4 × 3) = √4 × √3 = 2√3."
+        },
+
+        {
+          titulo:
+            "28. Outro exemplo de simplificação",
+
+          texto:
+            "√50 = √(25 × 2) = √25 × √2 = 5√2. Procurar o maior quadrado perfeito que divide o radicando costuma facilitar o processo."
+        },
+
+        {
+          titulo:
+            "29. Multiplicação de raízes",
+
+          texto:
+            "Em situações adequadas com radicandos não negativos, podemos utilizar √a × √b = √(ab). Por exemplo, √2 × √8 = √16 = 4."
+        },
+
+        {
+          titulo:
+            "30. Raiz e potência como operações relacionadas",
+
+          texto:
+            "Potenciação e radiciação estão profundamente relacionadas. Se 7² = 49, então √49 = 7. Essa relação será essencial no Teorema de Pitágoras."
+        },
+
+        {
+          titulo:
+            "31. Potências com variáveis",
+
+          texto:
+            "x² significa x × x. Já x³ significa x × x × x. É importante não confundir 2x com x²: 2x é 2 × x, enquanto x² é x × x."
+        },
+
+        {
+          titulo:
+            "32. Por que isso prepara para equação do segundo grau?",
+
+          texto:
+            "Uma equação do segundo grau possui um termo com variável elevada ao quadrado, como x². Para compreender e resolver essas equações, precisamos dominar previamente o significado de potências e raízes."
+        },
+
+        {
+          titulo:
+            "33. Por que isso prepara para Pitágoras?",
+
+          texto:
+            "O Teorema de Pitágoras relaciona os quadrados dos lados de um triângulo retângulo. Para encontrar um lado desconhecido, frequentemente precisamos calcular uma raiz quadrada."
+        },
+
+        {
+          titulo:
+            "34. Potências na Física e na Química",
+
+          texto:
+            "Potências aparecem em unidades de área e volume, notação científica, ordens de grandeza e diversas fórmulas. Por isso, este conteúdo será reutilizado muitas vezes ao longo da trilha."
+        }
+
+      ],
+
+      exemplosResolvidos: [
+
+        {
+          titulo:
+            "Potência básica",
+
+          problema:
+            "Calcule 3⁴.",
+
+          raciocinio:
+            "O expoente 4 indica quatro fatores iguais a 3.",
+
+          resolucao:
+            "3⁴ = 3 × 3 × 3 × 3 = 81.",
+
+          conclusao:
+            "O expoente informa a quantidade de fatores, não um número pelo qual multiplicamos a base uma única vez."
+        },
+
+        {
+          titulo:
+            "Base negativa",
+
+          problema:
+            "Calcule (-4)².",
+
+          raciocinio:
+            "A base inteira é -4 e aparece duas vezes como fator.",
+
+          resolucao:
+            "(-4) × (-4) = 16.",
+
+          conclusao:
+            "O produto de dois fatores negativos é positivo."
+        },
+
+        {
+          titulo:
+            "Produto de potências",
+
+          problema:
+            "Simplifique 2³ × 2⁵.",
+
+          raciocinio:
+            "As bases são iguais, então somamos os expoentes.",
+
+          resolucao:
+            "2³ × 2⁵ = 2³⁺⁵ = 2⁸ = 256.",
+
+          conclusao:
+            "No produto de potências de mesma base, os expoentes são somados."
+        },
+
+        {
+          titulo:
+            "Potência de potência",
+
+          problema:
+            "Simplifique (3²)³.",
+
+          raciocinio:
+            "Multiplicamos os expoentes.",
+
+          resolucao:
+            "(3²)³ = 3⁶ = 729.",
+
+          conclusao:
+            "Potência de potência utiliza multiplicação dos expoentes."
+        },
+
+        {
+          titulo:
+            "Expoente negativo",
+
+          problema:
+            "Calcule 5⁻².",
+
+          raciocinio:
+            "O expoente negativo indica o inverso.",
+
+          resolucao:
+            "5⁻² = 1/5² = 1/25.",
+
+          conclusao:
+            "O sinal negativo está no expoente e não significa que o resultado será negativo."
+        },
+
+        {
+          titulo:
+            "Raiz quadrada",
+
+          problema:
+            "Calcule √144.",
+
+          raciocinio:
+            "Procuramos o número não negativo cujo quadrado é 144.",
+
+          resolucao:
+            "12² = 144. Portanto, √144 = 12.",
+
+          conclusao:
+            "Conhecer quadrados perfeitos acelera muito esse tipo de cálculo."
+        },
+
+        {
+          titulo:
+            "Simplificando uma raiz",
+
+          problema:
+            "Simplifique √72.",
+
+          raciocinio:
+            "Procuramos um quadrado perfeito que seja fator de 72. Podemos escrever 72 = 36 × 2.",
+
+          resolucao:
+            "√72 = √(36 × 2) = √36 × √2 = 6√2.",
+
+          conclusao:
+            "Retiramos da raiz o fator cujo valor possui raiz exata."
+        },
+
+        {
+          titulo:
+            "Ligação com Geometria",
+
+          problema:
+            "Um quadrado possui área igual a 49 cm². Qual é a medida de seu lado?",
+
+          raciocinio:
+            "Se o lado mede l, então a área é l². Precisamos do número cujo quadrado é 49.",
+
+          resolucao:
+            "l = √49 = 7 cm.",
+
+          conclusao:
+            "A radiciação permite desfazer o quadrado nesse contexto."
+        }
+
+      ],
+
+      estrategiasEnem: [
+
+        {
+          titulo:
+            "Reconheça quadrados perfeitos",
+          texto:
+            "Memorizar pelo menos os quadrados de 1 até 12 ajuda muito em raízes, Pitágoras e equações."
+        },
+
+        {
+          titulo:
+            "Expanda quando esquecer uma propriedade",
+          texto:
+            "Se esquecer por que 2³ × 2² = 2⁵, escreva os fatores: (2×2×2)(2×2). A própria definição revela a regra."
+        },
+
+        {
+          titulo:
+            "Observe os parênteses",
+          texto:
+            "(-3)² e -3² não possuem o mesmo valor. Identifique exatamente qual é a base antes de calcular."
+        },
+
+        {
+          titulo:
+            "Procure quadrados perfeitos dentro da raiz",
+          texto:
+            "Para simplificar √48, por exemplo, procure um fator como 16: √(16×3) = 4√3."
+        },
+
+        {
+          titulo:
+            "Não transforme tudo em decimal",
+          texto:
+            "Em muitos problemas, manter uma raiz como √2 ou 3√5 preserva o valor exato e facilita cálculos posteriores."
+        }
+
+      ],
+
+      errosComuns: [
+
+        {
+          titulo:
+            "Fazer 2³ = 2 × 3",
+          texto:
+            "2³ significa 2 × 2 × 2 = 8, e não 6."
+        },
+
+        {
+          titulo:
+            "Confundir 2x com x²",
+          texto:
+            "2x significa 2 × x. x² significa x × x."
+        },
+
+        {
+          titulo:
+            "Somar expoentes em uma soma",
+          texto:
+            "A regra aᵐ × aⁿ = aᵐ⁺ⁿ vale para multiplicação de potências de mesma base. Ela não autoriza transformar a² + a³ em a⁵."
+        },
+
+        {
+          titulo:
+            "Achar que expoente negativo produz número negativo",
+          texto:
+            "2⁻³ = 1/8, que é positivo. O expoente negativo indica inversão."
+        },
+
+        {
+          titulo:
+            "Confundir √25 com ±5",
+          texto:
+            "O símbolo √25 representa a raiz principal: 5. O ± aparece em outros contextos, como ao resolver x² = 25."
+        },
+
+        {
+          titulo:
+            "Separar uma soma dentro da raiz",
+          texto:
+            "Em geral, √(a + b) não é igual a √a + √b. Por exemplo, √(9 + 16) = 5, enquanto √9 + √16 = 7."
+        }
+
+      ],
+
+      resumo:
+        "Potenciação representa multiplicações repetidas de fatores iguais. No produto de potências de mesma base, somamos expoentes; no quociente, subtraímos; e em potência de potência, multiplicamos. Expoentes negativos representam inversos. A radiciação está relacionada à potenciação: √25 = 5 porque 5² = 25. Também aprendemos quadrados perfeitos e simplificação de raízes. Esses conceitos serão essenciais para equações do segundo grau, Pitágoras, funções, Física e Química."
+
+    },
+
+    videoaula: {
+      titulo:
+        "Videoaula complementar",
+      url: ""
+    },
+
+    exercicios: [
+
+      {
+        nivel: "Fundamental",
+
+        pergunta:
+          "Qual é o valor de 2⁴?",
+
+        alternativas: [
+          "6",
+          "8",
+          "12",
+          "16",
+          "24"
+        ],
+
+        correta: 3,
+
+        explicacao:
+          "2⁴ = 2 × 2 × 2 × 2 = 16."
+      },
+
+      {
+        nivel: "Fundamental",
+
+        pergunta:
+          "Em 7³, quais são respectivamente a base e o expoente?",
+
+        alternativas: [
+          "3 e 7",
+          "7 e 3",
+          "7 e 21",
+          "21 e 3",
+          "7 e 7"
+        ],
+
+        correta: 1,
+
+        explicacao:
+          "A base é 7 e o expoente é 3."
+      },
+
+      {
+        nivel: "Fundamental",
+
+        pergunta:
+          "Qual é o valor de √81?",
+
+        alternativas: [
+          "8",
+          "9",
+          "18",
+          "27",
+          "40,5"
+        ],
+
+        correta: 1,
+
+        explicacao:
+          "9² = 81. Portanto, √81 = 9."
+      },
+
+      {
+        nivel: "Fundamental",
+
+        pergunta:
+          "Qual é o valor de (-3)²?",
+
+        alternativas: [
+          "-9",
+          "-6",
+          "6",
+          "9",
+          "3"
+        ],
+
+        correta: 3,
+
+        explicacao:
+          "(-3)² = (-3) × (-3) = 9."
+      },
+
+      {
+        nivel: "Intermediário",
+
+        pergunta:
+          "Simplifique 2³ × 2⁴.",
+
+        alternativas: [
+          "2⁷",
+          "4⁷",
+          "2¹²",
+          "4¹²",
+          "2"
+        ],
+
+        correta: 0,
+
+        explicacao:
+          "No produto de potências de mesma base, somamos os expoentes: 3 + 4 = 7."
+      },
+
+      {
+        nivel: "Intermediário",
+
+        pergunta:
+          "Simplifique 5⁶ ÷ 5².",
+
+        alternativas: [
+          "5³",
+          "5⁴",
+          "5⁸",
+          "25⁴",
+          "1"
+        ],
+
+        correta: 1,
+
+        explicacao:
+          "Na divisão de potências de mesma base, subtraímos os expoentes: 6 - 2 = 4."
+      },
+
+      {
+        nivel: "Intermediário",
+
+        pergunta:
+          "Simplifique (2³)⁴.",
+
+        alternativas: [
+          "2⁷",
+          "2¹²",
+          "8⁴",
+          "6⁴",
+          "2"
+        ],
+
+        correta: 1,
+
+        explicacao:
+          "Em potência de potência, multiplicamos os expoentes: 3 × 4 = 12."
+      },
+
+      {
+        nivel: "Intermediário",
+
+        pergunta:
+          "Qual é o valor de 2⁻³?",
+
+        alternativas: [
+          "-8",
+          "-6",
+          "1/8",
+          "1/6",
+          "8"
+        ],
+
+        correta: 2,
+
+        explicacao:
+          "2⁻³ = 1/2³ = 1/8."
+      },
+
+      {
+        nivel: "Intermediário",
+
+        pergunta:
+          "Qual é a forma simplificada de √20?",
+
+        alternativas: [
+          "2√5",
+          "4√5",
+          "5√2",
+          "10",
+          "20√2"
+        ],
+
+        correta: 0,
+
+        explicacao:
+          "20 = 4 × 5. Então √20 = √4 × √5 = 2√5."
+      },
+
+      {
+        nivel: "Intermediário",
+
+        pergunta:
+          "Qual é a forma simplificada de √75?",
+
+        alternativas: [
+          "3√5",
+          "5√3",
+          "15√5",
+          "25√3",
+          "5√5"
+        ],
+
+        correta: 1,
+
+        explicacao:
+          "75 = 25 × 3. Portanto, √75 = √25 × √3 = 5√3."
+      },
+
+      {
+        nivel: "Avançado",
+
+        pergunta:
+          "Qual afirmação está correta?",
+
+        alternativas: [
+          "x + x = x²",
+          "x × x = 2x",
+          "x × x = x²",
+          "2x = x² para qualquer x",
+          "x² = x + 2"
+        ],
+
+        correta: 2,
+
+        explicacao:
+          "x multiplicado por x é x². Já x + x = 2x."
+      },
+
+      {
+        nivel: "Avançado",
+
+        pergunta:
+          "Qual é o valor de √2 × √8?",
+
+        alternativas: [
+          "2",
+          "4",
+          "8",
+          "10",
+          "16"
+        ],
+
+        correta: 1,
+
+        explicacao:
+          "√2 × √8 = √16 = 4."
+      },
+
+      {
+        nivel: "Avançado",
+
+        pergunta:
+          "Um quadrado possui área de 196 cm². Quanto mede seu lado?",
+
+        alternativas: [
+          "7 cm",
+          "12 cm",
+          "14 cm",
+          "28 cm",
+          "98 cm"
+        ],
+
+        correta: 2,
+
+        explicacao:
+          "Se l² = 196, então l = √196 = 14 cm."
+      },
+
+      {
+        nivel: "Avançado",
+
+        pergunta:
+          "Por que √(9 + 16) não pode ser calculado como √9 + √16?",
+
+        alternativas: [
+          "Porque raízes nunca podem envolver soma.",
+          "Porque √(a + b) não é, em geral, igual a √a + √b.",
+          "Porque 9 e 16 não são quadrados perfeitos.",
+          "Porque somente raízes cúbicas permitem soma.",
+          "Porque √25 não existe."
+        ],
+
+        correta: 1,
+
+        explicacao:
+          "√(9 + 16) = √25 = 5, enquanto √9 + √16 = 3 + 4 = 7. Portanto, essa distribuição sobre uma soma não é válida."
+      }
+
+    ]
+
   }
 
 ];

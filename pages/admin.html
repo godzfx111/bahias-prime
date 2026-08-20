@@ -82,7 +82,7 @@
         <h2>Central do Bahia's Prime</h2>
 
         <p>
-          Gerencie alunos, videoaulas e conteúdos da plataforma.
+          Gerencie alunos, trilha de estudos e conteúdos da plataforma.
         </p>
       </div>
 
@@ -94,15 +94,94 @@
     </header>
 
 
-    <!-- ALUNOS -->
+    <!-- ======================================
+         ORGANIZAR TRILHA
+    ======================================= -->
 
     <section class="admin-section">
 
       <div class="admin-section-title">
+
         <div>
-          <span class="card-label">ALUNOS</span>
-          <h3>Gerenciar estudantes</h3>
+
+          <span class="card-label">
+            TRILHA
+          </span>
+
+          <h3>
+            Organizar trilha de estudos
+          </h3>
+
+          <p>
+            Arraste os módulos para alterar a ordem em que os alunos estudam.
+            Os IDs e o progresso dos alunos não serão alterados.
+          </p>
+
         </div>
+
+      </div>
+
+
+      <article class="card trail-order-admin-card">
+
+        <div class="trail-order-warning">
+
+          <strong>
+            ⚠ Ordem pedagógica
+          </strong>
+
+          <p>
+            Garanta que os pré-requisitos de um conteúdo sejam ensinados
+            antes dos módulos que dependem deles.
+          </p>
+
+        </div>
+
+
+        <div
+          id="moduleOrderList"
+          class="module-order-list"
+        >
+          Carregando módulos...
+        </div>
+
+
+        <div
+          id="moduleOrderMessage"
+          class="admin-message"
+        ></div>
+
+
+        <button
+          id="saveModuleOrderButton"
+          class="primary-button admin-submit"
+        >
+          Salvar nova ordem
+        </button>
+
+      </article>
+
+    </section>
+
+
+    <!-- ======================================
+         ALUNOS
+    ======================================= -->
+
+    <section class="admin-section">
+
+      <div class="admin-section-title">
+
+        <div>
+          <span class="card-label">
+            ALUNOS
+          </span>
+
+          <h3>
+            Gerenciar estudantes
+          </h3>
+        </div>
+
       </div>
 
 
@@ -110,7 +189,9 @@
 
         <article class="card admin-create-card">
 
-          <h3>Adicionar novo aluno</h3>
+          <h3>
+            Adicionar novo aluno
+          </h3>
 
           <p>
             Crie uma conta pronta para estudar no Bahia's Prime.
@@ -120,7 +201,10 @@
           <form id="studentForm">
 
             <div class="form-group">
-              <label>Nome</label>
+
+              <label>
+                Nome
+              </label>
 
               <input
                 id="studentName"
@@ -128,11 +212,15 @@
                 placeholder="Ex: Lucas"
                 required
               >
+
             </div>
 
 
             <div class="form-group">
-              <label>E-mail</label>
+
+              <label>
+                E-mail
+              </label>
 
               <input
                 id="studentEmail"
@@ -140,11 +228,15 @@
                 placeholder="aluno@email.com"
                 required
               >
+
             </div>
 
 
             <div class="form-group">
-              <label>Senha inicial</label>
+
+              <label>
+                Senha inicial
+              </label>
 
               <input
                 id="studentPassword"
@@ -153,6 +245,7 @@
                 minlength="6"
                 required
               >
+
             </div>
 
 
@@ -180,11 +273,15 @@
           <div class="admin-list-header">
 
             <div>
+
               <span class="card-label">
                 CADASTRADOS
               </span>
 
-              <h3>Alunos</h3>
+              <h3>
+                Alunos
+              </h3>
+
             </div>
 
             <strong id="studentCount">
@@ -208,23 +305,29 @@
     </section>
 
 
-    <!-- VIDEOAULAS -->
+    <!-- ======================================
+         VIDEOAULAS
+    ======================================= -->
 
     <section class="admin-section">
 
       <div class="admin-section-title">
 
         <div>
+
           <span class="card-label">
             VIDEOAULAS
           </span>
 
-          <h3>Complementos dos módulos</h3>
+          <h3>
+            Complementos dos módulos
+          </h3>
 
           <p>
             O ensino principal continua dentro do Bahia's Prime.
             As videoaulas funcionam como reforço opcional.
           </p>
+
         </div>
 
       </div>
@@ -241,9 +344,11 @@
             </label>
 
             <select id="videoModule">
+
               <option value="">
                 Selecione um módulo
               </option>
+
             </select>
 
           </div>
@@ -266,7 +371,10 @@
         </div>
 
 
-        <div class="admin-message" id="videoMessage"></div>
+        <div
+          class="admin-message"
+          id="videoMessage"
+        ></div>
 
 
         <button
@@ -281,41 +389,79 @@
     </section>
 
 
-    <!-- CONTEÚDO -->
+    <!-- ======================================
+         CONTEÚDO
+    ======================================= -->
 
     <section class="admin-section">
 
       <div class="admin-section-title">
+
         <div>
+
           <span class="card-label">
             CONTEÚDO
           </span>
 
-          <h3>Ferramentas futuras</h3>
+          <h3>
+            Ferramentas futuras
+          </h3>
+
         </div>
+
       </div>
 
 
       <div class="admin-tools-grid">
 
         <article class="card admin-tool">
-          <span>📎</span>
-          <strong>Materiais</strong>
-          <p>Adicionar PDFs, simulados e materiais complementares.</p>
+
+          <span>
+            📎
+          </span>
+
+          <strong>
+            Materiais
+          </strong>
+
+          <p>
+            Adicionar PDFs, simulados e materiais complementares.
+          </p>
+
         </article>
 
 
         <article class="card admin-tool">
-          <span>✎</span>
-          <strong>Temas de Redação</strong>
-          <p>Adicionar novas propostas ao banco de redação.</p>
+
+          <span>
+            ✎
+          </span>
+
+          <strong>
+            Temas de Redação
+          </strong>
+
+          <p>
+            Adicionar novas propostas ao banco de redação.
+          </p>
+
         </article>
 
 
         <article class="card admin-tool">
-          <span>📚</span>
-          <strong>Módulos</strong>
-          <p>Gerenciamento dos conteúdos da trilha.</p>
+
+          <span>
+            📚
+          </span>
+
+          <strong>
+            Módulos
+          </strong>
+
+          <p>
+            Gerenciamento dos conteúdos da trilha.
+          </p>
+
         </article>
 
       </div>
