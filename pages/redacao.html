@@ -116,7 +116,9 @@
     </header>
 
 
-    <!-- TEMA -->
+    <!-- =========================================
+         TEMA
+    ========================================== -->
 
     <section class="redacao-theme-card">
 
@@ -160,7 +162,9 @@
     </section>
 
 
-    <!-- CURSO -->
+    <!-- =========================================
+         CURSO
+    ========================================== -->
 
     <section class="redacao-section">
 
@@ -194,9 +198,11 @@
           class="redacao-lesson-card"
           style="text-decoration:none;color:inherit;"
         >
+
           <span>01</span>
 
           <div>
+
             <strong>
               Como funciona a Redação do ENEM
             </strong>
@@ -205,7 +211,9 @@
               Entenda a prova, a proposta, o gênero textual
               e como sua redação será avaliada.
             </p>
+
           </div>
+
         </a>
 
 
@@ -214,9 +222,11 @@
           class="redacao-lesson-card"
           style="text-decoration:none;color:inherit;"
         >
+
           <span>02</span>
 
           <div>
+
             <strong>
               As 5 competências
             </strong>
@@ -225,7 +235,9 @@
               Entenda o que realmente separa uma redação
               mediana de uma redação de alto nível.
             </p>
+
           </div>
+
         </a>
 
 
@@ -234,9 +246,11 @@
           class="redacao-lesson-card"
           style="text-decoration:none;color:inherit;"
         >
+
           <span>03</span>
 
           <div>
+
             <strong>
               Estrutura da dissertação
             </strong>
@@ -245,7 +259,9 @@
               Planeje introdução, desenvolvimento
               e conclusão antes de escrever.
             </p>
+
           </div>
+
         </a>
 
 
@@ -254,9 +270,11 @@
           class="redacao-lesson-card"
           style="text-decoration:none;color:inherit;"
         >
+
           <span>04</span>
 
           <div>
+
             <strong>
               Como fazer uma introdução
             </strong>
@@ -265,7 +283,9 @@
               Contextualização, recorte do tema,
               tese e projeto de texto.
             </p>
+
           </div>
+
         </a>
 
 
@@ -274,9 +294,11 @@
           class="redacao-lesson-card"
           style="text-decoration:none;color:inherit;"
         >
+
           <span>05</span>
 
           <div>
+
             <strong>
               Desenvolvimento
             </strong>
@@ -285,7 +307,9 @@
               Construa parágrafos que realmente
               desenvolvam uma ideia.
             </p>
+
           </div>
+
         </a>
 
 
@@ -294,9 +318,11 @@
           class="redacao-lesson-card"
           style="text-decoration:none;color:inherit;"
         >
+
           <span>06</span>
 
           <div>
+
             <strong>
               Argumentação
             </strong>
@@ -305,7 +331,9 @@
               Aprenda causa, consequência, comparação,
               exemplificação e análise crítica.
             </p>
+
           </div>
+
         </a>
 
 
@@ -314,9 +342,11 @@
           class="redacao-lesson-card"
           style="text-decoration:none;color:inherit;"
         >
+
           <span>07</span>
 
           <div>
+
             <strong>
               Repertório sociocultural
             </strong>
@@ -325,7 +355,9 @@
               Use história, filosofia, ciência e cultura
               para fortalecer seus argumentos.
             </p>
+
           </div>
+
         </a>
 
 
@@ -334,9 +366,11 @@
           class="redacao-lesson-card"
           style="text-decoration:none;color:inherit;"
         >
+
           <span>08</span>
 
           <div>
+
             <strong>
               Coesão e conectivos
             </strong>
@@ -345,7 +379,9 @@
               Conecte argumentos sem transformar
               o texto em uma coleção de conectivos.
             </p>
+
           </div>
+
         </a>
 
 
@@ -354,9 +390,11 @@
           class="redacao-lesson-card"
           style="text-decoration:none;color:inherit;"
         >
+
           <span>09</span>
 
           <div>
+
             <strong>
               Conclusão
             </strong>
@@ -365,7 +403,9 @@
               Feche a argumentação sem simplesmente
               repetir a introdução.
             </p>
+
           </div>
+
         </a>
 
 
@@ -374,9 +414,11 @@
           class="redacao-lesson-card"
           style="text-decoration:none;color:inherit;"
         >
+
           <span>10</span>
 
           <div>
+
             <strong>
               Proposta de intervenção
             </strong>
@@ -385,15 +427,20 @@
               Agente, ação, meio, finalidade
               e detalhamento bem articulados.
             </p>
+
           </div>
+
         </a>
+
 
       </div>
 
     </section>
 
 
-    <!-- TREINO -->
+    <!-- =========================================
+         TREINO
+    ========================================== -->
 
     <section class="redacao-section">
 
@@ -421,6 +468,8 @@
       <div class="redacao-training-grid">
 
 
+        <!-- NOVA REDAÇÃO -->
+
         <article class="card redacao-training-card">
 
           <span class="card-label">
@@ -446,6 +495,8 @@
         </article>
 
 
+        <!-- HISTÓRICO -->
+
         <article class="card redacao-training-card">
 
           <span class="card-label">
@@ -457,10 +508,11 @@
           </h3>
 
           <p id="historicoRedacaoTexto">
-            Você ainda não possui redações salvas.
+            Carregando seu histórico...
           </p>
 
           <button
+            id="verHistoricoRedacao"
             class="secondary-button"
             disabled
           >
@@ -469,6 +521,8 @@
 
         </article>
 
+
+        <!-- CORREÇÃO -->
 
         <article class="card redacao-training-card">
 
@@ -494,7 +548,49 @@
 
         </article>
 
+
       </div>
+
+
+      <!-- =========================================
+           HISTÓRICO COMPLETO
+      ========================================== -->
+
+      <div
+        id="historicoRedacoes"
+        class="historico-redacoes"
+        style="display: none; margin-top: 32px;"
+      >
+
+        <div class="redacao-section-header">
+
+          <div>
+
+            <span class="card-label">
+              HISTÓRICO
+            </span>
+
+            <h3>
+              Redações concluídas
+            </h3>
+
+            <p>
+              Consulte os textos que você já produziu.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <div
+          id="listaHistoricoRedacoes"
+          class="lista-historico-redacoes"
+        >
+        </div>
+
+      </div>
+
 
     </section>
 
